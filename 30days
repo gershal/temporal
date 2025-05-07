@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Elements Explained | Semantic Web Blog</title>
+  <style>
+    :root {
+      --primary: #4361ee;
+      --secondary: #3a0ca3;
+      --accent: #f72585;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --gray: #6c757d;
+      --transition: all 0.3s ease;
+    }
+
+    .dark-mode {
+      --primary: #60a5fa;
+      --secondary: #4f46e5;
+      --accent: #ec4899;
+      --light: #121212;
+      --dark: #f8f9fa;
+      --gray: #adb5bd;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      background-color: var(--light);
+      color: var(--dark);
+      transition: var(--transition);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--light);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--dark);
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--light) 0%, var(--primary) 100%);
+      background-size: 200% 200%;
+      animation: gradient 10s ease infinite;
+      text-align: center;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    /* Articles Section */
+    .articles {
+      padding: 5rem 0;
+      background-color: var(--light);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-title p {
+      color: var(--gray);
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .article-card {
+      background-color: var(--light);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      border: 1px solid var(--primary);
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .article-content {
+      padding: 1.5rem;
+    }
+
+    .article-title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .article-excerpt {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Article Pages */
+    .article-page {
+      padding: 5rem 0;
+      display: none;
+    }
+
+    .article-header {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .article-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .article-body {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .article-body h2 {
+      margin: 2rem 0 1rem;
+      color: var(--primary);
+    }
+
+    .article-body h3 {
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .code-block {
+      background-color: var(--light);
+      border: 1px solid var(--primary);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+    }
+
+    .live-example {
+      background-color: var(--light);
+      border: 1px solid var(--primary);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .example-title {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .benefits {
+      background-color: rgba(67, 97, 238, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .benefits h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .benefits ul {
+      padding-left: 1.5rem;
+    }
+
+    .benefits li {
+      margin-bottom: 0.5rem;
+    }
+
+    .alert {
+      background-color: rgba(247, 37, 133, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .alert.warning {
+      background-color: rgba(255, 193, 7, 0.1);
+      border-left: 4px solid #ffc107;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 3rem;
+      height: 3rem;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 99;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 1rem;
+      }
+
+      .article-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Contact Page Specific Styles */
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
+  }
+
+  .contact-info {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary);
+  }
+
+  .contact-info h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+  }
+
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-item svg {
+    margin-right: 1rem;
+    color: var(--primary);
+  }
+
+  .social-links {
+    margin-top: 2rem;
+  }
+
+  .social-links h3 {
+    margin-bottom: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-icons a {
+    color: var(--primary);
+    transition: var(--transition);
+  }
+
+  .social-icons a:hover {
+    color: var(--accent);
+  }
+
+  .contact-form {
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary);
+  }
+
+  .contact-form h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--primary);
+    border-radius: 0.3rem;
+    background-color: var(--light);
+    color: var(--dark);
+    transition: var(--transition);
+  }
+
+  .form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(247, 37, 133, 0.2);
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox-group input {
+    width: auto;
+    margin-right: 0.5rem;
+  }
+
+  .submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+  }
+
+  .submit-btn svg {
+    margin-right: 0.5rem;
+  }
+
+  .submit-btn:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">ZFJ</a>
+        <div class="nav-links">
+          <a href="#articles">Article</a>
+          <a href="#contact">Contact</a>
+          <!--<button class="theme-toggle" aria-label="Toggle theme">🌓--><!--🌙☀️--><!--</button>-->
+        </div>
+        <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>30 Days of Underused Semantic HTML Tags for Frontend Developers</h1>
+        <p>A daily guide to unlock hidden HTML tags that improve semantics, accessibility and functionality</p>
+        <a href="#articles" class="cta-button">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles Section -->
+  <section class="articles" id="articles">
+    <div class="container">
+      <div class="section-title">
+        <h2>Discover the Power of Semantic HTML</h2>
+        <p>Explore articles on underused HTML tags that enhance your web development.</p>
+      </div>
+      <div class="article-grid">
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;article&gt;: The Content Container</h3>
+            <p class="article-excerpt">Learn how to properly structure independent, self-contained content pieces on the Web.</p>
+            <a href="#article-article" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;aside&gt;: The Sidebar Story</h3>
+            <p class="article-excerpt">Discover techniques to improve supplementary content and strengthen your overall message.</p>
+            <a href="#article-aside" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;nav&gt;: The Guiding Path</h3>
+            <p class="article-excerpt">Learn to structure accessible, intuitive navigation menus using the &lt;nav&gt; element for a better user experience.</p>
+            <a href="#article-nav" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;figure&gt; & &lt;figcaption&gt;</h3>
+            <p class="article-excerpt">Explore how to semantically group visual content and captions with &lt;figure&gt; and &lt;figcaption&gt; for better context and clarity.</p>
+            <a href="#article-figure" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;details&gt; & &lt;summary&gt;</h3>
+            <p class="article-excerpt">Uncover how to create interactive disclosure widgets using <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> to hide and reveal extra content.</p>
+            <a href="#article-details" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;mark&gt;: Highlighted Text</h3>
+            <p class="article-excerpt">Highlight important or search-relevant text using the <mark> tag to draw attention without disrupting flow.</p>
+            <a href="#article-mark" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 7 -->
+        <article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Use the &lt;cite&gt; element to properly credit sources, authors, and titles in a semantically correct and accessible way.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+        
+        <!-- Article 8 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;abbr&gt;: Citations & References</h3>
+            <p class="article-excerpt">Master the use of abbreviations in HTML to provide helpful expansions for readers and accessibility tools.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article> -->
+
+        <!-- Article 9 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article> -->
+
+        <!-- Article 10 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 11 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 12 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 13 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 14 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 15 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+        
+        <!-- Article 16 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 17 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 18 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 19 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 20 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 21 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 22 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+        
+        <!-- Article 23 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 24 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 25 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 26 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 27 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+        
+        <!-- Article 28 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 29 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+        
+        <!-- Article 30 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">&lt;cite&gt;: Citations & References</h3>
+            <p class="article-excerpt">Learn how to properly attribute creative works and references.</p>
+            <a href="#article-cite" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+      </div>
+    </div>
+  </section>
+
+  <!-- Individual Article Pages -->
+  
+  <!-- Article Page for <article> -->
+  <section class="article-page" id="article-article">
+    <div class="container">
+      <article class="article-body">
+        <header class="article-header">
+          <h1>The &lt;article&gt; Tag: Your Content's Perfect Home</h1>
+          <div class="article-meta">Published on <time datetime="2025-05-01">May 01, 2025</time></div>
+        </header>
+
+        <p>🌟 Hey Frontend, Web Developers and Content Creators! Let's chat about something super cool—the <article> tag in HTML5!</p>
+
+        <p>This nifty little tag isn't just a container; it's designed to hold self-contained, independent pieces of content like your blog posts, news articles, or even product listings. Pretty neat, right?</p>
+        
+        <p>Imagine you're a newspaper editor. Each story needs its own container - complete with headline, byline, and content. That's exactly what <code>&lt;article&gt;</code> provides for the web.</p>
+
+        <div class="live-example">
+          <div class="example-title">Live Example:</div>
+          <article style="border: 1px dashed var(--primary); padding: 1rem; margin: 1rem 0;">
+            <h2>The Rise of Article Tag</h2>
+            <p>Once upon a time, developers used endless divs. Then came the Article tag in HTML5 with semantic meaning...</p>
+            <footer>By <span>zeroFiveJuly</span> | <time>May 01, 2025</time></footer>
+          </article>
+        </div>
+
+        <div class="benefits">
+          <h3>So, why should you care about using &lt;article&gt; ?</h3>
+          <ul>
+            <li><strong>✅ Semantic Clarity:</strong> It helps make your content's structure and meaning clear to browsers and assistive technologies.</li>
+            <li><strong>✅ SEO Perks:</strong> It assists search engines in understanding the context and relevance of your key content—hello, better rankings!</li>
+            <li><strong>✅ Accessibility Boost:</strong> This is great news for users who rely on screen readers, making their experience smoother.</li>
+            <li><strong>✅ Content Reusability:</strong> It makes syndicating and repurposing your awesome content a breeze!</li>
+            <li><strong>✅ Clean Structure:</strong> Replaces generic <code>&lt;div&gt;</code> containers with meaning</li>
+          </ul>
+        </div>
+
+        <h2>Real-World Uses</h2>
+        <p>You should wrap these in <code>&lt;article&gt;</code>:</p>
+        
+        <div class="code-block">
+          <pre><code>&lt;!-- Blog Post --&gt;
+&lt;article&gt;
+  &lt;h2&gt;My Development Journey&lt;/h2&gt;
+  &lt;p&gt;Content...&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;!-- Forum Post --&gt;
+&lt;article&gt;
+  &lt;h3&gt;Help with CSS Grid&lt;/h3&gt;
+  &lt;p&gt;I'm having trouble with...&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;!-- Product Card --&gt;
+&lt;article&gt;
+  &lt;h2&gt;Premium HTML Course&lt;/h2&gt;
+  &lt;p&gt;Learn semantic HTML...&lt;/p&gt;
+  &lt;button&gt;Enroll Now&lt;/button&gt;
+&lt;/article&gt;</code></pre>
+        </div>
+
+        <!-- <h2>Advanced Implementations</h2>
+        
+        <h3>Microdata Integration</h3>
+        <div class="code-block">
+          <pre><code>&lt;article itemscope itemtype="https://schema.org/BlogPosting"&gt;
+  &lt;h2 itemprop="headline"&gt;Advanced HTML Techniques&lt;/h2&gt;
+  &lt;div itemprop="author" itemscope itemtype="https://schema.org/Person"&gt;
+    By &lt;span itemprop="name"&gt;Jane Developer&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div itemprop="datePublished" content="2023-05-15"&gt;May 15, 2023&lt;/div&gt;
+  &lt;div itemprop="articleBody"&gt;
+    &lt;p&gt;Content here...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+        </div> -->
+        
+        <h3>Edge Cases</h3>
+        <div class="alert warning">
+          <p><strong>When NOT to use &lt;article&gt;:</strong></p>
+          <ul>
+            <li>For UI components (use <code>&lt;section&gt;</code> instead)</li>
+            <li>When content isn't independently distributable</li>
+            <li>For comments within articles (use <code>&lt;div&gt;</code> unless they're substantive)</li>
+          </ul>
+        </div>
+
+        <p><strong>Let's keep creating amazing things together!</strong></p>
+
+        <a href="#articles" class="cta-button">Back to Article</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Article Page for <aside> -->
+  <section class="article-page" id="article-aside">
+    <div class="container">
+      <article class="article-body">
+        <header class="article-header">
+          <h1>The &lt;aside&gt; Tag: Your Content's Sidekick</h1>
+          <div class="article-meta">Published on <time datetime="2025-05-02">May 02, 2025</time></div>
+        </header>
+
+        <p>Remember the <code>&lt;aside&gt;</code> tag! Image the main narrative of a webpage, the core story unfolding for the reader. Now, picture a gentle whisper, a related anecdote or a helpful piece of extra context sitting just beside it.</p> 
+        <p>This is where the <code>&lt;aside&gt;</code> tag found its purpose. It was the container for content that was tangentially connected to the main flow, like a sidebar showcasing related articles about different cultures alongside a travel blog, or a brief author biography enriching a news report.</p>
+       <p>Though separate, it added depth and flavour to the primary content. 
+            Think of <code>&lt;aside&gt;</code> as the whispered aside in a play - related to the main content but not central to the narrative.</p>
+
+        <div class="live-example">
+          <div class="example-title">Live Example:</div>
+          <article style="border: 1px dashed var(--primary); padding: 1rem; margin: 1rem 0;">
+            <h2>CSS Grid Layout</h2>
+            <p>Grid has revolutionized how we create layouts...</p>
+            
+            <aside style="background: rgba(67, 97, 238, 0.1); padding: 1rem; margin: 1rem 0; border-left: 3px solid var(--primary);">
+              <h3>Did You Know?</h3>
+              <p>CSS Grid was first proposed in 2011 and became widely supported by 2017.</p>
+            </aside>
+          </article>
+        </div>
+
+        <div class="benefits">
+          <h3>Why &lt;aside&gt; Matters:</h3>
+          <ul>
+            <li><strong>Semantic Separation:</strong> Clearly marks supplementary content</li>
+            <li><strong>Styling Hook:</strong> Often appears as a sidebar or pull-quote</li>
+            <li><strong>Reader Options:</strong> Screen readers can skip or prioritize it</li>
+            <li><strong>Content Hierarchy:</strong> Shows search engines what's primary vs secondary</li>
+          </ul>
+        </div>
+
+        <h2>When to Use It</h2>
+        <div class="code-block">
+          <pre><code>&lt;!-- Pull Quote --&gt;
+&lt;aside&gt;
+  &lt;blockquote&gt;"Semantic HTML improves accessibility"&lt;/blockquote&gt;
+&lt;/aside&gt;
+
+&lt;!-- Glossary Term --&gt;
+&lt;aside&gt;
+  &lt;h3&gt;What is ARIA?&lt;/h3&gt;
+  &lt;p&gt;Accessible Rich Internet Applications...&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;!-- Advertisement --&gt;
+&lt;aside&gt;
+  &lt;h3&gt;Sponsored&lt;/h3&gt;
+  &lt;!-- Ad content --&gt;
+&lt;/aside&gt;</code></pre>
+        </div>
+
+        <!-- <h2>Advanced Implementations</h2>
+        
+        <h3>Dynamic Sidebar with CSS Grid</h3>
+        <div class="code-block">
+          <pre><code>.container {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 250px;
+  gap: 2rem;
+}
+
+main {
+  grid-column: 1;
+}
+
+aside {
+  grid-column: 2;
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+}</code></pre>
+        </div> -->
+        
+        <h3>Edge Cases</h3>
+        <div class="alert warning">
+          <p><strong>Common Mistakes:</strong></p>
+          <ul>
+            <li>Using for completely unrelated content (breaks semantic meaning)</li>
+            <li>Nesting multiple <code>&lt;aside&gt;</code> without proper headings</li>
+            <li>Overusing in mobile layouts where space is limited</li>
+          </ul>
+        </div>
+
+        <a href="#articles" class="cta-button">Back to Articles</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Article Page for <nav> -->
+  <section class="article-page" id="article-nav">
+    <div class="container">
+      <article class="article-body">
+        <header class="article-header">
+          <h1>The &lt;nav&gt; Tag: Your Site's Roadmap</h1>
+          <div class="article-meta">Published on <time datetime="2025-05-03">May 03, 2025</time></div>
+        </header>
+
+        <p>Every great city thrives on clear street signs. Every great website relies on <code>&lt;nav&gt;</code> — the semantic cornerstone for its most essential links.</p> 
+        <p>In the boundless expanse of the internet, intuitive pathways are vital. The <code>&lt;nav&gt;</code> tag serves as a digital signpost, anchoring a website's navigation menus. Whether guiding shoppers through an e-commerce platform or providing a table of contents for a detailed article, <code>&lt;nav&gt;</code> delivers structure and focus.</p>
+        <p>More than a mere list of links, it boldly declares, “This is how to explore this site,” empowering human visitors and search engine crawlers alike with seamless navigation.</P>
+
+        <div class="live-example">
+          <div class="example-title">Live Example:</div>
+          <nav style="background: var(--light); padding: 1rem; margin: 1rem 0; border: 1px dashed var(--primary);">
+            <ul style="display: flex; gap: 1rem; list-style: none; padding: 0;">
+              <li><a href="#" style="text-decoration: none; color: var(--primary);">Home</a></li>
+              <li><a href="#" style="text-decoration: none; color: var(--primary);">Articles</a></li>
+              <li><a href="#" style="text-decoration: none; color: var(--primary);">About</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="benefits">
+          <h3>Why &lt;nav&gt; Matters:</h3>
+          <ul>
+            <li><strong>Keyboard Navigation:</strong> Users can jump to it with shortcuts</li>
+            <li><strong>SEO Significance:</strong> Search engines identify primary navigation</li>
+            <li><strong>Screen Reader Friendly:</strong> Announced as a navigation landmark</li>
+            <li><strong>Future-Proof:</strong> Prepares for emerging navigation patterns</li>
+          </ul>
+        </div>
+
+        <h2>Best Practices</h2>
+        <div class="code-block">
+          <pre><code>&lt;!-- Main Navigation --&gt;
+&lt;nav aria-label="Primary"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/articles"&gt;Articles&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Table of Contents --&gt;
+&lt;nav aria-label="Table of Contents"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="#intro"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#chapter1"&gt;Chapter 1&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+
+        <!-- <h2>Advanced Implementations</h2>
+        
+        <h3>Mega Menu Pattern</h3>
+        <div class="code-block">
+          <pre><code>&lt;nav aria-label="Main"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="/products" aria-haspopup="true"&gt;Products&lt;/a&gt;
+      &lt;div class="mega-menu"&gt;
+        &lt;div class="mega-menu-column"&gt;
+          &lt;h3&gt;Category 1&lt;/h3&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href="/products/1"&gt;Product 1&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;style&gt;
+  .mega-menu {
+    display: none;
+    position: absolute;
+    /* Positioning styles */
+  }
+  
+  li:hover .mega-menu {
+    display: grid;
+  }
+&lt;/style&gt;</code></pre>
+        </div> -->
+        
+        <h3>Edge Cases</h3>
+        <div class="alert warning">
+          <p><strong>Accessibility Considerations:</strong></p>
+          <ul>
+            <li>Always provide keyboard navigation support</li>
+            <li>Use <code>aria-current="page"</code> for current page indicators</li>
+            <li>Mobile menus should be fully operable via screen readers</li>
+          </ul>
+        </div>
+
+        <div class="alert">
+          <p><strong>Pro Tip:</strong> Don't wrap every link group in <code>&lt;nav&gt;</code>. Reserve it for <em>major</em> navigation blocks.</p>
+        </div>
+
+        <a href="#articles" class="cta-button">Back to Articles</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Article Page for <figure> and <figcaption> -->
+  <section class="article-page" id="article-figure">
+    <div class="container">
+      <article class="article-body">
+        <header class="article-header">
+          <h1>The Dynamic Duo: &lt;figure&gt; & &lt;figcaption&gt;</h1>
+          <div class="article-meta">Published on <time datetime="2025-05-04">May 04, 2025</time></div>
+        </header>
+
+        <p>Imagine wandering through a museum where paintings hang without labels—beautiful but bewildering. That's what images on the web are like without <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>: a semantic duo that anchors visuals to their meaning. 
+        <p>Every image, illustration, or media element carries a story. The <code>&lt;figure&gt;</code> tag serves as the frame, elegantly containing these visual treasures. Yet, it's the <code>&lt;figcaption&gt;</code>, nestled within, that breathes life into them with a descriptive caption. Picture a photo of The Grail Center in Akwa-Ibom, its caption unveiling its cultural significance or a code snippet paired with text clarifying its purpose.</p>
+        <p>Together, <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> weave context and clarity, making media richer, more accessible, and universally understood.</p>
+
+        <div class="live-example">
+          <div class="example-title">Live Example:</div>
+          <figure style="border: 1px dashed var(--primary); padding: 1rem; margin: 1rem 0;">
+            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute Dogs" style="width: 100%; height: auto;">
+            <figcaption style="text-align: center; font-style: italic; margin-top: 0.5rem;">
+              Figure 1: Two Yellow Labrador Retriever Puppies
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="benefits">
+          <h3>Why This Pair Matters:</h3>
+          <ul>
+            <li><strong>Accessibility:</strong> Screen readers announce the caption with the image</li>
+            <li><strong>SEO Value:</strong> Search engines understand the image-content relationship</li>
+            <li><strong>Responsive Ready:</strong> Maintains connection even when layout changes</li>
+            <li><strong>Styling Control:</strong> Perfect for creating consistent media blocks</li>
+          </ul>
+        </div>
+
+        <h2>Beyond Just Images</h2>
+        <p>These tags work with various content types:</p>
+        
+        <div class="code-block">
+          <pre><code>&lt;!-- Code Snippet Example --&gt;
+&lt;figure&gt;
+  &lt;pre&gt;&lt;code&gt;function greet() { 
+  console.log("Hello World!"); 
+}&lt;/code&gt;&lt;/pre&gt;
+  &lt;figcaption&gt;Listing 1: Basic JavaScript function&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Video Example --&gt;
+&lt;figure&gt;
+  &lt;video controls src="tutorial.mp4"&gt;&lt;/video&gt;
+  &lt;figcaption&gt;Video 1: Semantic HTML tutorial&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Data Visualization --&gt;
+&lt;figure&gt;
+  &lt;svg&gt;&lt;!-- Chart markup --&gt;&lt;/svg&gt;
+  &lt;figcaption&gt;Chart 1: Monthly traffic growth&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+        </div>
+
+        <!-- <h2>Advanced Implementations</h2>
+        
+        <h3>Responsive Art Direction</h3>
+        <div class="code-block">
+          <pre><code>&lt;figure&gt;
+  &lt;picture&gt;
+    &lt;source media="(min-width: 1200px)" srcset="large.jpg"&gt;
+    &lt;source media="(min-width: 800px)" srcset="medium.jpg"&gt;
+    &lt;img src="small.jpg" alt="Responsive image example"&gt;
+  &lt;/picture&gt;
+  &lt;figcaption&gt;Example of responsive art direction&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+        </div> -->
+        
+        <h3>Edge Cases</h3>
+        <div class="alert warning">
+          <p><strong>When to Avoid:</strong></p>
+          <ul>
+            <li>For decorative images that don't need captions</li>
+            <li>When the image is purely for layout purposes</li>
+            <li>If the caption doesn't add meaningful context</li>
+          </ul>
+        </div>
+
+        <div class="alert">
+          <p><strong>Pro Tip:</strong> Always include <code>alt</code> text for images <em>and</em> meaningful captions - they serve different purposes!</p>
+        </div>
+
+        <a href="#articles" class="cta-button">Back to Articles</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Article Page for <details> and <summary> -->
+  <section class="article-page" id="article-details">
+    <div class="container">
+      <article class="article-body">
+        <header class="article-header">
+          <h1>&lt;details&gt; & &lt;summary&gt;: Your Built - In Accordion</h1>
+          <div class="article-meta">Published on <time datetime="2025-05-05">May 05, 2025</time></div>
+        </header>
+
+        <p>Picture a treasure chest with a labeled latch, tempting you to lift it. The <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> tags bring that sense of discovery to the web - no JavaScript required!</p> 
+        <p>Webpages often conceal extra layers of knowledge, ready to be uncovered. The <code>&lt;details&gt;</code> tag serves as the chest, safeguarding these hidden insights. Its companion, <code>&lt;summary&gt;</code>, acts as the inviting latch, displaying a clickable heading that sparks curiosity.</p> 
+        <p>Imagine an FAQ where questions in <code>&lt;summary&gt;</code> unlock answers within <code>&lt;details&gt;</code> or technical specs revealed with a single click. Together, they create interactive, user-driven experiences with pure HTML finesse.</p>
+
+        <div class="live-example">
+          <div class="example-title">Live Example:</div>
+          <details style="border: 1px solid var(--primary); border-radius: 0.3rem; padding: 0.5rem; margin: 1rem 0;">
+  <summary style="font-weight: bold; cursor: pointer;">What is semantic HTML?</summary>
+  <p style="margin-top: 0.5rem;">Semantic HTML uses tags like <code>&lt;nav&gt;</code>, <code>&lt;figure&gt;</code>, and <code>&lt;details&gt;</code> to describe the meaning of content, improving accessibility and SEO.</p>
+</details>
+          
+          <details style="border: 1px solid var(--primary); border-radius: 0.3rem; padding: 0.5rem; margin: 1rem 0;">
+            <summary style="font-weight: bold; cursor: pointer;">Click to reveal secret HTML tip</summary>
+            <p style="margin-top: 0.5rem;">You can style the marker with <code>::marker</code> pseudo-element!</p>
+          </details>
+
+          <details style="border: 1px solid var(--primary); border-radius: 0.3rem; padding: 0.5rem; margin: 1rem 0;">
+  <summary style="font-weight: bold; cursor: pointer;">Why use &lt;details&gt; instead of JavaScript?</summary>
+  <p style="margin-top: 0.5rem;">The <code>&lt;details&gt;</code> tag provides native interactivity, reducing code complexity and ensuring compatibility with screen readers and low-bandwidth devices.</p>
+</details>
+        </div>
+
+        <div class="benefits">
+          <h3>Why This Combo Rocks:</h3>
+          <ul>
+            <li><strong>Zero JavaScript:</strong> Works even with JS disabled</li>
+            <li><strong>Progressive Disclosure:</strong> Perfect for FAQs and technical docs</li>
+            <li><strong>Built-In Accessibility:</strong> Keyboard operable by default</li>
+            <li><strong>Performance Friendly:</strong> No library overhead</li>
+          </ul>
+        </div>
+
+        <h2>Creative Implementations</h2>
+        <div class="code-block">
+          <pre><code>&lt;!-- FAQ Section --&gt;
+&lt;details&gt;
+  &lt;summary&gt;What is semantic HTML?&lt;/summary&gt;
+  &lt;p&gt;Semantic HTML means using elements that convey meaning...&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;!-- Spoiler Protection --&gt;
+&lt;details&gt;
+  &lt;summary&gt;Spoiler: Who wins in Avengers?&lt;/summary&gt;
+  &lt;p&gt;Iron Man sacrifices himself...&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;!-- Mobile-Friendly Menu --&gt;
+&lt;details&gt;
+  &lt;summary&gt;Menu&lt;/summary&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/details&gt;</code></pre>
+        </div>
+
+        <!-- <h2>Advanced Implementations</h2>
+        
+        <h3>Nested Accordion Pattern</h3>
+        <div class="code-block">
+          <pre><code>&lt;details&gt;
+  &lt;summary&gt;Main Category&lt;/summary&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Subcategory 1&lt;/summary&gt;
+    &lt;p&gt;Content...&lt;/p&gt;
+  &lt;/details&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Subcategory 2&lt;/summary&gt;
+    &lt;p&gt;Content...&lt;/p&gt;
+  &lt;/details&gt;
+&lt;/details&gt;</code></pre>
+        </div> -->
+        
+        <h3>Edge Cases</h3>
+        <div class="alert warning">
+          <p><strong>Browser Quirks:</strong></p>
+          <ul>
+            <li>Firefox shows animation by default (can be disabled with <code>transition: height 0s</code>)</li>
+            <li>IE11 requires polyfill for proper functionality</li>
+            <li>Some screen readers may announce state changes differently</li>
+          </ul>
+        </div>
+
+        <div class="alert">
+          <p><strong>Pro Tip:</strong> Use <code>details[open]</code> in CSS to style the open state differently!</p>
+        </div>
+
+        <a href="#articles" class="cta-button">Back to Articles</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Article Page for <mark> -->
+  <section class="article-page" id="article-mark">
+    <div class="container">
+      <article class="article-body">
+        <header class="article-header">
+          <h1>The &lt;mark&gt; Tag: Your Digital Highlighter</h1>
+          <div class="article-meta">Published on <time datetime="2025-05-06">May 06, 2025</time></div>
+        </header>
+
+        <p>Picture studying a dense document, highlighter in hand, marking words that leap off the page. The <code>&lt;mark&gt;</code> tag brings that focus to the web, acting as a digital highlighter with semantic strength.</p>
+        <p>Applied to text, it visually emphasizes key phrases, but its true power lies in meaning: it signals relevance. Use it to spotlight search terms in results or critical points in a quote, anchoring their importance within context.</p>
+        <p>Like neon streaks in a textbook, <code>&lt;mark&gt;</code> makes the web's key moments unmissable, for both readers and search engines.</p>
+
+        <div class="live-example">
+          <div class="example-title">Live Example:</div>
+          <p style="margin: 1rem 0;">
+            When searching for "semantic HTML", results should <mark style="background: var(--accent); color: white; padding: 0.1em 0.3em;">highlight</mark> relevant terms to show why they matched your query.
+          </p>
+        </div>
+
+        <div class="benefits">
+          <h3>Why &lt;mark&gt; Beats Generic Spans:</h3>
+          <ul>
+            <li><strong>Semantic Meaning:</strong> Indicates <em>relevance</em> in context</li>
+            <li><strong>Search-Friendly:</strong> Google may prioritize marked content</li>
+            <li><strong>Accessibility:</strong> Screen readers can announce highlights</li>
+            <li><strong>Styling Control:</strong> Easy to customize appearance</li>
+          </ul>
+        </div>
+
+        <h2>Practical Applications</h2>
+        <div class="code-block">
+          <pre><code>&lt;!-- Search Results --&gt;
+&lt;p&gt;Your search for "HTML" found:&lt;/p&gt;
+&lt;p&gt;Learn &lt;mark&gt;HTML&lt;/mark&gt; semantics in 30 days...&lt;/p&gt;
+
+&lt;!-- Tutorial Emphasis --&gt;
+&lt;p&gt;Remember: Always include &lt;mark&gt;alt text&lt;/mark&gt; for images.&lt;/p&gt;
+
+&lt;!-- User-Generated Highlights --&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The &lt;mark&gt;article&lt;/mark&gt; element changed how we structure content.&lt;/p&gt;
+  &lt;footer&gt;- Student highlight&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+        </div>
+
+        <!-- <h2>Advanced Implementations</h2>
+        
+        <h3>Search Highlight Animation</h3>
+        <div class="code-block">
+          <pre><code>mark {
+  background: linear-gradient(yellow, yellow);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease;
+}
+
+mark.animate {
+  background-size: 100% 100%;
+}</code></pre>
+        </div> -->
+        
+        <h3>Edge Cases</h3>
+        <div class="alert warning">
+          <p><strong>Semantic Misuse:</strong></p>
+          <ul>
+            <li>Don't use for styling only (use <code>&lt;span&gt;</code> with class)</li>
+            <li>Avoid marking large text blocks (breaks semantic meaning)</li>
+            <li>Not suitable for permanent highlights (use <code>&lt;strong&gt;</code> instead)</li>
+          </ul>
+        </div>
+
+        <div class="alert">
+          <p><strong>Design Tip:</strong> Customize the highlight color with CSS while preserving semantics:</p>
+          <pre><code>mark {
+  background: linear-gradient(yellow, yellow);
+  padding: 0.1em;
+}</code></pre>
+        </div>
+
+        <a href="#articles" class="cta-button">Back to Articles</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Article Page for <cite> -->
+  <section class="article-page" id="article-cite">
+    <div class="container">
+      <article class="article-body">
+        <header class="article-header">
+          <h1>The &lt;cite&gt; Tag: Giving Credit Where It's Due</h1>
+          <div class="article-meta">Published on <time datetime="2025-05-07">May 07, 2025</time></div>
+        </header>
+
+        <p>Imagine submitting a research paper without citations (that's academic disaster!).</p> 
+        <p>The web's equivalent is the <code>&lt;cite&gt;</code> tag, a semantic nod to crediting creative works. Every story or insight builds on others' contributions, and <code>&lt;cite&gt;</code> ensures they're acknowledged. It wraps the title of a work—be it a book, article, song, or film—giving context and attribution.</p>
+        <p>Often styled in italics by browsers, it signals provenance, like citing <cite>Things Fall Apart by Chinua Achebe</cite> in a literary essay or referencing a groundbreaking study. <code>&lt;cite&gt;</code> weaves a web of trust, grounding knowledge in its sources.</p>
+
+        <div class="live-example">
+          <div class="example-title">Live Example:</div>
+          <blockquote style="border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0;">
+            <p>"Semantic HTML is the foundation of accessible web development."</p>
+            <footer>— <cite style="font-style: italic;">Web Content Accessibility Guidelines (WCAG)</cite></footer>
+          </blockquote>
+        </div>
+
+        <div class="benefits">
+          <h3>Why &lt;cite&gt; Matters:</h3>
+          <ul>
+            <li><strong>Machine-Readable:</strong> Helps search engines understand references</li>
+            <li><strong>Academic Integrity:</strong> Proper source attribution</li>
+            <li><strong>Styling Hook:</strong> Italic by default but customizable</li>
+            <li><strong>Semantic Clarity:</strong> Distinguishes citations from regular text</li>
+          </ul>
+        </div>
+
+        <h2>Correct Usage</h2>
+        <div class="code-block">
+          <pre><code>&lt;!-- Creative Work Title --&gt;
+&lt;p&gt;My favorite book is &lt;cite&gt;Eloquent JavaScript&lt;/cite&gt;.&lt;/p&gt;
+
+&lt;!-- Quote Attribution --&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;"The web should be accessible to everyone."&lt;/p&gt;
+  &lt;footer&gt;— &lt;cite&gt;Tim Berners-Lee&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- Reference in Text --&gt;
+&lt;p&gt;As explained in &lt;cite&gt;HTML: The Living Standard&lt;/cite&gt;...&lt;/p&gt;</code></pre>
+        </div>
+
+        <h2>Advanced Implementations</h2>
+        
+        <h3>Biblographic References with Microdata</h3>
+        <div class="code-block">
+          <pre><code>&lt;p&gt;
+  From the book &lt;cite itemprop="citation" itemscope itemtype="https://schema.org/Book"&gt;
+    &lt;span itemprop="name"&gt;HTML5: The Missing Manual&lt;/span&gt;
+    by &lt;span itemprop="author"&gt;Matthew MacDonald&lt;/span&gt;
+  &lt;/cite&gt;.
+&lt;/p&gt;</code></pre>
+        </div>
+        
+        <h3>Edge Cases</h3>
+        <div class="alert warning">
+          <p><strong>Common Confusions:</strong></p>
+          <ul>
+            <li>Not for personal names (use <code>&lt;span&gt;</code> or <code>&lt;address&gt;</code>)</li>
+            <li>Avoid using for publication dates (use <code>&lt;time&gt;</code>)</li>
+            <li>Don't nest other semantic elements inside <code>&lt;cite&gt;</code></li>
+          </ul>
+        </div>
+
+        <div class="alert">
+          <p><strong>Important:</strong> Use <code>&lt;cite&gt;</code> for the <em>title of the work</em>, not the author's name. For people, use <code>&lt;span&gt;</code> or semantic classes.</p>
+        </div>
+
+        <a href="#articles" class="cta-button">Back to Articles</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact Page -->
+  <section class="article-page" id="contact">
+    <div class="container">
+      <article class="article-body">
+        <header class="article-header">
+          <h1>Contact Us</h1>
+          <div class="article-meta">Have questions or suggestions? Get in touch!</div>
+        </header>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <a href="#articles" class="cta-button">Back to Articles</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+        <!--<a href="#">Privacy Policy</a>-->
+      </div>
+      <p class="copyright">&copy; 2023 SemanticHTML Blog. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- JavaScript -->
+  <script>
+    // Theme Toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    const mobileThemeToggle = document.querySelector('.mobile-theme-toggle');
+    
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    }
+    
+    themeToggle.addEventListener('click', toggleTheme);
+    mobileThemeToggle.addEventListener('click', toggleTheme);
+    
+    // Check for saved theme preference
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+    
+    // Navigation
+    function showArticle(articleId) {
+      // Hide all article pages and contact
+      document.querySelectorAll('.article-page').forEach(page => {
+        page.style.display = 'none';
+      });
+      
+      // Show requested article
+      const target = document.querySelector(articleId);
+      if (target) {
+        target.style.display = 'block';
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    
+    // Set up article navigation
+    document.querySelectorAll('a[href^="#article-"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        showArticle(link.getAttribute('href'));
+      });
+    });
+    
+    // Contact page navigation
+    document.querySelectorAll('a[href="#contact"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        showArticle('#contact');
+      });
+    });
+    
+    // Back to articles
+    document.querySelectorAll('a[href="#articles"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('#articles').scrollIntoView({ behavior: 'smooth' });
+        document.querySelectorAll('.article-page').forEach(page => {
+          page.style.display = 'none';
+        });
+      });
+    });
+    
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Form Submission
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message! We will get back to you soon.');
+      contactForm.reset();
+    });
+    
+    // Enhanced Form Handling
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    const newsletter = document.getElementById('newsletter').checked;
+    
+    // Simple validation
+    if (!name || !email || !message) {
+      alert('Please fill in all required fields');
+      return;
+    }
+    
+    // In a real app, you would send this data to a server
+    console.log('Form submitted:', { name, email, subject, message, newsletter });
+    
+    // Show success message
+    const successMessage = document.createElement('div');
+    successMessage.className = 'alert';
+    successMessage.innerHTML = `
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <p>Thank you for your message! We'll get back to you soon.</p>
+    `;
+    
+    this.parentNode.insertBefore(successMessage, this.nextSibling);
+    this.reset();
+    
+    // Scroll to success message
+    setTimeout(() => {
+      successMessage.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  });
+  </script>
+</body>
+</html>
