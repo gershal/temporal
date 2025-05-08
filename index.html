@@ -1207,9 +1207,10 @@ abbr:hover::after {
           <div class="article-meta">Have questions or suggestions? Get in touch!</div>
         </header>
 
-        <form class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
           <div class="form-group">
             <label for="name">Name</label>
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
             <input type="text" id="name" name="name" required>
           </div>
           <div class="form-group">
