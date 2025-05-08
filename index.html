@@ -3,495 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Elements Explained | Semantic Web Blog</title>
-  <style>
-    :root {
-      --primary: #4361ee;
-      --secondary: #3a0ca3;
-      --accent: #f72585;
-      --light: #f8f9fa;
-      --dark: #212529;
-      --gray: #6c757d;
-      --transition: all 0.3s ease;
-    }
-
-    .dark-mode {
-      --primary: #60a5fa;
-      --secondary: #4f46e5;
-      --accent: #ec4899;
-      --light: #121212;
-      --dark: #f8f9fa;
-      --gray: #adb5bd;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
-      background-color: var(--light);
-      color: var(--dark);
-      transition: var(--transition);
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    /* Header */
-    header {
-      background-color: var(--light);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      color: var(--dark);
-      text-decoration: none;
-      font-weight: 500;
-      transition: var(--transition);
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .theme-toggle {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--dark);
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(135deg, var(--light) 0%, var(--primary) 100%);
-      background-size: 200% 200%;
-      animation: gradient 10s ease infinite;
-      text-align: center;
-    }
-
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--gray);
-      max-width: 600px;
-      margin: 0 auto 40px;
-    }
-
-    /* Articles Section */
-    .articles {
-      padding: 5rem 0;
-      background-color: var(--light);
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-title h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .section-title p {
-      color: var(--gray);
-    }
-
-    .article-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .article-card {
-      background-color: var(--light);
-      border-radius: 0.5rem;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: var(--transition);
-      border: 1px solid var(--primary);
-    }
-
-    .article-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    .article-content {
-      padding: 1.5rem;
-    }
-
-    .article-title {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-    }
-
-    .article-excerpt {
-      color: var(--gray);
-      margin-bottom: 1.5rem;
-    }
-
-    /* Article Pages */
-    .article-page {
-      padding: 5rem 0;
-      display: none;
-    }
-
-    .article-header {
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .article-header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .article-meta {
-      color: var(--gray);
-      font-size: 0.9rem;
-    }
-
-    .article-body {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .article-body h2 {
-      margin: 2rem 0 1rem;
-      color: var(--primary);
-    }
-
-    .article-body h3 {
-      margin: 1.5rem 0 0.5rem;
-    }
-
-    .article-body p {
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-    }
-
-    .code-block {
-      background-color: var(--light);
-      border: 1px solid var(--primary);
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-      overflow-x: auto;
-    }
-
-    .live-example {
-      background-color: var(--light);
-      border: 1px solid var(--primary);
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .example-title {
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-
-    .benefits {
-      background-color: rgba(67, 97, 238, 0.1);
-      border-left: 4px solid var(--primary);
-      padding: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    .benefits h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .benefits ul {
-      padding-left: 1.5rem;
-    }
-
-    .benefits li {
-      margin-bottom: 0.5rem;
-    }
-
-    .alert {
-      background-color: rgba(247, 37, 133, 0.1);
-      border-left: 4px solid var(--accent);
-      padding: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    .alert.warning {
-      background-color: rgba(255, 193, 7, 0.1);
-      border-left: 4px solid #ffc107;
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--dark);
-      color: white;
-      padding: 3rem 0;
-      text-align: center;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-links a {
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      transition: var(--transition);
-    }
-
-    .footer-links a:hover {
-      color: white;
-    }
-
-    .copyright {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.9rem;
-    }
-
-    /* Back to Top Button */
-    .back-to-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 3rem;
-      height: 3rem;
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      opacity: 0;
-      visibility: hidden;
-      transition: var(--transition);
-      z-index: 99;
-    }
-
-    .back-to-top.visible {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 0 1rem;
-      }
-
-      .article-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    /* Contact Page Specific Styles */
-  .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin: 2rem 0;
-  }
-
-  .contact-info {
-    background-color: var(--light);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--primary);
-  }
-
-  .contact-info h2 {
-    margin-bottom: 1.5rem;
-    color: var(--primary);
-  }
-
-  .info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .info-item svg {
-    margin-right: 1rem;
-    color: var(--primary);
-  }
-
-  .social-links {
-    margin-top: 2rem;
-  }
-
-  .social-links h3 {
-    margin-bottom: 1rem;
-  }
-
-  .social-icons {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .social-icons a {
-    color: var(--primary);
-    transition: var(--transition);
-  }
-
-  .social-icons a:hover {
-    color: var(--accent);
-  }
-
-  .contact-form {
-    background-color: var(--light);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--primary);
-  }
-
-  .contact-form h2 {
-    margin-bottom: 1.5rem;
-    color: var(--primary);
-  }
-
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-
-  .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid var(--primary);
-    border-radius: 0.3rem;
-    background-color: var(--light);
-    color: var(--dark);
-    transition: var(--transition);
-  }
-
-  .form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-  }
-
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 2px rgba(247, 37, 133, 0.2);
-  }
-
-  .checkbox-group {
-    display: flex;
-    align-items: center;
-  }
-
-  .checkbox-group input {
-    width: auto;
-    margin-right: 0.5rem;
-  }
-
-  .submit-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    padding: 0.8rem 1.8rem;
-    border-radius: 0.3rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    width: 100%;
-  }
-
-  .submit-btn svg {
-    margin-right: 0.5rem;
-  }
-
-  .submit-btn:hover {
-    background-color: var(--accent);
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 768px) {
-    .contact-container {
-      grid-template-columns: 1fr;
-    }
-  }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <title>30 Underrated HTML Elements Explained | Semantic Web Blog</title>
 </head>
 <body>
   <!-- Header -->
@@ -627,18 +140,17 @@
         </article>
         
         <!-- Article 8 -->
-        <!--<article class="article-card">
+        <article class="article-card">
           <div class="article-content">
-            <h3 class="article-title">&lt;abbr&gt;: Citations & References</h3>
+            <h3 class="article-title">&lt;abbr&gt;: Tag: Decoding Abbreviations</h3>
             <p class="article-excerpt">Master the use of abbreviations in HTML to provide helpful expansions for readers and accessibility tools.</p>
-            <a href="#article-cite" class="read-more">
+            <a href="#article-abbr" class="read-more">
               Read more
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
             </a>
-          </div>
-        </article> -->
+        </article>
 
         <!-- Article 9 -->
         <!--<article class="article-card">
@@ -1569,7 +1081,7 @@ mark.animate {
 &lt;p&gt;As explained in &lt;cite&gt;HTML: The Living Standard&lt;/cite&gt;...&lt;/p&gt;</code></pre>
         </div>
 
-        <h2>Advanced Implementations</h2>
+        <!--<h2>Advanced Implementations</h2>
         
         <h3>Biblographic References with Microdata</h3>
         <div class="code-block">
@@ -1579,7 +1091,7 @@ mark.animate {
     by &lt;span itemprop="author"&gt;Matthew MacDonald&lt;/span&gt;
   &lt;/cite&gt;.
 &lt;/p&gt;</code></pre>
-        </div>
+        </div>-->
         
         <h3>Edge Cases</h3>
         <div class="alert warning">
@@ -1599,6 +1111,92 @@ mark.animate {
       </article>
     </div>
   </section>
+
+  <!-- Article Page for <abbr> -->
+    <section class="article-page" id="article-abbr">
+      <div class="container">
+        <div class="container">
+          <article class="article-body">
+              <header class="article-header">
+                  <h1>The &lt;abbr&gt; Tag: Decoding Abbreviations</h1>
+                  <div class="article-meta">Published on <time datetime="2025-05-08">May 08, 2025</time></div>
+              </header>
+
+              <p>The <code>&lt;abbr&gt;</code> tag is your digital dictionary, decoding abbreviations and acronyms in a world brimming with shorthand. Picture a vibrant marketplace of words, where brevity spawns terms like “CSS” or “HTML” globally. The <code>&lt;abbr&gt;</code> tag steps in as a guide, its title attribute whispering the full meaning.</p>
+              <p>For screen readers, <abbr title="Cascading Style Sheets">CSS</abbr> becomes “Cascading Style Sheets,” and <abbr title="HyperText Markup Language">HTML</abbr> becomes “HyperText Markup Language,” thereby ensuring clarity for all. Like a thoughtful friend, <code>&lt;abbr&gt;</code> illuminates shorthand, making the web inclusive and understandable.</p>
+
+              <div class="live-example">
+                  <div class="example-title">Live Example:</div>
+                  <p>
+                      The <abbr title="HyperText Markup Language" style="text-decoration: underline dotted; cursor: help;">HTML</abbr> is the most basic building block of the Web.
+                  </p>
+              </div>
+
+              <div class="benefits">
+                  <h3>Why &lt;abbr&gt; Matters:</h3>
+                  <ul>
+                      <li><strong>Accessibility:</strong> Screen readers can announce the full term</li>
+                      <li><strong>Clarity:</strong> Users can hover to see definitions</li>
+                      <li><strong>SEO Value:</strong> Helps search engines understand content</li>
+                      <li><strong>Professionalism:</strong> Shows attention to detail</li>
+                  </ul>
+              </div>
+
+              <h2>Best Practices</h2>
+              <div class="code-block">
+                  <pre><code>&lt;p&gt;
+&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; 
+is a stylesheet language used to describe the presentation of a document written in HTML.
+&lt;/p&gt;
+
+&lt;p&gt;
+The &lt;abbr title="National Aeronautics and Space Administration"&gt;NASA&lt;/abbr&gt; 
+launched the James Webb Space Telescope.
+&lt;/p&gt;</code></pre>
+              </div>
+
+              <!-- <h2>Advanced Implementations</h2>
+              
+              <h3>Styling Abbreviations</h3>
+              <div class="code-block">
+                  <pre><code>&lt;style&gt;
+abbr {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+abbr:hover::after {
+  content: ' (' attr(title) ')';
+  font-size: smaller;
+  color: var(--primary);
+}
+&lt;/style&gt;</code></pre>
+              </div> -->
+              
+              <!-- <h3>Edge Cases</h3>
+              <div class="alert warning">
+                  <p><strong>Accessibility Considerations:</strong></p>
+                  <ul>
+                      <li>Always include the title attribute</li>
+                      <li>Consider spelling out the term first, then abbreviating</li>
+                      <li>For acronyms, use <code>&lt;abbr&gt;</code> even if pronounced as a word</li>
+                  </ul>
+              </div>
+
+              <div class="alert">
+                  <p><strong>Pro Tip:</strong> For common abbreviations (like "HTML"), you might omit the <code>&lt;abbr&gt;</code> tag after the first occurrence on a page.</p>
+              </div>
+
+              <a href="#top" class="cta-button">Back to Top</a>
+          </article> -->
+
+          <div class="up-next">
+            <h2 class="up-next-title">Up Next:</h2>
+            <h3><a href="404.html"><code>&lt;address&gt;</code></a></h3>
+        </div>
+      </div>
+  </section>
+
 
   <!-- Contact Page -->
   <section class="article-page" id="contact">
@@ -1639,7 +1237,7 @@ mark.animate {
         <a href="#contact">Contact</a>
         <!--<a href="#">Privacy Policy</a>-->
       </div>
-      <p class="copyright">&copy; 2023 SemanticHTML Blog. All rights reserved.</p>
+      <p class="copyright">&copy; 2025 30 Underrated HTML Elements Explained | Semantic Web Blog. All rights reserved.</p>
     </div>
   </footer>
 
@@ -1647,131 +1245,6 @@ mark.animate {
   <button class="back-to-top" aria-label="Back to top">↑</button>
 
   <!-- JavaScript -->
-  <script>
-    // Theme Toggle
-    const themeToggle = document.querySelector('.theme-toggle');
-    const mobileThemeToggle = document.querySelector('.mobile-theme-toggle');
-    
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-    }
-    
-    themeToggle.addEventListener('click', toggleTheme);
-    mobileThemeToggle.addEventListener('click', toggleTheme);
-    
-    // Check for saved theme preference
-    if (localStorage.getItem('darkMode') === 'true') {
-      document.body.classList.add('dark-mode');
-    }
-    
-    // Navigation
-    function showArticle(articleId) {
-      // Hide all article pages and contact
-      document.querySelectorAll('.article-page').forEach(page => {
-        page.style.display = 'none';
-      });
-      
-      // Show requested article
-      const target = document.querySelector(articleId);
-      if (target) {
-        target.style.display = 'block';
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-    
-    // Set up article navigation
-    document.querySelectorAll('a[href^="#article-"]').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        showArticle(link.getAttribute('href'));
-      });
-    });
-    
-    // Contact page navigation
-    document.querySelectorAll('a[href="#contact"]').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        showArticle('#contact');
-      });
-    });
-    
-    // Back to articles
-    document.querySelectorAll('a[href="#articles"]').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.querySelector('#articles').scrollIntoView({ behavior: 'smooth' });
-        document.querySelectorAll('.article-page').forEach(page => {
-          page.style.display = 'none';
-        });
-      });
-    });
-    
-    // Back to top button
-    const backToTopButton = document.querySelector('.back-to-top');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.add('visible');
-      } else {
-        backToTopButton.classList.remove('visible');
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-    
-    // Form Submission
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you for your message! We will get back to you soon.');
-      contactForm.reset();
-    });
-    
-    // Enhanced Form Handling
-  document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-    const newsletter = document.getElementById('newsletter').checked;
-    
-    // Simple validation
-    if (!name || !email || !message) {
-      alert('Please fill in all required fields');
-      return;
-    }
-    
-    // In a real app, you would send this data to a server
-    console.log('Form submitted:', { name, email, subject, message, newsletter });
-    
-    // Show success message
-    const successMessage = document.createElement('div');
-    successMessage.className = 'alert';
-    successMessage.innerHTML = `
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-      </svg>
-      <p>Thank you for your message! We'll get back to you soon.</p>
-    `;
-    
-    this.parentNode.insertBefore(successMessage, this.nextSibling);
-    this.reset();
-    
-    // Scroll to success message
-    setTimeout(() => {
-      successMessage.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  });
-  </script>
+  <script src="style.js"></script>
 </body>
 </html>
