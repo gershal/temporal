@@ -264,19 +264,19 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
 
-    h3 {
-        border: 2px solid var(--primary);
-        border-radius: 0.5rem;
-        padding: .5rem;
-        cursor:pointer;
-        background-color: var(--primary);
-    }
+.up-next h3 {
+    border: 2px solid var(--primary);
+    border-radius: 0.5rem;
+    padding: .5rem;
+    cursor:pointer;
+    background-color: var(--primary);
+}
     
-    a {
-        color: var(--light);
-        text-decoration: none;
-    }
+.up-next a {
+    color: var(--light);
+    text-decoration: none;
 }
 
 .up-next-title {
