@@ -152,6 +152,62 @@
             </a>
         </article>
 
+        <!-- Article 9 -->
+        <article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">Author's Corner: Semantically Defining Contact Info with &lt;address&gt;</h3>
+            <p class="article-excerpt">Learn how to semantically present contact information using the &lt;address&gt; tag for better structure and SEO.</p>
+            <a href="#article-address" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 10 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">Machine-Readable Magic: Connecting Content with &lt;data&gt;</h3>
+            <p class="article-excerpt">Explore the &lt;data&gt; element to embed machine-readable values while keeping human-friendly text visible.</p>
+            <a href="#article-data" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 11 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">Define Your Terms: The Importance of the &lt;dfn&gt; Tag </h3>
+            <p class="article-excerpt">Understand how to define terms in your content with the &lt;dfn&gt; tag to improve clarity and accessibility.</p>
+            <a href="#article-dfn" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
+        <!-- Article 12 -->
+        <!--<article class="article-card">
+          <div class="article-content">
+            <h3 class="article-title">Keyboard Cues: Styling User Input with &lt;kbd&gt;</h3>
+            <p class="article-excerpt">Discover how to mark up user input or keyboard commands using the <kbd> tag in technical documentation.</p>
+            <a href="#article-kbd" class="read-more">
+              Read more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </article>-->
+
         
       </div>
     </div>
@@ -884,12 +940,362 @@ abbr:hover::after {
               <a href="#top" class="cta-button">Back to Top</a>
           </article>
 
-          <div class="up-next">
+          <!--<div class="up-next">
             <h2 class="up-next-title">Up Next:</h2>
             <h3><a href="404.html"><code>&lt;address&gt;</code></a></h3>
+        </div>-->
+
+        <!-- Article Page for <address> -->
+    <section class="article-page" id="article-address">
+      <div class="container">
+        <article class="article-body">
+          <header class="article-header">
+            <h1>The &lt;address&gt; Tag: Contact Information Made Semantic</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-09">May 09, 2025</time></div>
+          </header>
+
+          <p>The <code>&lt;address&gt;</code> tag gives proper semantic meaning to contact information, whether for a person or an organization. Every voice on the web has a source, a point of contact. The <code>&lt;address&gt;</code> tag is the humble dwelling for this vital information.</p>
+          <p>Picture it at the footer of a website for a local business, displaying their physical address and email, or within an article attributing the author with their social media links. The browser often styles it with a gentle italic, a visual cue.</p>
+          <p>More importantly, assistive technologies recognize it as key contact information, bridging the digital content with the real people behind it.</p>
+
+          <div class="live-example">
+            <div class="example-title">Live Example:</div>
+              <address style="font-style: normal;">
+                Written by <a href="mailto:zerofivejuly@outlook.com">John Doe</a><br>
+                Visit us at:<br>
+                Example.com<br>
+                Box 564, Disneyland<br>
+                USA
+              </address>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;address&gt; Matters:</h3>
+                <ul>
+                  <li><strong>Semantic Meaning:</strong> Clearly identifies contact information</li>
+                  <li><strong>Accessibility:</strong> Screen readers understand the content type</li>
+                  <li><strong>Microdata:</strong> Helps search engines parse contact details</li>
+                  <li><strong>Styling:</strong> Typically renders with default italics</li>
+                </ul>
+            </div>
+
+            <h2>Best Practices</h2>
+            <div class="code-block">
+              <pre><code>&lt;address&gt;
+&lt;a href="mailto:contact@company.com"&gt;contact@company.com&lt;/a&gt;&lt;br&gt;
+&lt;a href="tel:+15551234567"&gt;(555) 123-4567&lt;/a&gt;&lt;br&gt;
+123 Business Ave, Suite 100&lt;br&gt;
+San Francisco, CA 94107
+&lt;/address&gt;</code></pre>
+            </div>
+
+            <!-- <h2>Advanced Implementations</h2>
+              
+            <h3>Combining with Schema.org</h3>
+            <div class="code-block">
+              <pre><code>&lt;address itemscope itemtype="http://schema.org/Organization"&gt;
+&lt;span itemprop="name"&gt;Acme Corp&lt;/span&gt;&lt;br&gt;
+&lt;span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"&gt;
+  &lt;span itemprop="streetAddress"&gt;123 Main St&lt;/span&gt;&lt;br&gt;
+  &lt;span itemprop="addressLocality"&gt;Anytown&lt;/span&gt;,
+  &lt;span itemprop="addressRegion"&gt;CA&lt;/span&gt;
+  &lt;span itemprop="postalCode"&gt;12345&lt;/span&gt;
+&lt;/span&gt;&lt;br&gt;
+Phone: &lt;span itemprop="telephone"&gt;(555) 123-4567&lt;/span&gt;
+&lt;/address&gt;</code></pre>
+            </div> -->
+              
+            <h3>Edge Cases</h3>
+            <div class="alert warning">
+              <p><strong>Common Misconceptions:</strong></p>
+              <ul>
+                <li>Not just for postal addresses - can be any contact information</li>
+                <li>Should not be used for arbitrary addresses (use <code>&lt;p&gt;</code> instead)</li>
+                <li>Can contain links, line breaks, and other inline elements</li>
+              </ul>
+            </div>
+
+            <div class="alert">
+              <p><strong>Pro Tip:</strong> Use the <code>&lt;address&gt;</code> tag in your footer for the website's contact information.</p>
+            </div>
+
+            <a href="#top" class="cta-button">Back to Top</a>
+        </article>
+
+        <div class="up-next">
+          <h2 class="up-next-title">Up Next:</h2>
+          <h3><a href="404.html"><code>&lt;data&gt;</code></a></h3>
         </div>
       </div>
-  </section>
+    </section>
+
+  <!-- Article Page for <data> -->
+  <!-- SATURDAY 10 MAY 25 -->
+  <!--<section class="article-page" id="article-data">
+      <div class="container">
+          <article class="article-body">
+              <header class="article-header">
+                  <h1>The &lt;data&gt; Tag: Bridging Human and Machine Readable Data</h1>
+
+                  <div class="article-meta">Published on <time datetime="2025-05-10">May 10, 2025</time></div>
+              </header>
+
+              <p>In the bustling global digital marketplace, from e-commerce hubs in Shanghai to startups in São Paulo, the &lt;data&gt; tag serves as a Rosetta Stone, translating human-readable content into machine-readable values.</p>
+              <p>Often overlooked for generic &lt;span&gt; tags, &lt;data&gt; embeds product IDs or standardized prices like “Olive Oil (1L): $10” with a value of “SKU12345”, enabling seamless data processing.</p>
+              <p>This semantic bridge empowers platforms worldwide to compare products, enhancing accessibility and interconnectivity in the web's data-driven ecosystem.</p>
+
+              <div class="live-example">
+                  <div class="example-title">Live Example:</div>
+                  <ul>
+                      <li><data value="978-3-16-148410-0">The Great Novel</data></li>
+                      <li><data value="978-1-23-456789-0">Web Development Guide</data></li>
+                  </ul>
+
+                  
+              </div>
+
+              <div class="benefits">
+                  <h3>Why &lt;data&gt; Matters:</h3>
+                  <ul>
+                      <li><strong>Data Processing:</strong> Provides machine-readable values</li>
+                      <li><strong>Semantics:</strong> Clearly marks data values</li>
+                      <li><strong>Microdata:</strong> Works well with structured data</li>
+                      <li><strong>Future-Proof:</strong> Prepares content for data extraction</li>
+                  </ul>
+              </div>
+
+              <h2>Best Practices</h2>
+              <div class="code-block">
+                  <pre><code>&lt;ul&gt;
+&lt;li&gt;&lt;data value="42"&gt;Forty-two&lt;/data&gt;&lt;/li&gt;
+&lt;li&gt;&lt;data value="2023-05-17"&gt;Today&lt;/data&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Product ID: &lt;data value="PRD-12345"&gt;12345&lt;/data&gt;&lt;/p&gt;</code></pre>
+              </div>-->
+
+              <!-- <h2>Advanced Implementations</h2>
+              
+              <h3>Combining with JavaScript</h3>
+              <div class="code-block">
+                  <pre><code>&lt;ul id="products"&gt;
+&lt;li&gt;&lt;data value="100"&gt;$100&lt;/data&gt; Product A&lt;/li&gt;
+&lt;li&gt;&lt;data value="150"&gt;$150&lt;/data&gt; Product B&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script&gt;
+const items = document.querySelectorAll('#products data');
+let total = 0;
+
+items.forEach(item => {
+  total += Number(item.value);
+});
+
+console.log(`Total value: $${total}`);
+&lt;/script&gt;</code></pre>
+              </div> -->
+              
+              <!--<h3>Edge Cases</h3>
+              <div class="alert warning">
+                  <p><strong>Important Notes:</strong></p>
+                  <ul>
+                      <li>Not to be confused with <code>&lt;time&gt;</code> for dates/times</li>
+                      <li>The value attribute must be present</li>
+                      <li>Use <code>&lt;meta&gt;</code> for data not visible to users</li>
+                  </ul>
+              </div>
+
+              <div class="alert">
+                  <p><strong>Pro Tip:</strong> Use <code>&lt;data&gt;</code> when you need to maintain both human-readable and machine-readable versions of the same information.</p>
+              </div>
+
+              <a href="#top" class="cta-button">Back to Top</a>
+          </article>-->
+
+          <!-- <div class="up-next">
+            <h2 class="up-next-title">Up Next:</h2>
+            <h3><a href="404.html"><code>&lt;dfn&gt;</code></a></h3>
+          </div> -->
+      <!--</div>
+  </section>-->
+
+  <!-- Article Page for <dfn> -->
+  <!-- SUNDAY 11 MAY 25 -->
+  <!--<section class="article-page" id="article-dfn">
+      <div class="container">
+          <article class="article-body">
+              <header class="article-header">
+                  <h1>The &lt;dfn&gt; Tag: Defining Terms with Clarity</h1>
+                  <div class="article-meta">Published on <time datetime="2025-05-11">May 11, 2025</time></div>
+              </header>
+
+              <p>In the web's ever-growing lexicon, from AI jargon in Tokyo to fintech terms in London, clarity is paramount.</p>
+              <p>The &lt;dfn&gt; tag, a lighthouse of definition, illuminates the first use of terms like “Blockchain” or “Quantum Computing,” often paired with a title attribute explanation.</p> 
+              <p>Frequently overlooked for plain text, &lt;dfn&gt; ensures accessible, semantic clarity for global readers, anchoring understanding in technical content and inviting all to “define our terms together.”</p>
+
+              <div class="live-example">
+                  <div class="example-title">Live Example:</div>
+                  <p>
+                      A <dfn style="font-style: italic; font-weight: bold;">blog</dfn> is a discussion or informational website published on the web.
+                  </p>
+                  <p>The <dfn title="Decentralized digital ledger"><span style="font-style: italic; font-weight: bold">Blockchain</span></dfn> enables secure transactions.</p>
+              </div>
+
+              <div class="benefits">
+                  <h3>Why &lt;dfn&gt; Matters:</h3>
+                  <ul>
+                      <li><strong>Semantic Meaning:</strong> Clearly identifies definitions</li>
+                      <li><strong>Accessibility:</strong> Screen readers can identify definitions</li>
+                      <li><strong>Documentation:</strong> Perfect for technical writing</li>
+                      <li><strong>Styling:</strong> Typically renders with default italics</li>
+                  </ul>
+              </div>
+
+              <h2>Best Practices</h2>
+              <div class="code-block">
+                  <pre><code>&lt;p&gt;
+&lt;dfn&gt;HTML&lt;/dfn&gt;, HyperText Markup Language, 
+is the standard markup language for web pages.
+&lt;/p&gt;
+
+&lt;p&gt;
+The &lt;dfn id="css-def"&gt;CSS&lt;/dfn&gt; (Cascading Style Sheets) 
+describes how HTML elements are displayed.
+&lt;/p&gt;
+&lt;a href="#css-def"&gt;Learn more about CSS&lt;/a&gt;</code></pre>
+              </div>-->
+
+              <!-- <h2>Advanced Implementations</h2>
+              
+              <h3>Creating a Glossary</h3>
+              <div class="code-block">
+                  <pre><code>&lt;dl&gt;
+&lt;dt&gt;&lt;dfn id="ajax"&gt;AJAX&lt;/dfn&gt;&lt;/dt&gt;
+&lt;dd&gt;Asynchronous JavaScript and XML, a web development technique.&lt;/dd&gt;
+
+&lt;dt&gt;&lt;dfn id="api"&gt;API&lt;/dfn&gt;&lt;/dt&gt;
+&lt;dd&gt;Application Programming Interface, a software intermediary.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Learn more about &lt;a href="#api"&gt;APIs&lt;/a&gt; in our documentation.&lt;/p&gt;</code></pre>
+              </div> -->
+              
+              <!--<h3>Edge Cases</h3>
+              <div class="alert warning">
+                  <p><strong>Usage Guidelines:</strong></p>
+                  <ul>
+                      <li>Only use for the defining instance of a term</li>
+                      <li>The term can be wrapped in <code>&lt;abbr&gt;</code> if it's an abbreviation</li>
+                      <li>Consider adding an id for linking to the definition</li>
+                  </ul>
+              </div>
+
+              <div class="alert">
+                  <p><strong>Pro Tip:</strong> Combine <code>&lt;dfn&gt;</code> with <code>&lt;abbr&gt;</code> when defining abbreviations for maximum clarity.</p>
+              </div>
+
+              <a href="#top" class="cta-button">Back to Top</a>
+          </article>-->
+
+          <!-- <div class="up-next">
+            <h2 class="up-next-title">Up Next:</h2>
+            <h3><a href="404.html"><code>&lt;kbd&gt;</code></a></h3>
+          </div> -->
+      <!--</div>
+  </section>-->
+
+  <!-- Article Page for <kbd> -->
+  <!-- MONDAY 12 MAY 25 -->
+  <!--<section class="article-page" id="article-kbd">
+      <div class="container">
+          <article class="article-body">
+              <header class="article-header">
+                  <h1>The &lt;kbd&gt; Tag: Keyboard Input Made Visible</h1>
+                  <div class="article-meta">Published on <time datetime="2025-05-12">May 12, 2025</time></div>
+              </header>
+
+              <p>In the global landscape of technical tutorials and documentation, from Silicon Valley to Bangalore, guiding developers and designers through software navigation is essential.</p>
+              <p>The &lt;kbd&gt; tag, a beacon of keystroke clarity, visually anchors commands like &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt; for copying or &lt;kbd&gt;npm install&lt;/kbd&gt; for package setup, rendered in crisp monospace.</p>
+              <p>Often overlooked for plain text, &lt;kbd&gt; bridges instruction and execution, ensuring accessible, semantic cues for coders worldwide, enhancing tutorials with precision.</p>
+
+              <div class="live-example">
+                  <div class="example-title">Live Example:</div>
+                  <p>
+                      Press <kbd style="background: #eee; border-radius: 3px; border: 1px solid #b4b4b4; box-shadow: 0 1px 1px rgba(0,0,0,0.2); padding: 2px 4px;">Ctrl</kbd> + <kbd style="background: #eee; border-radius: 3px; border: 1px solid #b4b4b4; box-shadow: 0 1px 1px rgba(0,0,0,0.2); padding: 2px 4px;">S</kbd> to save your document.
+                  </p>
+                  <p>
+                      Press <kbd style="background: #eee; border-radius: 3px; border: 1px solid #b4b4b4; box-shadow: 0 1px 1px rgba(0,0,0,0.2); padding: 2px 4px;">Ctrl</kbd> + <kbd style="background: #eee; border-radius: 3px; border: 1px solid #b4b4b4; box-shadow: 0 1px 1px rgba(0,0,0,0.2); padding: 2px 4px;">C</kbd> to copy selected items to clipboard.
+                  </p>
+              </div>
+
+              <div class="benefits">
+                  <h3>Why &lt;kbd&gt; Matters:</h3>
+                  <ul>
+                      <li><strong>Clarity:</strong> Clearly distinguishes keyboard commands</li>
+                      <li><strong>Consistency:</strong> Standard way to mark user input</li>
+                      <li><strong>Accessibility:</strong> Screen readers can identify keyboard input</li>
+                      <li><strong>Styling:</strong> Typically renders with monospace font</li>
+                  </ul>
+              </div>
+
+              <h2>Best Practices</h2>
+              <div class="code-block">
+                  <pre><code>&lt;p&gt;To copy text, press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;.&lt;/p&gt;
+
+&lt;p&gt;In Linux, you can force quit with &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;Esc&lt;/kbd&gt;.&lt;/p&gt;
+
+&lt;p&gt;Type &lt;kbd&gt;exit&lt;/kbd&gt; to close the terminal.&lt;/p&gt;</code></pre>
+              </div>-->
+
+              <!-- <h2>Advanced Implementations</h2>
+              
+              <h3>Styling Keyboard Keys</h3>
+              <div class="code-block">
+                  <pre><code>&lt;style&gt;
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  display: inline-block;
+  font-family: monospace;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+kbd kbd {
+  padding: 0;
+  box-shadow: none;
+}
+&lt;/style&gt;
+
+&lt;p&gt;Press &lt;kbd&gt;&lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;F3&lt;/kbd&gt;&lt;/kbd&gt; for advanced search.&lt;/p&gt;</code></pre>
+              </div> -->
+              
+              <!--<h3>Edge Cases</h3>
+              <div class="alert warning">
+                  <p><strong>Usage Guidelines:</strong></p>
+                  <ul>
+                      <li>Use for actual keyboard input, not conceptual input</li>
+                      <li>Can be nested for complex key combinations</li>
+                      <li>Not for arbitrary monospace text (use <code>&lt;code&gt;</code> instead)</li>
+                  </ul>
+              </div>
+
+              <div class="alert">
+                  <p><strong>Pro Tip:</strong> Combine <code>&lt;kbd&gt;</code> with <code>&lt;code&gt;</code> when showing commands that should be typed verbatim.</p>
+              </div>
+
+              <a href="#top" class="cta-button">Back to Top</a>
+          </article>-->
+
+          <!-- <div class="up-next">
+            <h2 class="up-next-title">Up Next:</h2>
+            <h3><a href="404.html"><code>&lt;meter&gt;</code></a></h3>
+          </div> -->
+      <!--</div>
+  </section>-->
 
 
   <!-- Contact Page -->
