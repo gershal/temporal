@@ -307,6 +307,7 @@ footer {
     background-color: var(--dark);
     padding: 3rem 0;
     text-align: center;
+    color: var(--light);
 }
 
 .footer-links {
