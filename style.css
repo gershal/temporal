@@ -231,6 +231,16 @@ nav {
     margin: 1.5rem 0;
 }
 
+.live-example kbd {
+    background: var(--light);
+    color: var(--dark);
+    border-radius: 3px;
+    border: 1px solid var(--gray);
+    box-shadow: 0 1px 1px var(--dark);
+    padding: 3px 5px;
+    outline: none;
+}
+
 .example-title {
     font-weight: 600;
     margin-bottom: 1rem;
