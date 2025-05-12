@@ -208,6 +208,34 @@
           </div>
         </article>
 
+        <!-- Article 13 -->
+    <!--<article class="article-card">
+    <div class="article-content">
+      <h3 class="article-title">Measuring Up: Visualizing Data with the &lt;meter&gt; Tag</h3>
+      <p class="article-excerpt">Use the &lt;meter&gt; element to represent scalar measurements within a known range, such as progress or scores.</p>
+      <a href="#article-meter" class="read-more">
+        Read more
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </article>-->
+
+  <!-- Article 14 -->
+  <!--<article class="article-card">
+    <div class="article-content">
+      <h3 class="article-title">The Pulse of Results: &lt;output&gt; Powers Interactivity</h3>
+      <p class="article-excerpt">Learn to display dynamic calculation results or user-driven values in real time with the &lt;output&gt; tag.</p>
+      <a href="#article-output" class="read-more">
+        Read more
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </article>-->
+
         
       </div>
     </div>
@@ -1297,6 +1325,191 @@ kbd kbd {
           </div>
       </div>
   </section>
+
+  <!-- Article Page for <meter> -->
+    <!-- <section class="article-page" id="article-meter">
+        <div class="container">
+            <article class="article-body">
+                <header class="article-header">
+                    <h1>The &lt;meter&gt; Tag: Visualizing Scalar Measurements</h1>
+                    <div class="article-meta">Published on <time datetime="2025-05-13">May 13, 2025</time></div>
+                </header> -->
+  
+                <!-- <p>Words alone can struggle to capture a value's place within a range, whether it's your phone's battery life, WiFi signal strength across locations, or the progress of an online form. The &lt;meter&gt; tag emerges as a compelling visual narrator, leveraging attributes like value, min, max, and optionally low and high to deliver clarity.</p>
+                <p>For instance, a website might showcase a vibrant green &lt;meter&gt; bar steadily filling to reflect your data download's progress, syncing seamlessly with the process to provide an instant, intuitive understanding of the status.</p>
+  
+                <div class="live-example">
+                    <div class="example-title">Live Example:</div>
+                    <div>
+                        Signal Strength: <meter value="65" min="0" max="100" style="width: 200px; height: 20px;">65%</meter> 65%
+                        <p></p>
+                        Signal Quality: <meter class="bad" value="35" min="0" max="100" style="width: 200px; height: 20px;">35%</meter> 35%
+                    </div>
+                </div>
+  
+                <div class="benefits">
+                    <h3>Why &lt;meter&gt; Matters:</h3>
+                    <ul>
+                        <li><strong>Semantics:</strong> Clearly defines a measurement</li>
+                        <li><strong>Accessibility:</strong> Screen readers can interpret the value</li>
+                        <li><strong>Visualization:</strong> Browser provides native rendering</li>
+                        <li><strong>Flexibility:</strong> Works with different value ranges</li>
+                    </ul>
+                </div>
+  
+                <h2>Best Practices</h2>
+                <div class="code-block">
+                    <pre><code>&lt;!-- Simple percentage --&gt;
+  &lt;meter value="0.75"&gt;75%&lt;/meter&gt;
+  
+  &lt;!-- With min/max --&gt;
+  &lt;meter value="8" min="0" max="10"&gt;8 out of 10&lt;/meter&gt;
+  
+  &lt;!-- With optimal range --&gt;
+  &lt;meter value="85" min="0" max="100" low="30" high="80" optimum="50"&gt;
+  Moderate
+  &lt;/meter&gt;</code></pre>
+                </div> -->
+  
+                <!-- <h2>Advanced Implementations</h2>
+                
+                <h3>Dynamic Meter Updates</h3>
+                <div class="code-block">
+                    <pre><code>&lt;meter id="storage-meter" value="35" min="0" max="100"&gt;&lt;/meter&gt;
+  &lt;button onclick="increaseStorage()"&gt;Add 10GB&lt;/button&gt;
+  
+  &lt;script&gt;
+  function increaseStorage() {
+    const meter = document.getElementById('storage-meter');
+    meter.value += 10;
+    
+    if (meter.value > 80) {
+      meter.high = meter.value - 5;
+    }
+  }
+  &lt;/script&gt;</code></pre>
+                </div> -->
+                
+                <!-- <h3>Edge Cases</h3>
+                <div class="alert warning">
+                    <p><strong>Important Notes:</strong></p>
+                    <ul>
+                        <li>Not for progress bars (use <code>&lt;progress&gt;</code> instead)</li>
+                        <li>Should represent a scalar measurement, not an arbitrary value</li>
+                        <li>Always include fallback text between the tags</li>
+                    </ul>
+                </div> -->
+  
+                <!-- <div class="alert">
+                    <p><strong>Pro Tip:</strong> Use the <code>low</code>, <code>high</code>, and <code>optimum</code> attributes to create visual indicators for your measurement ranges.</p>
+                </div>
+  
+                <a href="#articles" class="cta-button">Back to Articles</a>
+            </article> -->
+
+            <!-- <div class="up-next">
+            <h2 class="up-next-title">Up Next:</h2>
+            <h3><a href="404.html"><code>&lt;output&gt;</code></a></h3>
+          </div> -->
+        <!-- </div>
+    </section> -->
+  
+    <!-- Article Page for <output> -->
+    <section class="article-page" id="article-output">
+        <div class="container">
+            <article class="article-body">
+                <header class="article-header">
+                    <h1>The &lt;output&gt; Tag: Displaying Calculation Results</h1>
+                    <div class="article-meta">Published on <time datetime="2025-05-14">May 14, 2025</time></div>
+                </header>
+  
+                <p>In the ever-evolving landscape of web applications, where user interactions drive real-time responses, such as converting meters to feet, currency converter transforming Naira to USD or other calculator crunching numbers; the &lt;output&gt; tag stands as a vital messenger.</p>
+                <p>It prominently showcases the results of calculations or user inputs, ensuring clarity and engagement. By leveraging the "for" attribute, &lt;output&gt; can seamlessly connect to the input elements that shape its content, forging a transparent and intuitive chain of interaction.</p>
+                <p>The &lt;output&gt; tag is the heartbeat of the interactive web, delivering essential feedback that enriches and completes the user's digital experience.</p>
+  
+                <div class="live-example">
+                    <div class="example-title">Live Example:</div>
+                    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                        <input type="number" id="a" value="10"> +
+                        <input type="number" id="b" value="20"> =
+                        <output name="result" for="a b" style="font-weight: bold;">30</output>
+                    </form>
+                    <form oninput="result.value=parseInt(c.value)*parseInt(d.value)">
+                        <input type="number" id="c" value="10"> *
+                        <input type="number" id="d" value="20"> =
+                        <output name="result" for="c d" style="font-weight: bold;">200</output>
+                    </form>
+                </div>
+  
+                <div class="benefits">
+                    <h3>Why &lt;output&gt; Matters:</h3>
+                    <ul>
+                        <li><strong>Semantics:</strong> Clearly identifies calculation results</li>
+                        <li><strong>Accessibility:</strong> Screen readers understand the purpose</li>
+                        <li><strong>Connection:</strong> Can be associated with input elements</li>
+                        <li><strong>Flexibility:</strong> Works with JavaScript calculations</li>
+                    </ul>
+                </div>
+  
+                <h2>Best Practices</h2>
+                <div class="code-block">
+                    <pre><code>&lt;form oninput="price.value = quantity.value * unitprice.value"&gt;
+  &lt;input type="number" id="quantity" value="1"&gt; x
+  &lt;input type="number" id="unitprice" value="10"&gt; =
+  &lt;output name="price" for="quantity unitprice"&gt;10&lt;/output&gt;
+  &lt;/form&gt;
+  
+  &lt;div&gt;
+  Calculation result: &lt;output id="calc-result"&gt;0&lt;/output&gt;
+  &lt;/div&gt;</code></pre>
+                </div>
+  
+                <!-- <h2>Advanced Implementations</h2>
+                
+                <h3>JavaScript Integration</h3>
+                <div class="code-block">
+                    <pre><code>&lt;form id="mortgage-form"&gt;
+  &lt;!-- Input fields --&gt;
+  &lt;output name="payment"&gt;&lt;/output&gt;
+  &lt;/form&gt;
+  
+  &lt;script&gt;
+  document.getElementById('mortgage-form').addEventListener('input', function() {
+    const principal = parseFloat(document.getElementById('principal').value);
+    const rate = parseFloat(document.getElementById('rate').value) / 100 / 12;
+    const term = parseFloat(document.getElementById('term').value) * 12;
+    
+    const payment = principal * rate * Math.pow(1 + rate, term) / 
+                   (Math.pow(1 + rate, term) - 1);
+    
+    document.querySelector('output[name="payment"]').value = payment.toFixed(2);
+  });
+  &lt;/script&gt;</code></pre>
+                </div> -->
+                
+                <h3>Edge Cases</h3>
+                <div class="alert warning">
+                    <p><strong>Usage Guidelines:</strong></p>
+                    <ul>
+                        <li>Not a replacement for all dynamic content, only for results</li>
+                        <li>Use the <code>for</code> attribute to associate with inputs</li>
+                        <li>Can be used outside forms with JavaScript</li>
+                    </ul>
+                </div>
+  
+                <div class="alert">
+                    <p><strong>Pro Tip:</strong> Combine <code>&lt;output&gt;</code> with <code>&lt;label&gt;</code> for better accessibility when displaying results.</p>
+                </div>
+  
+                <a href="#articles" class="cta-button">Back to Articles</a>
+            </article>
+
+            <!-- <div class="up-next">
+            <h2 class="up-next-title">Up Next:</h2>
+            <h3><a href="404.html"><code>&lt;embed&gt;</code></a></h3>
+          </div> -->
+        </div>
+    </section>
 
 
   <!-- Contact Page -->
