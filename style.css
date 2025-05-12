@@ -241,6 +241,10 @@ nav {
     outline: none;
 }
 
+.bad::-webkit-meter-optimum-value {
+  background: red; /* Red progress bar for values in the optimum range */
+}
+
 .example-title {
     font-weight: 600;
     margin-bottom: 1rem;
