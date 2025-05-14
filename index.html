@@ -1736,6 +1736,347 @@ kbd kbd {
         </div>
     </section>
 
+    <!-- Article Page for <object> -->
+    <!-- <section class="article-page" id="article-object">
+      <div class="container">
+        <article class="article-body">
+          <header class="article-header">
+            <h1>The &lt;object&gt; Tag: Your Forgotten Embedding Powerhouse</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-15">May 15, 2025</time></div>
+          </header>
+
+          <p>Imagine you're building a website and want to showcase a video, a PDF or even an interactive game. HTML offers two trusty tools for embedding such content: the &lt;embed&gt; tag and the &lt;object&gt; tag.</p>
+          <p>While &lt;embed&gt; is quick and easy, the &lt;object&gt; tag provides a more robust, flexible solution for embedding content in web pages as it just sits patiently in HTML's toolbox.</p> 
+          <p>Its ability to handle nested fallbacks makes it particularly valuable for creating accessible, future-proof content that works across different browsers and devices.</p>
+          <p>Next time you need to embed content, try the &lt;object&gt; tag, you never know, it might just become your new favorite tool!</p> -->
+
+          <!--=====NOT NEEDED YET========= 
+          Imagine you’re building a website and want to showcase a video, a PDF, or even an interactive game. HTML offers two trusty tools for embedding such content: the <embed> tag and the <object> tag. While both can get the job done, they’re like two different superheroes in HTML’s toolbox, each with unique strengths. Let’s explore why <object> often steals the show for creating accessible, future-proof, and versatile web content!
+ -->
+          <!-- <div class="live-example">
+            <div class="example-title">Live Example</div>
+              <div class="example-container" style="border: 1px dashed var(--primary); padding: 1rem;">
+                <object
+                type="video/mp4" 
+                data="/assets/2.mp4" 
+                width="100%" 
+                height="500px">
+                  <param name="autoplay" value="true">
+                  <param name="loop" value="true">
+                    Your browser does not support this video.
+                </object>
+                <figcaption>Video by Claudiu Ciobanu from Pexels</figcaption>
+              </div>
+          </div>
+
+         <div class="benefits">
+            <h3>Why &lt;object&gt; Matters:</h3>
+            <ul>
+              <li><strong>Standard Compliance:</strong> Fully HTML5 compliant (unlike embed's legacy status)</li>
+              <li><strong>Nested Fallbacks:</strong> Multiple levels of graceful degradation</li>
+              <li><strong>Parameter Support:</strong> Configure content with &lt;param&gt; elements</li>
+              <li><strong>Universal Embedding:</strong> Handles PDFs, SVGs, HTML, Flash (legacy), and more</li>
+              <li><strong>Better Events:</strong> Reliable load/error event handling</li>
+            </ul>
+          </div>
+
+          <h2>Best Practices</h2>
+          <div class="code-block">
+            <pre><code>&lt;!-- Basic PDF Embed --&gt;
+    &lt;object data="report.pdf" type="application/pdf" width="800" height="600"&gt;
+      &lt;p&gt;Download the &lt;a href="report.pdf"&gt;PDF report&lt;/a&gt;.&lt;/p&gt;
+    &lt;/object&gt;
+
+    &lt;!-- SVG with Parameters --&gt;
+    &lt;object data="chart.svg" type="image/svg+xml"&gt;
+      &lt;param name="showGrid" value="true"&gt;
+      &lt;param name="animationSpeed" value="2"&gt;
+      &lt;img src="chart-static.png" alt="Data chart"&gt;
+    &lt;/object&gt;</code></pre>
+          </div> -->
+
+          <!-- <div class="attribute-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Attribute</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>data</code></td>
+                  <td>URL of the object to embed</td>
+                </tr>
+                <tr>
+                  <td><code>type</code></td>
+                  <td>MIME type of the embedded content</td>
+                </tr>
+                <tr>
+                  <td><code>width</code>/<code>height</code></td>
+                  <td>Dimensions of the object</td>
+                </tr>
+                <tr>
+                  <td><code>form</code></td>
+                  <td>Associates the object with a form</td>
+                </tr>
+              </tbody>
+            </table>
+          </div> -->
+
+          <!-- <h2>Advanced Implementations</h2>
+          
+          <h3>1. Interactive SVG Dashboard</h3>
+          <div class="code-block">
+            <pre><code>&lt;object id="svg-dashboard" data="dashboard.svg" type="image/svg+xml"&gt;
+      &lt;img src="dashboard-fallback.png" alt="Dashboard overview"&gt;
+    &lt;/object&gt;
+
+    &lt;script&gt;
+      document.getElementById('svg-dashboard').addEventListener('load', function() {
+        const svgDoc = this.getSVGDocument();
+        // Add interactivity to SVG elements here
+        const elements = svgDoc.querySelectorAll('.interactive');
+        elements.forEach(el => {
+          el.addEventListener('click', handleInteraction);
+        });
+        
+        function handleInteraction(e) {
+          console.log('Element clicked:', e.target);
+        }
+      });
+    &lt;/script&gt;</code></pre>
+          </div>
+      
+          <h3>2. PDF Viewer with Custom Controls</h3>
+          <div class="code-block">
+            <pre><code>&lt;div class="pdf-viewer"&gt;
+      &lt;object id="pdf-viewer" data="document.pdf" type="application/pdf"&gt;
+        &lt;div class="pdf-fallback"&gt;
+          &lt;a href="document.pdf" class="download-btn"&gt;Download PDF&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/object&gt;
+      &lt;div class="viewer-controls"&gt;
+        &lt;button onclick="zoomIn()"&gt;+ Zoom&lt;/button&gt;
+        &lt;button onclick="zoomOut()"&gt;- Zoom&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+      function zoomIn() {
+        const viewer = document.getElementById('pdf-viewer');
+        const currentWidth = parseInt(viewer.style.width) || 100;
+        viewer.style.width = `${currentWidth + 10}%`;
+      }
+      
+      function zoomOut() {
+        const viewer = document.getElementById('pdf-viewer');
+        const currentWidth = parseInt(viewer.style.width) || 100;
+        viewer.style.width = `${Math.max(50, currentWidth - 10)}%`;
+      }
+    &lt;/script&gt;</code></pre>
+          </div> -->
+
+          <!-- <h3>Edge Cases</h3>
+          <div class="alert warning">
+            <p><strong>When NOT to use &lt;object&gt;:</strong></p>
+            <ul>
+              <li>For simple media (use &lt;img&gt;, &lt;video&gt;, or &lt;audio&gt;)</li>
+              <li>When you need to embed entire web pages (use &lt;iframe&gt;)</li>
+              <li>For Flash content (obsolete technology)</li>
+            </ul>
+          </div>
+
+          <div class="alert">
+            <p><strong>Pro Tip:</strong> Combine &lt;object&gt; with the &lt;embed&gt; tag as a nested fallback for maximum compatibility.</p>
+          </div> -->
+
+          <!-- <h2>Browser Support Timeline</h2>
+          <div class="compatibility-chart">
+            <ul>
+              <li><strong>Chrome:</strong> Full support since version 1</li>
+              <li><strong>Firefox:</strong> Full support since version 1</li>
+              <li><strong>Safari:</strong> Full support since version 1.2</li>
+              <li><strong>Edge:</strong> Full support since version 12</li>
+              <li><strong>IE:</strong> Partial support since IE4 (with quirks)</li>
+            </ul>
+          </div> -->
+
+          <!-- <a href="#articles" class="cta-button">Back to Articles</a>
+        </article> -->
+
+        <!-- <div class="up-next">
+            <h2 class="up-next-title">Up Next:</h2>
+            <h3><a href="#article-iframe"><code>&lt;iframe&gt;</code></a></h3>
+          </div> -->
+        <!-- </div>
+      </section> -->
+
+      <!-- Article Page for <iframe> -->
+      <!-- <section class="article-page" id="article-iframe">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;iframe&gt; Tag: Your Window to External Content</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-16">May 16, 2025</time></div>
+            </header>
+            <p>Want to create a dashboard with live data visualizations from an external service or embed a dynamic form from another platform? Look no further than the &lt;iframe&gt; tag.</p>
+            <p>The &lt;iframe&gt; (inline frame) tag acts like a window within your website, seamlessly displaying content from another webpage, like YouTube videos, Google Maps or even a section of your own site.</p>
+            <p>Its isolated nature ensures third-party content loads securely without interfering with your main site's functionality or styling, making it ideal for modular, worry-free integrations.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example: Netlify</div>
+                <div class="iframe-container">
+                  <iframe 
+                    src="https://www.netlify.com/" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="true" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Netlify"
+                    aria-label="Netlify">
+                  </iframe>
+                </div>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;iframe&gt; Matters:</h3>
+              <ul>
+                <li><strong>Content Isolation:</strong> Runs in separate browsing context</li>
+                <li><strong>Security Sandbox:</strong> Controlled via sandbox attribute</li>
+                <li><strong>Embed Anything:</strong> Videos, maps, forms, even entire apps</li>
+                <li><strong>Lazy Loading:</strong> Supports loading="lazy" for performance</li>
+              </ul>
+            </div>
+
+            <h2>Essential Attributes</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Basic YouTube Embed --&gt;
+      &lt;iframe width="560" height="315" 
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              frameborder="0" 
+              allowfullscreen&gt;
+      &lt;/iframe&gt;
+
+      &lt;!-- Sandboxed Form --&gt;
+      &lt;iframe src="contact-form.html" 
+              sandbox="allow-forms allow-scripts" 
+              width="100%" 
+              height="500"&gt;
+      &lt;/iframe&gt;</code></pre>
+            </div> -->
+
+            <!-- <div class="attribute-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>src</code></td>
+                    <td>URL of the page to embed</td>
+                  </tr>
+                  <tr>
+                    <td><code>srcdoc</code></td>
+                    <td>Inline HTML to embed</td>
+                  </tr>
+                  <tr>
+                    <td><code>sandbox</code></td>
+                    <td>Security restrictions</td>
+                  </tr>
+                  <tr>
+                    <td><code>allow</code></td>
+                    <td>Feature policy controls</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> -->
+
+            <!-- <div class="alert warning">
+              <p><strong>Security Note:</strong> Always use &lt;sandbox&gt; attribute when embedding untrusted content and consider CSP frame-ancestors for protection against clickjacking.</p>
+            </div>
+
+            <a href="#articles" class="cta-button">Back to Articles</a>
+          </article> -->
+
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-picture">&lt;picture&gt;</a></h3>
+          </div> -->
+        <!-- </div>
+      </section> -->
+
+      <!-- Article Page for <picture> -->
+      <!-- <section class="article-page" id="article-picture">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;picture&gt; Tag: Responsive Images Done Right</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-17">May 17, 2025</time></div>
+            </header>
+
+            <p>In today's diverse digital landscape, serving the right image to the right device is paramount. The &lt;picture&gt; tag is your intelligent image delivery system, which ensures optimal visual experiences across various screen sizes and browser capabilities.
+            </p>
+            <p>It allows you to define multiple image sources with different resolutions, formats (like WebP for modern browsers), and even cropping or focal point adjustments for different breakpoints.</p>
+
+            <p>Just imagine the &lt;picture&gt; tag as the smart image butler, ready to serve the perfect image version based on device capabilities and screen size.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example: Photo by Francesco Ungaro from Pexels</div>
+              <picture>
+                <source media="(max-width: 600px)" srcset="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=600">
+                <source media="(max-width: 1000px)" srcset="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=1000">
+                <source srcset="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                <img src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Hot air balloon floating over a field" style="width: 100%;">
+              </picture>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;picture&gt; Matters:</h3>
+              <ul>
+                <li><strong>Art Direction:</strong> Different crops for different viewports</li>
+                <li><strong>Format Optimization:</strong> Serve modern formats to supported browsers</li>
+                <li><strong>Bandwidth Savings:</strong> Only download needed image version</li>
+                <li><strong>Future-Proof:</strong> Easy to add new formats like AVIF</li>
+              </ul>
+            </div>
+
+            <h2>Implementation Patterns</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Art Direction --&gt;
+      &lt;picture&gt;
+        &lt;source media="(min-width: 1200px)" srcset="hero-desktop.jpg"&gt;
+        &lt;source media="(min-width: 768px)" srcset="hero-tablet.jpg"&gt;
+        &lt;img src="hero-mobile.jpg" alt="Hero image"&gt;
+      &lt;/picture&gt;
+
+      &lt;!-- Modern Format Fallback --&gt;
+      &lt;picture&gt;
+        &lt;source type="image/avif" srcset="image.avif"&gt;
+        &lt;source type="image/webp" srcset="image.webp"&gt;
+        &lt;img src="image.jpg" alt="Fallback image"&gt;
+      &lt;/picture&gt;</code></pre>
+            </div>
+
+            <div class="alert">
+              <p><strong>Pro Tip:</strong> Combine with &lt;img loading="lazy"&gt; for optimal performance.</p>
+            </div>
+
+            <a href="#articles" class="cta-button">Back to Articles</a>
+          </article> -->
+
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-progress"><code>&lt;progress&gt;</code></a></h3>
+          </div> -->
+        <!-- </div>
+      </section> -->
+
 
   <!-- Contact Page -->
   <!--<section class="article-page" id="contact">
