@@ -38,13 +38,13 @@ document.querySelectorAll('a[href^="#article-"]').forEach(link => {
   });
 });
 
-// Contact page navigation
+/* // Contact page navigation
 document.querySelectorAll('a[href="#contact"]').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     showArticle('#contact');
   });
-});
+}); */
 
 // Back to articles
 document.querySelectorAll('a[href="#articles"]').forEach(link => {
@@ -75,7 +75,7 @@ backToTopButton.addEventListener('click', () => {
   });
 });
 
-// Form Submission
+/* // Form Submission
 const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -121,4 +121,4 @@ this.reset();
 setTimeout(() => {
   successMessage.scrollIntoView({ behavior: 'smooth' });
 }, 100);
-});
+}); */
