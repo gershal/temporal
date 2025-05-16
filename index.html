@@ -2076,10 +2076,9 @@ kbd kbd {
           </div> -->
         <!-- </div>
       </section> -->
-
-
+ 
   <!-- Contact Page -->
-  <!--<section class="article-page" id="contact">
+  <section class="article-page" id="contact">
     <div class="container">
       <article class="article-body">
         <header class="article-header">
@@ -2087,25 +2086,28 @@ kbd kbd {
           <div class="article-meta">Have questions or suggestions? Get in touch!</div>
         </header>
 
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" aria-label="contact-form">
+          <input type="hidden" name="access_key" value="49fbe388-ecf6-4f51-9506-527174a0725b">
+          
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="hidden" name="access_key" value="9a2b56c9-027c-4f3f-92ed-a5789862a671">
             <input type="text" id="name" name="name" required>
           </div>
+          
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
           </div>
+          
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" required></textarea>
           </div>
+          
           <button type="submit" class="submit-btn">Send Message</button>
         </form>
-
         <a href="#articles" class="cta-button">Back to Articles</a>
-      </article> -->
+      </article>
     
 
   <!-- Footer -->
