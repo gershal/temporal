@@ -266,7 +266,7 @@
         </article>
 
         <!-- Article 17 -->
-        <!-- <article class="article-card">
+        <article class="article-card">
           <div class="article-content">
             <h3 class="article-title">The Chameleon of Visuals: &lt;picture&gt; Transforms Design</h3>
             <p class="article-excerpt">Is your website's imagery looking sharp on every device? The &lt;picture&gt; tag is your secret weapon for serving the perfect image, every time.</p>
@@ -277,7 +277,7 @@
               </svg>
             </a>
           </div>
-        </article> -->
+        </article>
 
         <!-- Article 18 -->
         <!-- <article class="article-card">
@@ -2004,15 +2004,15 @@ kbd kbd {
             <a href="#articles" class="cta-button">Back to Articles</a>
           </article>
 
-          <div class="up-next">
+          <!-- <div class="up-next">
               <h2 class="up-next-title">Up Next:</h2>
               <h3><a href="#article-picture">&lt;picture&gt;</a></h3>
-          </div>
+          </div> -->
         </div>
       </section>
 
       <!-- Article Page for <picture> -->
-      <!-- <section class="article-page" id="article-picture">
+      <section class="article-page" id="article-picture">
         <div class="container">
           <article class="article-body">
             <header class="article-header">
@@ -2068,13 +2068,79 @@ kbd kbd {
             </div>
 
             <a href="#articles" class="cta-button">Back to Articles</a>
-          </article> -->
+          </article>
 
-          <!-- <div class="up-next">
+          <div class="up-next">
               <h2 class="up-next-title">Up Next:</h2>
-              <h3><a href="#article-progress"><code>&lt;progress&gt;</code></a></h3>
-          </div> -->
-        <!-- </div>
+              <h3><a href="#article-progress">&lt;progress&gt;</a></h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Article Page for <progress> -->
+      <!-- <section class="article-page" id="article-progress">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;progress&gt; Tag: Visualizing Completion</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-18">May 18, 2025</time></div>
+            </header>
+
+            <p>Did you know browsers give you a fully accessible progress indicator out of the box? Meet the &lt;progress&gt; element! A semantic way to show task completion without JavaScript widgets.</p>
+            <p>The &lt;progress&gt; element provides a visual representation of the completion of a task.  It's a simple yet effective way to keep users informed about the status of a process, such as a file upload, a download, or a multi-step form.
+            </p>
+            <p>The default appearance of the &lt;progress&gt; element varies between browsers, it can be styled using CSS to match your website's design.  You can change the color, size and even add animations to create a more engaging visual experience.</p>
+              
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <label for="file-upload">Upload progress:</label>
+              <progress id="file-upload" value="65" max="100" style="width: 100%;">65%</progress>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;progress&gt; Matters:</h3>
+              <ul>
+                <li><strong>Semantic Meaning:</strong> Clearly indicates progress to browsers</li>
+                <li><strong>Accessibility:</strong> Built-in ARIA role and properties</li>
+                <li><strong>Styling Control:</strong> Customizable with CSS pseudo-elements</li>
+                <li><strong>No JavaScript Needed:</strong> Works with static values</li>
+              </ul>
+            </div>
+
+            <h2>Usage Examples</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Determinate Progress --&gt;
+      &lt;progress value="75" max="100"&gt;75%&lt;/progress&gt;
+
+      &lt;!-- Indeterminate Progress --&gt;
+      &lt;progress max="100"&gt;Working...&lt;/progress&gt;
+
+      &lt;!-- Form Integration --&gt;
+      &lt;form onsubmit="startUpload()"&gt;
+        &lt;input type="file" id="upload"&gt;
+        &lt;progress id="upload-progress" value="0" max="100" hidden&gt;&lt;/progress&gt;
+      &lt;/form&gt;
+
+      &lt;script&gt;
+        function startUpload() {
+          document.getElementById('upload-progress').hidden = false;
+          // Upload logic...
+        }
+      &lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="alert warning">
+              <p><strong>Note:</strong> For file uploads, you'll still need JavaScript to update the value dynamically.</p>
+            </div>
+
+            <a href="#articles" class="cta-button">Back to Articles</a>
+          </article>
+
+          <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-q">&lt;q&gt;</a></h3>
+          </div>
+        </div>
       </section> -->
  
   <!-- Contact Page -->
