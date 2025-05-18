@@ -2179,8 +2179,765 @@ Phone: &lt;span itemprop="telephone"&gt;(555) 123-4567&lt;/span&gt;
         </div>
     </section>
 
+    <!-- Article Page for <q> -->
+    <section class="article-page" id="article-q">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;q&gt; Tag: Semantic Quotation</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-19">May 19, 2025</time></div>
+            </header>
 
-  <!-- Contact Page -->
+            <p>The <code>&lt;q&gt;</code> element is for short, inline quotes - the semantic alternative to manually typing quotation marks.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <p>As Steve Jobs once said, <q>Stay hungry, stay foolish</q> - a mantra that inspired many.</p>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;q&gt; Matters:</h3>
+              <ul>
+                <li><strong>Automatic Quotes:</strong> Browser adds locale-appropriate quotation marks</li>
+                <li><strong>Semantic Meaning:</strong> Machines understand it's a quotation</li>
+                <li><strong>Citation Support:</strong> Works with <code>cite</code> attribute</li>
+                <li><strong>Styling Hook:</strong> Easy to style differently from regular text</li>
+              </ul>
+            </div>
+
+            <h2>Usage Patterns</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Basic Quote --&gt;
+      &lt;p&gt;She said &lt;q&gt;Hello world&lt;/q&gt; enthusiastically.&lt;/p&gt;
+
+      &lt;!-- With Citation --&gt;
+      &lt;p&gt;
+        &lt;q cite="https://example.com/speech"&gt;
+          This is an important statement
+        &lt;/q&gt;
+      &lt;/p&gt;
+
+      &lt;!-- Nested Quotes --&gt;
+      &lt;p&gt;
+        He said &lt;q&gt;She told me &lt;q&gt;No way!&lt;/q&gt;&lt;/q&gt;
+      &lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="alert">
+              <p><strong>Pro Tip:</strong> For block-level quotes, use <code>&lt;blockquote&gt;</code> instead.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+          </article>
+
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-dl">&lt;dl;&lt;dt; and &lt;dd;</a></h3>
+          </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <dl>, <dt>, <dd> -->
+    <section class="article-page" id="article-dl">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The Definition List Trio: &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-20">May 20, 2025</time></div>
+            </header>
+
+            <p>Definition lists are HTML's way of creating name-value pair groupings - perfect for glossaries, metadata, and other associative data.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <dl style="border: 1px dashed var(--primary); padding: 1rem;">
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language - the standard for web documents</dd>
+                
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets - controls presentation</dd>
+              </dl>
+            </div>
+
+            <div class="benefits">
+              <h3>Why Definition Lists Matter:</h3>
+              <ul>
+                <li><strong>Semantic Structure:</strong> Clearly indicates term-definition relationships</li>
+                <li><strong>Flexible Usage:</strong> Not just for strict definitions</li>
+                <li><strong>Accessibility:</strong> Screen readers announce the relationships</li>
+                <li><strong>Styling Options:</strong> Various layout possibilities with CSS</li>
+              </ul>
+            </div>
+
+            <h2>Implementation Examples</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Glossary --&gt;
+      &lt;dl&gt;
+        &lt;dt&gt;API&lt;/dt&gt;
+        &lt;dd&gt;Application Programming Interface&lt;/dd&gt;
+        
+        &lt;dt&gt;DOM&lt;/dt&gt;
+        &lt;dd&gt;Document Object Model&lt;/dd&gt;
+      &lt;/dl&gt;
+
+      &lt;!-- Metadata --&gt;
+      &lt;dl&gt;
+        &lt;dt&gt;Author&lt;/dt&gt;
+        &lt;dd&gt;Jane Smith&lt;/dd&gt;
+        
+        &lt;dt&gt;Published&lt;/dt&gt;
+        &lt;dd&gt;&lt;time datetime="2023-05-23"&gt;May 23, 2023&lt;/time&gt;&lt;/dd&gt;
+      &lt;/dl&gt;
+
+      &lt;!-- FAQ --&gt;
+      &lt;dl&gt;
+        &lt;dt&gt;How do I reset my password?&lt;/dt&gt;
+        &lt;dd&gt;Visit the account recovery page...&lt;/dd&gt;
+      &lt;/dl&gt;</code></pre>
+            </div>
+
+            <div class="alert">
+              <p><strong>Pro Tip:</strong> Use CSS Grid to create modern, responsive definition list layouts.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+          </article>
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-small">&lt;small&lt;</a></h3>
+          </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <small> -->
+    <section class="article-page" id="article-small">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;small&gt; Tag: Fine Print Matters</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-21">May 21, 2025</time></div>
+            </header>
+
+            <p>The <code>&lt;small&gt;</code> element represents side comments and small print - perfect for disclaimers, copyrights, and legal text.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <div style="border: 1px dashed var(--primary); padding: 1rem;">
+                <p>Special discount available this week only!</p>
+                <small>* Limited to one per customer. Offer expires May 31, 2023.</small>
+              </div>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;small&gt; Matters:</h3>
+              <ul>
+                <li><strong>Semantic Meaning:</strong> Indicates secondary importance</li>
+                <li><strong>Not Just Visual:</strong> More than just reduced font size</li>
+                <li><strong>Accessibility:</strong> Screen readers may adjust tone</li>
+                <li><strong>Legal Clarity:</strong> Standard for disclaimers</li>
+              </ul>
+            </div>
+
+            <h2>Proper Usage</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Copyright Notice --&gt;
+      &lt;footer&gt;
+        &lt;small&gt;© 2023 Company Name. All rights reserved.&lt;/small&gt;
+      &lt;/footer&gt;
+
+      &lt;!-- Form Disclaimer --&gt;
+      &lt;form&gt;
+        &lt;!-- form inputs --&gt;
+        &lt;small&gt;We'll never share your email with third parties.&lt;/small&gt;
+      &lt;/form&gt;
+
+      &lt;!-- Side Comment --&gt;
+      &lt;p&gt;
+        Main content here
+        &lt;small&gt;(See appendix for details)&lt;/small&gt;
+      &lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="alert warning">
+              <p><strong>Don't:</strong> Use <code>&lt;small&gt;</code> just to make text smaller - that's what CSS is for.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+          </article>
+
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-sub">&lt;sub&gt; and &lt;sup&gt;</a></h3>
+          </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <sub> and <sup> -->
+    <section class="article-page" id="article-sub">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;sub&gt; & &lt;sup&gt; Tags: Text Positioning</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-22">May 22, 2025</time></div>
+            </header>
+
+            <p>These typographical elements handle subscript and superscript text - essential for scientific, mathematical, and footnote content.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <div style="border: 1px dashed var(--primary); padding: 1rem;">
+                <p>H<sub>2</sub>O is essential for life.</p>
+                <p>E = mc<sup>2</sup> is Einstein's famous equation.</p>
+              </div>
+            </div>
+
+            <div class="benefits">
+              <h3>Why They Matter:</h3>
+              <ul>
+                <li><strong>Scientific Accuracy:</strong> Correct chemical/mathematical notation</li>
+                <li><strong>Semantic Meaning:</strong> More than just visual positioning</li>
+                <li><strong>Footnote Support:</strong> Standard for citation markers</li>
+                <li><strong>Accessibility:</strong> Screen readers announce appropriately</li>
+              </ul>
+            </div>
+
+            <h2>Usage Examples</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Chemical Formulas --&gt;
+      &lt;p&gt;The pH of H&lt;sub&gt;2&lt;/sub&gt;SO&lt;sub&gt;4&lt;/sub&gt; is very low.&lt;/p&gt;
+
+      &lt;!-- Mathematical --&gt;
+      &lt;p&gt;Solve for x: x&lt;sup&gt;2&lt;/sup&gt; + 3x + 2 = 0&lt;/p&gt;
+
+      &lt;!-- Footnotes --&gt;
+      &lt;p&gt;Recent studies&lt;sup&gt;&lt;a href="#footnote1"&gt;1&lt;/a&gt;&lt;/sup&gt; show...&lt;/p&gt;
+
+      &lt;!-- Ordinal Numbers --&gt;
+      &lt;p&gt;This is my 1&lt;sup&gt;st&lt;/sup&gt; time visiting.&lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="alert">
+              <p><strong>Pro Tip:</strong> For complex mathematical notation, consider MathML.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+          </article>
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-noscript">&lt;noscript;&lt</a></h3>
+          </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <noscript> -->
+    <section class="article-page" id="article-noscript">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;noscript&gt; Tag: JavaScript Fallback</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-23">May 23, 2025</time></div>
+            </header>
+
+            <p>The <code>&lt;noscript&gt;</code> element is your safety net - content shown when JavaScript is disabled or unavailable.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <script>
+                document.write("<p style='color:green'>JavaScript is enabled!</p>");
+              </script>
+              <noscript>
+                <p style="color:red">JavaScript is disabled in your browser.</p>
+              </noscript>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;noscript&gt; Matters:</h3>
+              <ul>
+                <li><strong>Graceful Degradation:</strong> Maintain functionality without JS</li>
+                <li><strong>Accessibility:</strong> Some users disable JavaScript</li>
+                <li><strong>SEO Friendly:</strong> Search engines can see fallback content</li>
+                <li><strong>User Experience:</strong> Avoids blank pages when JS fails</li>
+              </ul>
+            </div>
+
+            <h2>Implementation Patterns</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Basic Detection --&gt;
+      &lt;noscript&gt;
+        &lt;div class="warning"&gt;
+          This site works best with JavaScript enabled.
+        &lt;/div&gt;
+      &lt;/noscript&gt;
+
+      &lt;!-- Alternative Content --&gt;
+      &lt;script&gt;
+        // Load interactive widget
+      &lt;/script&gt;
+      &lt;noscript&gt;
+        &lt;img src="static-chart.png" alt="Data chart"&gt;
+      &lt;/noscript&gt;
+
+      &lt;!-- Form Fallback --&gt;
+      &lt;form id="ajax-form"&gt;
+        &lt;!-- form inputs --&gt;
+      &lt;/form&gt;
+      &lt;noscript&gt;
+        &lt;style&gt;#ajax-form { display: none }&lt;/style&gt;
+        &lt;form method="post" action="/submit"&gt;
+          &lt;!-- same inputs --&gt;
+        &lt;/form&gt;
+      &lt;/noscript&gt;</code></pre>
+            </div>
+
+            <div class="alert warning">
+              <p><strong>Modern Approach:</strong> Consider progressive enhancement rather than relying solely on noscript.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+          </article>
+
+
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-template">&lt;template;&lt</a></h3>
+          </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <template> -->
+    <section class="article-page" id="article-template">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;template&gt; Tag: Client-Side Templating</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-24">May 24, 2025</time></div>
+            </header>
+
+            <p>The <code>&lt;template&gt;</code> element is your HTML storage container - it holds client-side content that can be cloned and used later.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <button onclick="useTemplate()">Show Templated Content</button>
+              <div id="template-output"></div>
+              
+              <template id="example-template">
+                <div style="color: var(--primary); margin-top: 1rem;">
+                  <h3>This came from a template!</h3>
+                  <p>Dynamically inserted content.</p>
+                </div>
+              </template>
+              
+              <script>
+                function useTemplate() {
+                  const template = document.getElementById('example-template');
+                  const clone = template.content.cloneNode(true);
+                  document.getElementById('template-output').appendChild(clone);
+                }
+              </script>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;template&gt; Matters:</h3>
+              <ul>
+                <li><strong>Inert Content:</strong> Doesn't render until activated</li>
+                <li><strong>Performance:</strong> Better than hidden divs</li>
+                <li><strong>Clean Markup:</strong> Keeps templates in HTML</li>
+                <li><strong>Modern Alternative:</strong> Replaces script-based templating</li>
+              </ul>
+            </div>
+
+            <h2>Usage Patterns</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Basic Template --&gt;
+      &lt;template id="user-card"&gt;
+        &lt;div class="card"&gt;
+          &lt;h2&gt;&lt;slot name="username"&gt;Default User&lt;/slot&gt;&lt;/h2&gt;
+          &lt;p&gt;&lt;slot name="bio"&gt;No bio provided&lt;/slot&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/template&gt;
+
+      &lt;!-- Using the Template --&gt;
+      &lt;script&gt;
+        function createCard(name, bio) {
+          const template = document.getElementById('user-card');
+          const clone = template.content.cloneNode(true);
+          
+          clone.querySelector('[name="username"]').textContent = name;
+          clone.querySelector('[name="bio"]').textContent = bio;
+          
+          document.body.appendChild(clone);
+        }
+      &lt;/script&gt;</code></pre>
+            </div>
+
+            <div class="alert">
+              <p><strong>Pro Tip:</strong> Combine with Web Components for powerful reusable elements.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+          </article>
+
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-var">&lt;var;&lt;</a></h3>
+          </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <var> -->
+    <section class="article-page" id="article-var">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;var&gt; Tag: Mathematical Variables</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-25">May 25, 2025</time></div>
+            </header>
+
+            <p>The <code>&lt;var&gt;</code> element represents mathematical or programming variables - making them distinct from surrounding text.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <p style="border: 1px dashed var(--primary); padding: 1rem;">
+                The equation <var>E</var> = <var>m</var><var>c</var><sup>2</sup> shows...
+              </p>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;var&gt; Matters:</h3>
+              <ul>
+                <li><strong>Semantic Meaning:</strong> Identifies variables in content</li>
+                <li><strong>Accessibility:</strong> Screen readers may announce differently</li>
+                <li><strong>Styling Hook:</strong> Typically renders in italics</li>
+                <li><strong>Code Clarity:</strong> Distinguishes variables from code</li>
+              </ul>
+            </div>
+
+            <h2>Usage Examples</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Mathematical --&gt;
+      &lt;p&gt;Solve for &lt;var&gt;x&lt;/var&gt; in the equation...&lt;/p&gt;
+
+      &lt;!-- Programming --&gt;
+      &lt;p&gt;The &lt;code&gt;sort()&lt;/code&gt; method mutates the &lt;var&gt;array&lt;/var&gt; in place.&lt;/p&gt;
+
+      &lt;!-- Physics --&gt;
+      &lt;p&gt;
+        &lt;var&gt;F&lt;/var&gt; = &lt;var&gt;m&lt;/var&gt;&lt;var&gt;a&lt;/var&gt; (Force = mass × acceleration)
+      &lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="alert">
+              <p><strong>Note:</strong> For code blocks, use <code>&lt;code&gt;</code> instead.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+          </article>
+
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-wbr">&lt;wbr;&lt;</a></h3>
+          </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <wbr> -->
+    <section class="article-page" id="article-wbr">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;wbr&gt; Tag: Word Break Opportunity</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-26">May 26, 2025</time></div>
+            </header>
+
+            <p>The <code>&lt;wbr&gt;</code> element suggests where a word might break if needed - like a soft hyphen without the hyphen.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <div style="border: 1px dashed var(--primary); padding: 1rem; width: 150px;">
+                <p>https://<wbr>example<wbr>.com/<wbr>very<wbr>/long<wbr>/path</p>
+              </div>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;wbr&gt; Matters:</h3>
+              <ul>
+                <li><strong>Readability Control:</strong> Guides line breaks in long words</li>
+                <li><strong>URL Handling:</strong> Perfect for breaking up long URLs</li>
+                <li><strong>No Visual Effect:</strong> Only activates when needed</li>
+                <li><strong>Better Than &amp;shy;:</strong> Doesn't insert hyphens</li>
+              </ul>
+            </div>
+
+            <h2>Implementation Examples</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Long URL --&gt;
+      &lt;p&gt;Visit https://&lt;wbr&gt;example&lt;wbr&gt;.com/&lt;wbr&gt;products/&lt;wbr&gt;category&lt;/p&gt;
+
+      &lt;!-- Complex Term --&gt;
+      &lt;p&gt;The scientific name is &lt;i&gt;Streptococcus&lt;wbr&gt;pyogenes&lt;/i&gt;.&lt;/p&gt;
+
+      &lt;!-- Technical Code --&gt;
+      &lt;p&gt;Use &lt;code&gt;array&lt;wbr&gt;.prototype&lt;wbr&gt;.forEach()&lt;/code&gt;.&lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="alert warning">
+              <p><strong>Note:</strong> Different from <code>&amp;shy;</code> which inserts a visible hyphen when breaking.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+          </article>
+
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-s">&lt;s;&lt;</a></h3>
+          </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <s> -->
+    <section class="article-page" id="article-s">
+        <div class="container">
+          <article class="article-body">
+            <header class="article-header">
+              <h1>The &lt;s&gt; Tag: Strikethrough with Meaning</h1>
+              <div class="article-meta">Published on <time datetime="2025-05-27">May 27, 2025</time></div>
+            </header>
+
+            <p>The <code>&lt;s&gt;</code> element represents content that is no longer accurate or relevant - more semantic than just using CSS strikethrough.</p>
+
+            <div class="live-example">
+              <div class="example-title">Live Example:</div>
+              <div style="border: 1px dashed var(--primary); padding: 1rem;">
+                <p>Sale price: $29.99 <s>Was $49.99</s></p>
+              </div>
+            </div>
+
+            <div class="benefits">
+              <h3>Why &lt;s&gt; Matters:</h3>
+              <ul>
+                <li><strong>Semantic Meaning:</strong> Indicates inaccurate/old information</li>
+                <li><strong>Accessibility:</strong> Screen readers may announce differently</li>
+                <li><strong>Better Than CSS:</strong> More than just visual styling</li>
+                <li><strong>E-Commerce Standard:</strong> Common for showing price changes</li>
+              </ul>
+            </div>
+
+            <h2>Usage Patterns</h2>
+            <div class="code-block">
+              <pre><code>&lt;!-- Price Discount --&gt;
+      &lt;p&gt;Now $19.99 &lt;s&gt;$24.99&lt;/s&gt;&lt;/p&gt;
+
+      &lt;!-- Todo List --&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;s&gt;Buy milk&lt;/s&gt;&lt;/li&gt;
+        &lt;li&gt;Walk the dog&lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;!-- Document Edits --&gt;
+      &lt;p&gt;
+        The meeting will be on &lt;s&gt;Tuesday&lt;/s&gt; Wednesday.
+      &lt;/p&gt;</code></pre>
+            </div>
+
+            <div class="alert warning">
+              <p><strong>Don't Confuse:</strong> <code>&lt;del&gt;</code> is for deleted content in edits, while <code>&lt;s&gt;</code> is for no-longer-relevant content.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+          </article>
+
+          <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="#article-samp">&lt;samp;&lt;</a></h3>
+          </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <samp> -->
+    <section class="article-page" id="article-samp">
+      <div class="container">
+        <article class="article-body">
+          <header class="article-header">
+            <h1>The &lt;samp&gt; Tag: Sample Output</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-28">May 28, 2025</time></div>
+          </header>
+
+          <p>The <code>&lt;samp&gt;</code> element represents sample output from a program - perfect for showing command results or system messages.</p>
+
+          <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <div style="border: 1px dashed var(--primary); padding: 1rem; font-family: monospace;">
+              <p>After running the command:</p>
+              <samp>$ git status<br>On branch main<br>Your branch is up to date.</samp>
+            </div>
+          </div>
+
+          <div class="benefits">
+            <h3>Why &lt;samp&gt; Matters:</h3>
+            <ul>
+              <li><strong>Semantic Meaning:</strong> Clearly identifies program output</li>
+              <li><strong>Default Styling:</strong> Typically monospace font</li>
+              <li><strong>Documentation:</strong> Essential for technical writing</li>
+              <li><strong>Tutorials:</strong> Distinguishes commands from output</li>
+            </ul>
+          </div>
+
+          <h2>Usage Examples</h2>
+          <div class="code-block">
+            <pre><code>&lt;!-- Command Line --&gt;
+    &lt;p&gt;Command:&lt;/p&gt;
+    &lt;pre&gt;&lt;code&gt;npm install&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;Output:&lt;/p&gt;
+    &lt;samp&gt;Added 15 packages in 3.2s&lt;/samp&gt;
+
+    &lt;!-- Error Message --&gt;
+    &lt;p&gt;If successful, you'll see:&lt;/p&gt;
+    &lt;samp&gt;Compilation complete. 0 errors.&lt;/samp&gt;
+
+    &lt;!-- Combined with kbd --&gt;
+    &lt;p&gt;Press &lt;kbd&gt;Enter&lt;/kbd&gt; and you should see:&lt;/p&gt;
+    &lt;samp&gt;Ready to begin.&lt;/samp&gt;</code></pre>
+          </div>
+
+          <div class="alert">
+            <p><strong>Pro Tip:</strong> Often paired with <code>&lt;kbd&gt;</code> for showing input/output sequences.</p>
+          </div>
+
+          <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
+
+        <!-- <div class="up-next">
+          <h2 class="up-next-title">Up Next:</h2>
+          <h3><a href="#article-samp">&lt;samp;&lt;</a></h3>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Article Page for <bdi> & <bdo> -->
+    <section class="article-page" id="article-bdi">
+      <div class="container">
+        <article class="article-body">
+          <header class="article-header">
+            <h1>The &lt;bdi&gt; & &lt;bdo&gt; Tags: Bidirectional Text</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-29">May 29, 2025</time></div>
+          </header>
+
+          <p>These elements handle bidirectional text - crucial for mixed-language content and proper text direction control.</p>
+
+          <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <div style="border: 1px dashed var(--primary); padding: 1rem;">
+              <p>Username: <bdi>إيان</bdi> - 5 comments</p>
+              <p><bdo dir="rtl">This text goes right-to-left</bdo></p>
+            </div>
+          </div>
+
+          <div class="benefits">
+            <h3>Why They Matter:</h3>
+            <ul>
+              <li><strong>Language Support:</strong> Essential for Arabic, Hebrew, etc.</li>
+              <li><strong>Isolation:</strong> <code>&lt;bdi&gt;</code> prevents bidirectional corruption</li>
+              <li><strong>Explicit Control:</strong> <code>&lt;bdo&gt;</code> overrides text direction</li>
+              <li><strong>User-Generated Content:</strong> Protects against malformed text</li>
+            </ul>
+          </div>
+
+          <h2>Implementation Examples</h2>
+          <div class="code-block">
+            <pre><code>&lt;!-- User Comments --&gt;
+    &lt;div&gt;
+      &lt;span&gt;&lt;bdi&gt;user123&lt;/bdi&gt;: Hello!&lt;/span&gt;&lt;br&gt;
+      &lt;span&gt;&lt;bdi&gt;المستخدم&lt;/bdi&gt;: مرحبا!&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Forced RTL --&gt;
+    &lt;bdo dir="rtl"&gt;
+      .desrever eb dluow siht txet
+    &lt;/bdo&gt;
+
+    &lt;!-- Mixed Content --&gt;
+    &lt;p&gt;
+      The Arabic word for book is &lt;bdi&gt;كتاب&lt;/bdi&gt;.
+    &lt;/p&gt;</code></pre>
+          </div>
+
+          <div class="alert warning">
+            <p><strong>Note:</strong> <code>&lt;bdi&gt;</code> is different from the <code>dir</code> attribute - it isolates rather than directs.</p>
+          </div>
+
+          <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
+
+        <!-- <div class="up-next">
+          <h2 class="up-next-title">Up Next:</h2>
+          <h3><a href="#article-bdi">&lt;ruby;&gt; &lt;rt&gt; and &lt;rp;&gt;</a></h3>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Article Page for <ruby>, <rt>, <rp> -->
+    <section class="article-page" id="article-ruby">
+      <div class="container">
+        <article class="article-body">
+          <header class="article-header">
+            <h1>The Ruby Trio: &lt;ruby&gt;, &lt;rt&gt;, &lt;rp&gt;</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-30">May 30, 2025</time></div>
+          </header>
+
+          <p>Ruby annotations are for showing pronunciation guides - primarily used for East Asian languages like Japanese and Chinese.</p>
+
+          <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <div style="border: 1px dashed var(--primary); padding: 1rem; font-size: 1.5em;">
+              <ruby>
+                漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+                字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+              </ruby>
+            </div>
+          </div>
+
+          <div class="benefits">
+            <h3>Why Ruby Matters:</h3>
+            <ul>
+              <li><strong>Language Learning:</strong> Essential for kanji/hanzi pronunciation</li>
+              <li><strong>Semantic Meaning:</strong> Properly associates base text with annotation</li>
+              <li><strong>Fallback Support:</strong> <code>&lt;rp&gt;</code> provides parentheses for unsupported browsers</li>
+              <li><strong>Styling Control:</strong> CSS can customize appearance</li>
+            </ul>
+          </div>
+
+          <h2>Usage Examples</h2>
+          <div class="code-block">
+            <pre><code>&lt;!-- Basic Ruby --&gt;
+    &lt;ruby&gt;
+      漢 &lt;rt&gt;Kan&lt;/rt&gt;
+      字 &lt;rt&gt;ji&lt;/rt&gt;
+    &lt;/ruby&gt;
+
+    &lt;!-- With Fallback --&gt;
+    &lt;ruby&gt;
+      日本語 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Nihongo&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+    &lt;/ruby&gt;
+
+    &lt;!-- Multiple Characters --&gt;
+    &lt;ruby&gt;
+      東 &lt;rt&gt;tō&lt;/rt&gt;
+      京 &lt;rt&gt;kyō&lt;/rt&gt;
+    &lt;/ruby&gt;</code></pre>
+          </div>
+
+          <div class="alert">
+            <p><strong>Pro Tip:</strong> Use CSS <code>ruby-position</code> to control annotation placement.</p>
+          </div>
+
+          <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
+      </div>
+    </section>
+    
+
+
+    <!-- Contact Page -->
     <section class="article-page" id="contact">
         <div class="container">
         <article class="article-body">
