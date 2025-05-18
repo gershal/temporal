@@ -133,3 +133,45 @@ backToTopButton.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+/* // Landing Page
+document.addEventListener('DOMContentLoaded', function() {
+  const landingPage = document.getElementById('landingPage');
+  const ctaButton = document.getElementById('ctaButton');
+  const mainContent = document.getElementById('mainContent');
+
+  // Show main content when CTA is clicked
+  ctaButton.addEventListener('click', function() {
+    landingPage.classList.add('hidden');
+    mainContent.classList.add('visible');
+                
+    // Enable scrolling on the main content
+    document.body.style.overflow = 'auto';
+  });
+
+    // Initially hide main content and disable scrolling
+    document.body.style.overflow = 'hidden';
+  }); */
+
+document.addEventListener('DOMContentLoaded', function() {
+  const landingPage = document.getElementById('landingPage');
+  const ctaButton = document.getElementById('ctaButton');
+  const mainContent = document.getElementById('mainContent');
+  const darkModeToggle = document.getElementById('darkModeToggle');
+
+  // Add landing-active class to body initially
+  document.body.classList.add('landing-active');
+
+  // Show main content when CTA is clicked
+  ctaButton.addEventListener('click', function() {
+    landingPage.classList.add('hidden');
+    mainContent.classList.add('visible');
+
+    // Remove landing-active class to restore scrolling
+    document.body.classList.remove('landing-active');
+
+    // Reset body positioning
+    document.body.style.position = 'static';
+    document.body.style.height = 'auto';
+    });
+});
