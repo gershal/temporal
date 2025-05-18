@@ -1,4 +1,5 @@
-// Enhanced Dark Mode Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced Dark Mode Toggle
     const darkModeToggle = document.createElement('button');
     darkModeToggle.innerHTML = '🌙 Dark Mode';
     darkModeToggle.style.position = 'fixed';
