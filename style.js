@@ -1,28 +1,77 @@
-// Theme Toggle
-const themeToggle = document.querySelector('.theme-toggle');
-const mobileThemeToggle = document.querySelector('.mobile-theme-toggle');
+// Enhanced Dark Mode Toggle
+    const darkModeToggle = document.createElement('button');
+    darkModeToggle.innerHTML = '🌙 Dark Mode';
+    darkModeToggle.style.position = 'fixed';
+    darkModeToggle.style.top = '10px';
+    darkModeToggle.style.right = '10px';
+    darkModeToggle.style.padding = '8px 13px';
+    darkModeToggle.style.background = 'var(--primary)';
+    darkModeToggle.style.color = 'white';
+    darkModeToggle.style.border = 'none';
+    darkModeToggle.style.borderRadius = '4px';
+    darkModeToggle.style.cursor = 'pointer';
+    darkModeToggle.style.zIndex = '1000';
+    
+    document.body.appendChild(darkModeToggle);
+    
+    // Check for saved preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.innerHTML = '☀️ Light Mode';
+    }
 
-function toggleTheme() {
-  document.body.classList.toggle('dark-mode');
-  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    darkModeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        
+        if (document.body.classList.contains('dark-mode')) {
+            darkModeToggle.innerHTML = '☀️ Light Mode';
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            darkModeToggle.innerHTML = '🌙 Dark Mode';
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+
+    // [Keep your existing form handling code]
+});
+
+
+// Scroller Effect for Previous Articles
+const scrollers = document.querySelectorAll(".scroller");
+
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
 }
 
-themeToggle.addEventListener('click', toggleTheme);
-mobileThemeToggle.addEventListener('click', toggleTheme);
+function addAnimation() {
+    scrollers.forEach(scroller => {
+        scroller.setAttribute('data-animated', true);
 
-// Check for saved theme preference
-if (localStorage.getItem('darkMode') === 'true') {
-  document.body.classList.add('dark-mode');
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+        /*IF ===scrollerInner.children=== IS USED, IT WILL LEAD TO AN HTML COLLECTION WHEN CONSOLE LOGGED. MEANING IF THE LIST IS MODIFIED, IT WILL RESULT TO AN ENDLESS LOOP (REPETITION) SO INCLUDE ===Array.from()===*/
+
+        scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+        });
+    });
 }
 
 // Navigation
 function showArticle(articleId) {
-  // Hide all article pages and contact
+  // Hide all article pages and the main article section
   document.querySelectorAll('.article-page').forEach(page => {
     page.style.display = 'none';
   });
-  
-  // Show requested article
+
+  const mainArticle = document.querySelector('#article');
+  if (mainArticle) {
+    mainArticle.style.display = 'none'; // hide the main article list
+  }
+
+  // Show the requested article or contact page
   const target = document.querySelector(articleId);
   if (target) {
     target.style.display = 'block';
@@ -38,24 +87,33 @@ document.querySelectorAll('a[href^="#article-"]').forEach(link => {
   });
 });
 
-/* // Contact page navigation
+// Contact page navigation
 document.querySelectorAll('a[href="#contact"]').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     showArticle('#contact');
   });
-}); */
+});
 
-// Back to articles
+// Back to article list
 document.querySelectorAll('a[href="#articles"]').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
-    document.querySelector('#articles').scrollIntoView({ behavior: 'smooth' });
+
+    // Hide all article pages (including contact)
     document.querySelectorAll('.article-page').forEach(page => {
       page.style.display = 'none';
     });
+
+    // Show the main article section again
+    const mainArticle = document.querySelector('#article');
+    if (mainArticle) {
+      mainArticle.style.display = 'block';
+      mainArticle.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 });
+
 
 // Back to top button
 const backToTopButton = document.querySelector('.back-to-top');
@@ -74,51 +132,3 @@ backToTopButton.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
-
-/* // Form Submission
-const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Thank you for your message! We will get back to you soon.');
-  contactForm.reset();
-});
-
-// Enhanced Form Handling
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-e.preventDefault();
-
-// Get form values
-const name = document.getElementById('name').value;
-const email = document.getElementById('email').value;
-const subject = document.getElementById('subject').value;
-const message = document.getElementById('message').value;
-const newsletter = document.getElementById('newsletter').checked;
-
-// Simple validation
-if (!name || !email || !message) {
-  alert('Please fill in all required fields');
-  return;
-}
-
-// In a real app, you would send this data to a server
-console.log('Form submitted:', { name, email, subject, message, newsletter });
-
-// Show success message
-const successMessage = document.createElement('div');
-successMessage.className = 'alert';
-successMessage.innerHTML = `
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-  </svg>
-  <p>Thank you for your message! We'll get back to you soon.</p>
-`;
-
-this.parentNode.insertBefore(successMessage, this.nextSibling);
-this.reset();
-
-// Scroll to success message
-setTimeout(() => {
-  successMessage.scrollIntoView({ behavior: 'smooth' });
-}, 100);
-}); */
