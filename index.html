@@ -1,108 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
   <title>30 Underrated HTML Elements Explained | Semantic Web Blog</title>
 </head>
 <body>
-  <!-- Header -->
-  <header>
+    <!-- Header -->
+    <header>
     <div class="container">
-      <nav>
-        <a href="#" class="logo">ZFJ</a>
-        <div class="nav-links">
-          <a href="#articles">Article</a>
-          <a href="#contact">Contact</a>
-          <!--<button class="theme-toggle" aria-label="Toggle theme">🌓--><!--🌙☀️--><!--</button>-->
-        </div>
-        <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">🌓</button>
-      </nav>
+        <h1>30 Underrated HTML Elements Explained | Semantic Web Blog</h1>
     </div>
-  </header>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-content">
-        <h1>30 Days of Underused Semantic HTML Tags for Frontend Developers</h1>
-        <p>A daily guide to unlock hidden HTML tags that improve semantics, accessibility and functionality</p>
-        <a href="#articles" class="cta-button">Learn More</a>
-      </div>
-    </div>
-  </section>
+    <nav>
+      <ul class="logo">
+        <li><a href="index.html" class="logo">ZFJ</a></li>
+      </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Article</a></li>
+        <!-- <li><a href="archive.html">Archive</a></li> -->
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- Articles Section -->
-  <section class="articles" id="articles">
-    <div class="container">
-      <div class="section-title">
-        <h2>Discover the Power of Semantic HTML</h2>
-        <p>Explore articles on underused HTML tags that enhance your web development.</p>
-      </div>
-      <div class="article-grid">
-        
-        <!-- Article 1 -->
-        <article class="article-card">
+    <main class="article hidden" id="article">
+        <article class="articles" id="articles">
+            <h2 class="article-title" style="text-align: center; text-transform: uppercase;">Today's Article</h2>
+            
+            <!-- Article 1 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 1: The Little Box That Held Worlds: A Tale of the &lt;article&gt;</h2>
+                <div class="article-content">
+                    <h3 class="article-excerpt">Learn how to properly structure independent, self-contained content pieces on the Web.</h3>
+                    <a href="#article-article" class="read-more">
+                    Read more
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                    </a>
+                </div>
+            </article> -->
+
+            <!-- Article 2 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 2: The Whisper of Context that Enriches Storytelling &lt;aside&gt;</h2>
+                <div class="article-content">
+                    <h3 class="article-excerpt">Discover techniques to improve supplementary content and strengthen your overall message.</h3>
+                        <a href="#article-aside" class="read-more">
+                            Read more
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                </div>
+            </article> -->
+
+            <!-- Article 3 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 3: The Compass of Navigation Guiding Usability: &lt;nav&gt;</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Learn to structure accessible, intuitive navigation menus using the &lt;nav&gt; element for a better user experience.</h3>
+                <a href="#article-nav" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 4 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 4: The Image and Its Voice: &lt;figure&gt; & &lt;figcaption&gt;</h2>
+                <div class="article-content">
+                <h3 class="article-excerpt">Explore how to semantically group visual content and captions with &lt;figure&gt; and &lt;figcaption&gt; for better context and clarity.</h3>
+                <a href="#article-figure" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 5 -->
+            <!-- <article class="article-card">
+            <h3 class="article-title">Day 5: The Curtain of Discovery: Unveiling Interactivity using &lt;details&gt; & &lt;summary&gt;</h3>
           <div class="article-content">
-            <h3 class="article-title">The Little Box That Held Worlds: A Tale of the &lt;article&gt;</h3>
-            <p class="article-excerpt">Learn how to properly structure independent, self-contained content pieces on the Web.</p>
-            <a href="#article-article" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 2 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Whisper of Context that Enriches Storytelling &lt;aside&gt;</h3>
-            <p class="article-excerpt">Discover techniques to improve supplementary content and strengthen your overall message.</p>
-            <a href="#article-aside" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 3 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Compass of Navigation Guiding Usability: &lt;nav&gt; </h3>
-            <p class="article-excerpt">Learn to structure accessible, intuitive navigation menus using the &lt;nav&gt; element for a better user experience.</p>
-            <a href="#article-nav" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 4 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Image and Its Voice: &lt;figure&gt; & &lt;figcaption&gt;</h3>
-            <p class="article-excerpt">Explore how to semantically group visual content and captions with &lt;figure&gt; and &lt;figcaption&gt; for better context and clarity.</p>
-            <a href="#article-figure" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 5 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Curtain of Discovery: Unveiling Interactivity using &lt;details&gt; & &lt;summary&gt;</h3>
-            <p class="article-excerpt">Uncover how to create interactive disclosure widgets using &lt;details&gt; & &lt;summary&gt; to hide and reveal extra content.</p>
+            <h3 class="article-excerpt">Uncover how to create interactive disclosure widgets using <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> to hide and reveal extra content.</h3>
             <a href="#article-details" class="read-more">
               Read more
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -110,1012 +98,1063 @@
               </svg>
             </a>
           </div>
-        </article>
+            </article> -->
 
-        <!-- Article 6 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Spotlight of Emphasis: &lt;mark&gt;</h3>
-            <p class="article-excerpt">Highlight important or search-relevant text using the &lt;mark&gt; tag to draw attention without disrupting flow.</p>
-            <a href="#article-mark" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
+            <!-- Article 6 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 6: The Spotlight of Emphasis: &lt;mark&gt;</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Highlight important or search-relevant text using the &lt;mark&gt; tag to draw attention without disrupting flow.</h3>
+                <a href="#article-mark" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
 
-        <!-- Article 7 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Echo of Attribution: &lt;cite&gt;</h3>
-            <p class="article-excerpt">Use the &lt;cite&gt; element to properly credit sources, authors, and titles in a semantically correct and accessible way.</p>
-            <a href="#article-cite" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-        
-        <!-- Article 8 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Whisper of Meaning: &lt;abbr&gt;</h3>
-            <p class="article-excerpt">Master the use of abbreviations in HTML to provide helpful expansions for readers and accessibility tools.</p>
-            <a href="#article-abbr" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-        </article>
-
-        <!-- Article 9 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">Author's Corner: Semantically Defining Contact Info with &lt;address&gt;</h3>
-            <p class="article-excerpt">Learn how to semantically present contact information using the &lt;address&gt; tag for better structure and SEO.</p>
-            <a href="#article-address" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 10 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">Machine-Readable Magic: Connecting Content with &lt;data&gt;</h3>
-            <p class="article-excerpt">Explore the &lt;data&gt; element to embed machine-readable values while keeping human-friendly text visible.</p>
-            <a href="#article-data" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 11 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">Define Your Terms: The Importance of the &lt;dfn&gt; Tag </h3>
-            <p class="article-excerpt">Understand how to define terms in your content with the &lt;dfn&gt; tag to improve clarity and accessibility.</p>
-            <a href="#article-dfn" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 12 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">Keyboard Cues: Styling User Input with &lt;kbd&gt;</h3>
-            <p class="article-excerpt">Discover how to mark up user input or keyboard commands using the &lt;kbd&gt; tag in technical documentation.</p>
-            <a href="#article-kbd" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 13 -->
-    <article class="article-card">
-    <div class="article-content">
-      <h3 class="article-title">Measuring Up: Visualizing Data with the &lt;meter&gt; Tag</h3>
-      <p class="article-excerpt">Use the &lt;meter&gt; element to represent scalar measurements within a known range, such as progress or scores.</p>
-      <a href="#article-meter" class="read-more">
-        Read more
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </a>
-    </div>
-  </article>
-
-  <!-- Article 14 -->
-  <article class="article-card">
-    <div class="article-content">
-      <h3 class="article-title">The Pulse of Results: &lt;output&gt; Powers Interactivity</h3>
-      <p class="article-excerpt">Learn to display dynamic calculation results or user-driven values in real time with the &lt;output&gt; tag.</p>
-      <a href="#article-output" class="read-more">
-        Read more
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </a>
-    </div>
-  </article>
-
-        <!-- Article 15 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The &lt;object&gt; Tag: The Underrated HTML Hero for Embedding Everything</h3>
-            <p class="article-excerpt">Discover how the &lt;object&gt; tag steals the spotlight as it quietly handles content with better fallbacks and HTML5 compliance.</p>
-            <a href="#article-object" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-  
-        <!-- Article 16 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Invisible Window to Worlds: &lt;iframe&gt;'s Essential Frontend Role</h3>
-            <p class="article-excerpt">Think portals within your website! The &lt;iframe&gt; tag lets you bring in content from anywhere; YouTube videos, live maps, even other websites.</p>
-            <a href="#article-iframe" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 17 -->
-        <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Chameleon of Visuals: &lt;picture&gt; Transforms Design</h3>
-            <p class="article-excerpt">Is your website's imagery looking sharp on every device? The &lt;picture&gt; tag is your secret weapon for serving the perfect image, every time.</p>
-            <a href="#article-picture" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 18 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Pulse of Progress: &lt;progress&gt;'s Vital Beat in UX</h3>
-            <p class="article-excerpt">Don't leave your users guessing! The &lt;progress&gt; tag offers a visual lifeline for ongoing tasks, keeping everyone in the loop. See how to implement it.</p>
-            <a href="#article-progress" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        <!-- Article 19 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Whisper of Citation: &lt;q&gt; Tag Strengthens Semantics</h3>
-            <p class="article-excerpt">Short, impactful quotes deserve special treatment. The &lt;q&gt; tag semantically marks your inline citations, making them clear and stylish.</p>
-            <a href="#article-q" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        <!-- Article 20 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Symphony of Structure: &lt;dl&gt;, &lt;dt&gt; and &lt;dd&gt; Harmonizing Semantics</h3>
-            <p class="article-excerpt">Ever need to present key value pairs on your website in a clear, structured way? Think no more, the trio of &lt;dl&gt;, &lt;dt&gt; and &lt;dd&gt; to the rescue.</p>
-            <a href="#article-dl" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        <!-- Article 21 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Quiet Footnote of Clarity: &lt;small&gt;'s Big Role in Precision</h3>
-            <p class="article-excerpt">The devil's in the details! From legal disclaimers to subtle annotations, the &lt;small&gt; tag ensures important but less prominent text gets the attention it needs.</p>
-            <a href="#article-small" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        <!-- Article 22 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Pillars of Precision: &lt;sub&gt; and &lt;sup&gt; Elevate Frontend Science & Math </h3>
-            <p class="article-excerpt">Do you know &lt;sub&gt; and &lt;sup&gt; ensures accuracy and visual clarity when writing chemical formulas (H₂O) and mathematical exponents (E=mc²)</p>
-            <a href="#article-sub" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-        
-        <!-- Article 23 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Safety Net of Accessibility: Why &lt;noscript&gt; Saves Frontend Experiences</h3>
-            <p class="article-excerpt">What happens when JavaScript isn't an option? The &lt;noscript&gt; tag provides a crucial fallback, ensuring your content remains accessible to everyone globally.</p>
-            <a href="#article-noscript" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        <!-- Article 24 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Blueprint of Efficiency: How &lt;template&gt; Revolutionizes Frontend Code</h3>
-            <p class="article-excerpt">Unlock the power of reusable HTML! The &lt;template&gt; tag that stores hidden snippets ready to be deployed with JavaScript, making dynamic content cleaner and more efficient.</p>
-            <a href="#article-template" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        <!-- Article 25 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Compass of Code Clarity: &lt;var&gt;'s Underrated Frontend Precision</h3>
-            <p class="article-excerpt">From mathematical equations to code snippets, clarity is key. The &lt;var&gt; tag helps you semantically denote variables, making your technical content easier to understand.</p>
-            <a href="#article-var" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        <!-- Article 26 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Gentle Hinge of Flow: &lt;wbr&gt; Enhances Frontend Typography</h3>
-            <p class="article-excerpt">Tired of long URLs breaking your layout, especially on mobile devices? The &lt;wbr&gt; tag offers a subtle solution for elegant line breaks.</p>
-            <a href="#article-wbr" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        <!-- Article 27 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Strikethrough of Evolution: Why &lt;s&gt; Matters in Frontend Storytelling</h3>
-            <p class="article-excerpt">Show the evolution of information! The &lt;s&gt; tag visually marks outdated text, perfect for showcasing discounts or historical data.</p>
-            <a href="#article-s" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-        
-        <!-- Article 28 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Echo of Output: &lt;samp&gt; Is a Frontend Developer's Secret Weapon</h3>
-            <p class="article-excerpt">Bringing the terminal to the browser! The &lt;samp&gt; tag lets you clearly display sample code output, making your tutorials and technical documentation a breeze to follow.</p>
-            <a href="#article-samp" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        <!-- Article 29 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Dance of Direction: &lt;bdi&gt; and &lt;bdo&gt; Choreograph Globalisation</h3>
-            <p class="article-excerpt">Don't let text direction be an afterthought; use <bdi> and <bdo> tags to discover how these tags can make your content truly international!</p>
-            <a href="#article-bdi" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-        
-        <!-- Article 30 -->
-        <!-- <article class="article-card">
-          <div class="article-content">
-            <h3 class="article-title">The Tapestry of Annotation: Why &lt;ruby&gt; &lt;rt&gt; and &lt;rp&gt; Weave Linguistics</h3>
-            <p class="article-excerpt">Ever seen those small pronunciation guides above East Asian characters? That's the magic of the trio of &lt;ruby&gt; &lt;rt&gt; and &lt;rp&gt;!</p>
-            <a href="#article-ruby" class="read-more">
-              Read more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </article> -->
-
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- Individual Article Pages -->
-  
-  <!-- Article Page for <article> -->
-  <section class="article-page" id="article-article">
-    <div class="container">
-      <article class="article-body">
-        <header class="article-header">
-          <h1>The &lt;article&gt; Tag: Your Content's Perfect Home</h1>
-          <div class="article-meta">Published on <time datetime="2025-05-01">May 01, 2025</time></div>
-        </header>
-
-        <p>🌟 Hey Frontend, Web Developers and Content Creators! Let's chat about something super cool—the <article> tag in HTML5!</p>
-
-        <p>This nifty little tag isn't just a container; it's designed to hold self-contained, independent pieces of content like your blog posts, news articles, or even product listings. Pretty neat, right?</p>
-        
-        <p>Imagine you're a newspaper editor. Each story needs its own container - complete with headline, byline, and content. That's exactly what <code>&lt;article&gt;</code> provides for the web.</p>
-
-        <div class="live-example">
-          <div class="example-title">Live Example:</div>
-          <article style="border: 1px dashed var(--primary); padding: 1rem; margin: 1rem 0;">
-            <h2>The Rise of Article Tag</h2>
-            <p>Once upon a time, developers used endless divs. Then came the Article tag in HTML5 with semantic meaning...</p>
-            <footer>By <span>zeroFiveJuly</span> | <time>May 01, 2025</time></footer>
-          </article>
-        </div>
-
-        <div class="benefits">
-          <h3>So, why should you care about using &lt;article&gt; ?</h3>
-          <ul>
-            <li><strong>✅ Semantic Clarity:</strong> It helps make your content's structure and meaning clear to browsers and assistive technologies.</li>
-            <li><strong>✅ SEO Perks:</strong> It assists search engines in understanding the context and relevance of your key content—hello, better rankings!</li>
-            <li><strong>✅ Accessibility Boost:</strong> This is great news for users who rely on screen readers, making their experience smoother.</li>
-            <li><strong>✅ Content Reusability:</strong> It makes syndicating and repurposing your awesome content a breeze!</li>
-            <li><strong>✅ Clean Structure:</strong> Replaces generic <code>&lt;div&gt;</code> containers with meaning</li>
-          </ul>
-        </div>
-
-        <h2>Real-World Uses</h2>
-        <p>You should wrap these in <code>&lt;article&gt;</code>:</p>
-        
-        <div class="code-block">
-          <pre><code>&lt;!-- Blog Post --&gt;
-&lt;article&gt;
-  &lt;h2&gt;My Development Journey&lt;/h2&gt;
-  &lt;p&gt;Content...&lt;/p&gt;
-&lt;/article&gt;
-
-&lt;!-- Forum Post --&gt;
-&lt;article&gt;
-  &lt;h3&gt;Help with CSS Grid&lt;/h3&gt;
-  &lt;p&gt;I'm having trouble with...&lt;/p&gt;
-&lt;/article&gt;
-
-&lt;!-- Product Card --&gt;
-&lt;article&gt;
-  &lt;h2&gt;Premium HTML Course&lt;/h2&gt;
-  &lt;p&gt;Learn semantic HTML...&lt;/p&gt;
-  &lt;button&gt;Enroll Now&lt;/button&gt;
-&lt;/article&gt;</code></pre>
-        </div>
-
-        <!-- <h2>Advanced Implementations</h2>
-        
-        <h3>Microdata Integration</h3>
-        <div class="code-block">
-          <pre><code>&lt;article itemscope itemtype="https://schema.org/BlogPosting"&gt;
-  &lt;h2 itemprop="headline"&gt;Advanced HTML Techniques&lt;/h2&gt;
-  &lt;div itemprop="author" itemscope itemtype="https://schema.org/Person"&gt;
-    By &lt;span itemprop="name"&gt;Jane Developer&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div itemprop="datePublished" content="2023-05-15"&gt;May 15, 2023&lt;/div&gt;
-  &lt;div itemprop="articleBody"&gt;
-    &lt;p&gt;Content here...&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/article&gt;</code></pre>
-        </div> -->
-        
-        <h3>Edge Cases</h3>
-        <div class="alert warning">
-          <p><strong>When NOT to use &lt;article&gt;:</strong></p>
-          <ul>
-            <li>For UI components (use <code>&lt;section&gt;</code> instead)</li>
-            <li>When content isn't independently distributable</li>
-            <li>For comments within articles (use <code>&lt;div&gt;</code> unless they're substantive)</li>
-          </ul>
-        </div>
-
-        <p><strong>Let's keep creating amazing things together!</strong></p>
-
-        <a href="#articles" class="cta-button">Back to Article</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- Article Page for <aside> -->
-  <section class="article-page" id="article-aside">
-    <div class="container">
-      <article class="article-body">
-        <header class="article-header">
-          <h1>The &lt;aside&gt; Tag: Your Content's Sidekick</h1>
-          <div class="article-meta">Published on <time datetime="2025-05-02">May 02, 2025</time></div>
-        </header>
-
-        <p>Remember the <code>&lt;aside&gt;</code> tag! Image the main narrative of a webpage, the core story unfolding for the reader. Now, picture a gentle whisper, a related anecdote or a helpful piece of extra context sitting just beside it.</p> 
-        <p>This is where the <code>&lt;aside&gt;</code> tag found its purpose. It was the container for content that was tangentially connected to the main flow, like a sidebar showcasing related articles about different cultures alongside a travel blog, or a brief author biography enriching a news report.</p>
-       <p>Though separate, it added depth and flavour to the primary content. 
-            Think of <code>&lt;aside&gt;</code> as the whispered aside in a play - related to the main content but not central to the narrative.</p>
-
-        <div class="live-example">
-          <div class="example-title">Live Example:</div>
-          <article style="border: 1px dashed var(--primary); padding: 1rem; margin: 1rem 0;">
-            <h2>CSS Grid Layout</h2>
-            <p>Grid has revolutionized how we create layouts...</p>
+            <!-- Article 7 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 7: The Echo of Attribution: &lt;cite&gt;</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Use the &lt;cite&gt; element to properly credit sources, authors, and titles in a semantically correct and accessible way.</h3>
+                <a href="#article-cite" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
             
-            <aside style="background: rgba(67, 97, 238, 0.1); padding: 1rem; margin: 1rem 0; border-left: 3px solid var(--primary);">
-              <h3>Did You Know?</h3>
-              <p>CSS Grid was first proposed in 2011 and became widely supported by 2017.</p>
-            </aside>
-          </article>
-        </div>
+            <!-- Article 8 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 8: The Whisper of Meaning: &lt;abbr&gt;</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Master the use of abbreviations in HTML to provide helpful expansions for readers and accessibility tools.</h3>
+                <a href="#article-abbr" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </article> -->
 
-        <div class="benefits">
-          <h3>Why &lt;aside&gt; Matters:</h3>
-          <ul>
-            <li><strong>Semantic Separation:</strong> Clearly marks supplementary content</li>
-            <li><strong>Styling Hook:</strong> Often appears as a sidebar or pull-quote</li>
-            <li><strong>Reader Options:</strong> Screen readers can skip or prioritize it</li>
-            <li><strong>Content Hierarchy:</strong> Shows search engines what's primary vs secondary</li>
-          </ul>
-        </div>
+            <!-- Article 9 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 9: Author's Corner: Semantically Defining Contact Info with &lt;address&gt;</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Learn how to semantically present contact information using the &lt;address&gt; tag for better structure and SEO.</h3>
+                <a href="#article-address" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
 
-        <h2>When to Use It</h2>
-        <div class="code-block">
-          <pre><code>&lt;!-- Pull Quote --&gt;
-&lt;aside&gt;
-  &lt;blockquote&gt;"Semantic HTML improves accessibility"&lt;/blockquote&gt;
-&lt;/aside&gt;
+            <!-- Article 10 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 10: Machine-Readable Magic: Connecting Content with &lt;data&gt;</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Explore the &lt;data&gt; element to embed machine-readable values while keeping human-friendly text visible.</h3>
+                <a href="#article-data" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
 
-&lt;!-- Glossary Term --&gt;
-&lt;aside&gt;
-  &lt;h3&gt;What is ARIA?&lt;/h3&gt;
-  &lt;p&gt;Accessible Rich Internet Applications...&lt;/p&gt;
-&lt;/aside&gt;
+            <!-- Article 11 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 11: Define Your Terms: The Importance of the &lt;dfn&gt; Tag </h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Understand how to define terms in your content with the &lt;dfn&gt; tag to improve clarity and accessibility.</h3>
+                <a href="#article-dfn" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
 
-&lt;!-- Advertisement --&gt;
-&lt;aside&gt;
-  &lt;h3&gt;Sponsored&lt;/h3&gt;
-  &lt;!-- Ad content --&gt;
-&lt;/aside&gt;</code></pre>
-        </div>
+            <!-- Article 12 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 12: Keyboard Cues: Styling User Input with &lt;kbd&gt;</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Discover how to mark up user input or keyboard commands using the &lt;kbd&gt; tag in technical documentation.</h3>
+                <a href="#article-kbd" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
 
-        <!-- <h2>Advanced Implementations</h2>
-        
-        <h3>Dynamic Sidebar with CSS Grid</h3>
-        <div class="code-block">
-          <pre><code>.container {
-  display: grid;
-  grid-template-columns: minmax(300px, 1fr) 250px;
-  gap: 2rem;
-}
+            <!-- Article 13 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 13: Measuring Up: Visualizing Data with the &lt;meter&gt; Tag</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Use the &lt;meter&gt; element to represent scalar measurements within a known range, such as progress or scores.</p>
+                <a href="#article-meter" class="read-more">
+                    Read more
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+            </article> -->
 
-main {
-  grid-column: 1;
-}
+            <!-- Article 14 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 14: The Pulse of Results: &lt;output&gt; Powers Interactivity</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Learn to display dynamic calculation results or user-driven values in real time with the &lt;output&gt; tag.</h3>
+                <a href="#article-output" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
 
-aside {
-  grid-column: 2;
-  position: sticky;
-  top: 1rem;
-  align-self: start;
-}</code></pre>
-        </div> -->
-        
-        <h3>Edge Cases</h3>
-        <div class="alert warning">
-          <p><strong>Common Mistakes:</strong></p>
-          <ul>
-            <li>Using for completely unrelated content (breaks semantic meaning)</li>
-            <li>Nesting multiple <code>&lt;aside&gt;</code> without proper headings</li>
-            <li>Overusing in mobile layouts where space is limited</li>
-          </ul>
-        </div>
-
-        <a href="#articles" class="cta-button">Back to Articles</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- Article Page for <nav> -->
-  <section class="article-page" id="article-nav">
-    <div class="container">
-      <article class="article-body">
-        <header class="article-header">
-          <h1>The &lt;nav&gt; Tag: Your Site's Roadmap</h1>
-          <div class="article-meta">Published on <time datetime="2025-05-03">May 03, 2025</time></div>
-        </header>
-
-        <p>Every great city thrives on clear street signs. Every great website relies on <code>&lt;nav&gt;</code> — the semantic cornerstone for its most essential links.</p> 
-        <p>In the boundless expanse of the internet, intuitive pathways are vital. The <code>&lt;nav&gt;</code> tag serves as a digital signpost, anchoring a website's navigation menus. Whether guiding shoppers through an e-commerce platform or providing a table of contents for a detailed article, <code>&lt;nav&gt;</code> delivers structure and focus.</p>
-        <p>More than a mere list of links, it boldly declares, “This is how to explore this site,” empowering human visitors and search engine crawlers alike with seamless navigation.</P>
-
-        <div class="live-example">
-          <div class="example-title">Live Example:</div>
-          <nav style="background: var(--light); padding: 1rem; margin: 1rem 0; border: 1px dashed var(--primary);">
-            <ul style="display: flex; gap: 1rem; list-style: none; padding: 0;">
-              <li><a href="#" style="text-decoration: none; color: var(--primary);">Home</a></li>
-              <li><a href="#" style="text-decoration: none; color: var(--primary);">Articles</a></li>
-              <li><a href="#" style="text-decoration: none; color: var(--primary);">About</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="benefits">
-          <h3>Why &lt;nav&gt; Matters:</h3>
-          <ul>
-            <li><strong>Keyboard Navigation:</strong> Users can jump to it with shortcuts</li>
-            <li><strong>SEO Significance:</strong> Search engines identify primary navigation</li>
-            <li><strong>Screen Reader Friendly:</strong> Announced as a navigation landmark</li>
-            <li><strong>Future-Proof:</strong> Prepares for emerging navigation patterns</li>
-          </ul>
-        </div>
-
-        <h2>Best Practices</h2>
-        <div class="code-block">
-          <pre><code>&lt;!-- Main Navigation --&gt;
-&lt;nav aria-label="Primary"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/articles"&gt;Articles&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;!-- Table of Contents --&gt;
-&lt;nav aria-label="Table of Contents"&gt;
-  &lt;ol&gt;
-    &lt;li&gt;&lt;a href="#intro"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#chapter1"&gt;Chapter 1&lt;/a&gt;&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/nav&gt;</code></pre>
-        </div>
-
-        <!-- <h2>Advanced Implementations</h2>
-        
-        <h3>Mega Menu Pattern</h3>
-        <div class="code-block">
-          <pre><code>&lt;nav aria-label="Main"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href="/products" aria-haspopup="true"&gt;Products&lt;/a&gt;
-      &lt;div class="mega-menu"&gt;
-        &lt;div class="mega-menu-column"&gt;
-          &lt;h3&gt;Category 1&lt;/h3&gt;
-          &lt;ul&gt;
-            &lt;li&gt;&lt;a href="/products/1"&gt;Product 1&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-
-&lt;style&gt;
-  .mega-menu {
-    display: none;
-    position: absolute;
-    /* Positioning styles */
-  }
+            <!-- Article 15 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 15: The &lt;object&gt; Tag: The Underrated HTML Hero for Embedding Everything</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Discover how the &lt;object&gt; tag steal the spotlight as it quietly handles content with better fallbacks and HTML5 compliance.</h3>
+                <a href="#article-object" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
   
-  li:hover .mega-menu {
+            <!-- Article 16 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 16: The Invisible Window to Worlds: &lt;iframe&gt;'s Essential Frontend Role</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Think portals within your website! The &lt;iframe&gt; tag lets you bring in content from anywhere; YouTube videos, live maps, even other websites.</h3>
+                <a href="#article-iframe" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 17 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 17: The Chameleon of Visuals: &lt;picture&gt; Transforms Design</h2>
+                <div class="article-content">
+                    <h3 class="article-excerpt">Is your website's imagery looking sharp on every device? The &lt;picture&gt; tag is your secret weapon for serving the perfect image, every time.</h3>
+                    <a href="#article-picture" class="read-more">
+                        Read more
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </article> -->
+
+            <!-- Article 18 -->
+            <article class="article-card">
+                <h2 class="article-title">Day 18: The Pulse of Progress: &lt;progress&gt;'s Vital Beat in UX</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Don't leave your users guessing! The &lt;progress&gt; tag offers a visual lifeline for ongoing tasks, keeping everyone in the loop. See how to implement it.</h3>
+                <a href="#article-progress" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article>
+
+            <!-- Article 19 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 19: The Whisper of Citation: &lt;q&gt; Tag Strengthens Semantics</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Short, impactful quotes deserve special treatment. The &lt;q&gt; tag semantically marks your inline citations, making them clear and stylish.</h3>
+                <a href="#article-q" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 20 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 20: The Symphony of Structure: &lt;dl&gt;, &lt;dt&gt; and &lt;dd&gt; Harmonizing Semantics</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Ever need to present key value pairs on your website in a clear, structured way? Think no more, the trio of &lt;dl&gt;, &lt;dt&gt; and &lt;dd&gt; to the rescue.</h3>
+                <a href="#article-dl" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 21 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 21: The Quiet Footnote of Clarity: &lt;small&gt;'s Big Role in Precision</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">The devil's in the details! From legal disclaimers to subtle annotations, the &lt;small&gt; tag ensures important but less prominent text gets the attention it needs.</p>
+                <a href="#article-small" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 22 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 22: The Pillars of Precision: &lt;sub&gt; and &lt;sup&gt; Elevate Frontend Science & Math </h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Do you know &lt;sub&gt; and &lt;sup&gt; ensures accuracy and visual clarity when writing chemical formulas (H₂O) and mathematical exponents (E=mc²)</h3>
+                <a href="#article-sub" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+            
+            <!-- Article 23 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 23: The Safety Net of Accessibility: Why &lt;noscript&gt; Saves Frontend Experiences</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">What happens when JavaScript isn't an option? The &lt;noscript&gt; tag provides a crucial fallback, ensuring your content remains accessible to everyone globally.</h3>
+                <a href="#article-noscript" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 24 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 24: The Blueprint of Efficiency: How &lt;template&gt; Revolutionizes Frontend Code</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Unlock the power of reusable HTML! The &lt;template&gt; tag that stores hidden snippets ready to be deployed with JavaScript, making dynamic content cleaner and more efficient.</h3>
+                <a href="#article-template" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 25 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 25: The Compass of Code Clarity: &lt;var&gt;'s Underrated Frontend Precision</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">From mathematical equations to code snippets, clarity is key. The &lt;var&gt; tag helps you semantically denote variables, making your technical content easier to understand.</h3>
+                <a href="#article-var" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 26 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 26: The Gentle Hinge of Flow: &lt;wbr&gt; Enhances Frontend Typography</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Tired of long URLs breaking your layout, especially on mobile devices? The &lt;wbr&gt; tag offers a subtle solution for elegant line breaks.</h3>
+                <a href="#article-wbr" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 27 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 27: The Strikethrough of Evolution: Why &lt;s&gt; Matters in Frontend Storytelling</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Show the evolution of information! The &lt;s&gt; tag visually marks outdated text, perfect for showcasing discounts or historical data.</h3>
+                <a href="#article-s" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+            
+            <!-- Article 28 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 28: The Echo of Output: &lt;samp&gt; Is a Frontend Developer's Secret Weapon</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Bringing the terminal to the browser! The &lt;samp&gt; tag lets you clearly display sample code output, making your tutorials and technical documentation a breeze to follow.</h3>
+                <a href="#article-samp" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+            <!-- Article 29 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 29: The Dance of Direction: &lt;bdi&gt; and &lt;bdo&gt; Choreograph Globalisation</h2>
+            <div class="article-content">
+                <p class="article-excerpt">Don't let text direction be an afterthought; use <bdi> and <bdo> tags to discover how these tags can make your content truly international!</h3>
+                <a href="#article-bdi" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+            
+            <!-- Article 30 -->
+            <!-- <article class="article-card">
+                <h2 class="article-title">Day 30: he Tapestry of Annotation: Why &lt;ruby&gt; &lt;rt&gt; and &lt;rp&gt; Weave Linguistics</h2>
+            <div class="article-content">
+                <h3 class="article-excerpt">Ever seen those small pronunciation guides above East Asian characters? That's the magic of the trio of &lt;ruby&gt; &lt;rt&gt; and &lt;rp&gt;!</h3>
+                <a href="#article-ruby" class="read-more">
+                Read more
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </a>
+            </div>
+            </article> -->
+
+
+
+
+
+
+
+
+        </article>
+        
+        <!-- Previous Articles -->
+        <aside class="previous-article">
+            <h2>Previous Article</h2>
+
+            <div class="scroller" data-direction="left" data-speed="fast">
+                <ul class="day-nav scroller__inner">
+                    <li><a href="#article-article" class="current">Day 1: &lt;article&gt;</a></li>
+                    <li><a href="#article-aside">Day 2: &lt;aside&gt;</a></li>
+                    <li><a href="#article-nav">Day 3: &lt;nav&gt;</a></li>
+                    <li><a href="#article-figure">Day 4: &lt;figure&gt; & &lt;figcaption&gt;</a></li>
+                    <li><a href="#article-details">Day 5: &lt;details&gt; & &lt;summary&gt;</a></li>
+                    <li><a href="#article-mark">Day 6: &lt;mark&gt;</a></li>
+                    <li><a href="#article-cite">Day 7: &lt;cite&gt;</a></li>
+                    <li><a href="#article-abbr">Day 8: &lt;abbr&gt;</a></li>
+                    <li><a href="#article-address">Day 9: &lt;address&gt;</a></li>
+                    <li><a href="#article-data">Day 10: &lt;data&gt;</a></li>
+                    <li><a href="#article-dfn">Day 11: &lt;dfn&gt;</a></li>
+                    <li><a href="#article-kbd">Day 12: &lt;kbd&gt;</a></li>
+                    <li><a href="#article-meter">Day 13: &lt;meter&gt;</a></li>
+                    <li><a href="#article-output">Day 14: &lt;output&gt;</a></li>
+                    <li><a href="#article-object">Day 15: &lt;object&gt;</a></li>
+                    <li><a href="#article-iframe">Day 16: &lt;iframe&gt;</a></li>
+                    <li><a href="#article-picture">Day 17: &lt;picture&gt;</a></li>
+                    <!-- <li><a href="#article-progress">Day 18: &lt;progress&gt;</a></li> -->
+                    <!-- <li><a href="#article-q">Day 19: &lt;q&gt;</a></li> -->
+                    <!-- <li><a href="#article-dl">Day 20: &lt;dl&gt; &lt;dt&gt; & &lt;dd&gt;</a></li> -->
+                    <!-- <li><a href="#article-sub">Day 22: &lt;sub&gt; & &lt;sup&gt;</a></li> -->
+                    <!-- <li><a href="#article-noscript">Day 23: &lt;noscript&gt;</a></li> -->
+                    <!-- <li><a href="#article-template">Day 24: &lt;template&gt;</a></li> -->
+                    <!-- <li><a href="#article-var">Day 25: &lt;var&gt;</a></li> -->
+                    <!-- <li><a href="#article-wbr">Day 26: &lt;wbr&gt;</a></li> -->
+                    <!-- <li><a href="#article-s">Day 27: &lt;s&gt;</a></li> -->
+                    <!-- <li><a href="#article-samp">Day 28: &lt;samp&gt;</a></li> -->
+                    <!-- <li><a href="#article-bdi">Day 29: &lt;bdi&gt; & &lt;bdo&gt;</a></li> -->
+                    <!-- <li><a href="#article-ruby">Day 30: &lt;ruby&gt; &lt;rt&gt; & &lt;rp&gt;</a></li> -->
+                </ul>
+
+                <!-- <div class="subscribe">
+                    <h2>Subscribe</h2>
+                    <form>
+                        <label for="email">Get daily updates:</label>
+                        <input type="email" id="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div> -->
+            </div>
+        </aside>
+    </main>
+
+    <!-- Article Page for <article> -->
+    <section class="article-page" id="article-article">
+        <div class="container">
+        <article class="article-body">
+            <header class="article-header">
+            <h1>The &lt;article&gt; Tag: Your Content's Perfect Home</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-01">May 01, 2025</time></div>
+            </header>
+
+            <p>🌟 Hey Frontend, Web Developers and Content Creators! Let's chat about something super cool—the &lt;article&gt; tag in HTML5!</p>
+
+            <p>This nifty little tag isn't just a container; it's designed to hold self-contained, independent pieces of content like your blog posts, news articles, or even product listings. Pretty neat, right?</p>
+            
+            <p>Imagine you're a newspaper editor. Each story needs its own container - complete with headline, byline, and content. That's exactly what &lt;article&gt; provides for the web.</p>
+
+            <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <article style="border: 1px dashed var(--primary); padding: 1rem; margin: 1rem 0;">
+                <h2>The Rise of Article Tag</h2>
+                <p>Once upon a time, developers used endless divs. Then came the Article tag in HTML5 with semantic meaning...</p>
+                <footer>By <span>zeroFiveJuly</span> | <time>May 01, 2025</time></footer>
+            </article>
+            </div>
+
+            <div class="benefits">
+            <h3>So, why should you care about using &lt;article&gt; ?</h3>
+            <ul style="list-style: none;">
+                <li><strong>✅ Semantic Clarity:</strong> It helps make your content's structure and meaning clear to browsers and assistive technologies.</li>
+                <li><strong>✅ SEO Perks:</strong> It assists search engines in understanding the context and relevance of your key content—hello, better rankings!</li>
+                <li><strong>✅ Accessibility Boost:</strong> This is great news for users who rely on screen readers, making their experience smoother.</li>
+                <li><strong>✅ Content Reusability:</strong> It makes syndicating and repurposing your awesome content a breeze!</li>
+                <li><strong>✅ Clean Structure:</strong> Replaces generic <code>&lt;div&gt;</code> containers with meaning</li>
+            </ul>
+            </div>
+
+            <h2>Real-World Uses</h2>
+            <p>You should wrap these in <code>&lt;article&gt;</code>:</p>
+            
+            <div class="code-block">
+            <pre><code>&lt;!-- Blog Post --&gt;
+    &lt;article&gt;
+    &lt;h2&gt;My Development Journey&lt;/h2&gt;
+    &lt;p&gt;Content...&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;!-- Forum Post --&gt;
+    &lt;article&gt;
+    &lt;h3&gt;Help with CSS Grid&lt;/h3&gt;
+    &lt;p&gt;I'm having trouble with...&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;!-- Product Card --&gt;
+    &lt;article&gt;
+    &lt;h2&gt;Premium HTML Course&lt;/h2&gt;
+    &lt;p&gt;Learn semantic HTML...&lt;/p&gt;
+    &lt;button&gt;Enroll Now&lt;/button&gt;
+    &lt;/article&gt;</code></pre>
+            </div>
+
+            <!-- <h2>Advanced Implementations</h2>
+            
+            <h3>Microdata Integration</h3>
+            <div class="code-block">
+            <pre><code>&lt;article itemscope itemtype="https://schema.org/BlogPosting"&gt;
+    &lt;h2 itemprop="headline"&gt;Advanced HTML Techniques&lt;/h2&gt;
+    &lt;div itemprop="author" itemscope itemtype="https://schema.org/Person"&gt;
+        By &lt;span itemprop="name"&gt;Jane Developer&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div itemprop="datePublished" content="2023-05-15"&gt;May 15, 2023&lt;/div&gt;
+    &lt;div itemprop="articleBody"&gt;
+        &lt;p&gt;Content here...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/article&gt;</code></pre>
+            </div> -->
+            
+            <h3>Edge Cases</h3>
+            <div class="alert warning">
+            <p><strong>When NOT to use &lt;article&gt;:</strong></p>
+            <ul>
+                <li>For UI components (use <code>&lt;section&gt;</code> instead)</li>
+                <li>When content isn't independently distributable</li>
+                <li>For comments within articles (use <code>&lt;div&gt;</code> unless they're substantive)</li>
+            </ul>
+            </div>
+
+            <p><strong>Let's keep creating amazing things together!</strong></p>
+
+            <a href="index.html" class="cta-button">Back to Article</a>
+        </article>
+        </div>
+    </section>
+
+    <!-- Article Page for <aside> -->
+    <section class="article-page" id="article-aside">
+        <div class="container">
+        <article class="article-body">
+            <header class="article-header">
+            <h1>The &lt;aside&gt; Tag: Your Content's Sidekick</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-02">May 02, 2025</time></div>
+            </header>
+
+            <p>Remember the <code>&lt;aside&gt;</code> tag! Image the main narrative of a webpage, the core story unfolding for the reader. Now, picture a gentle whisper, a related anecdote or a helpful piece of extra context sitting just beside it.</p> 
+            <p>This is where the <code>&lt;aside&gt;</code> tag found its purpose. It was the container for content that was tangentially connected to the main flow, like a sidebar showcasing related articles about different cultures alongside a travel blog, or a brief author biography enriching a news report.</p>
+        <p>Though separate, it added depth and flavour to the primary content. 
+                Think of <code>&lt;aside&gt;</code> as the whispered aside in a play - related to the main content but not central to the narrative.</p>
+
+            <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <article style="border: 1px dashed var(--primary); padding: 1rem; margin: 1rem 0;">
+                <h2>CSS Grid Layout</h2>
+                <p>Grid has revolutionized how we create layouts...</p>
+                
+                <aside style="background: rgba(67, 97, 238, 0.1); padding: 1rem; margin: 1rem 0; border-left: 3px solid var(--primary);">
+                <h3>Did You Know?</h3>
+                <p>CSS Grid was first proposed in 2011 and became widely supported by 2017.</p>
+                </aside>
+            </article>
+            </div>
+
+            <div class="benefits">
+            <h3>Why &lt;aside&gt; Matters:</h3>
+            <ul>
+                <li><strong>Semantic Separation:</strong> Clearly marks supplementary content</li>
+                <li><strong>Styling Hook:</strong> Often appears as a sidebar or pull-quote</li>
+                <li><strong>Reader Options:</strong> Screen readers can skip or prioritize it</li>
+                <li><strong>Content Hierarchy:</strong> Shows search engines what's primary vs secondary</li>
+            </ul>
+            </div>
+
+            <h2>When to Use It</h2>
+            <div class="code-block">
+            <pre><code>&lt;!-- Pull Quote --&gt;
+    &lt;aside&gt;
+    &lt;blockquote&gt;"Semantic HTML improves accessibility"&lt;/blockquote&gt;
+    &lt;/aside&gt;
+
+    &lt;!-- Glossary Term --&gt;
+    &lt;aside&gt;
+    &lt;h3&gt;What is ARIA?&lt;/h3&gt;
+    &lt;p&gt;Accessible Rich Internet Applications...&lt;/p&gt;
+    &lt;/aside&gt;
+
+    &lt;!-- Advertisement --&gt;
+    &lt;aside&gt;
+    &lt;h3&gt;Sponsored&lt;/h3&gt;
+    &lt;!-- Ad content --&gt;
+    &lt;/aside&gt;</code></pre>
+            </div>
+
+            <!-- <h2>Advanced Implementations</h2>
+            
+            <h3>Dynamic Sidebar with CSS Grid</h3>
+            <div class="code-block">
+            <pre><code>.container {
     display: grid;
-  }
-&lt;/style&gt;</code></pre>
-        </div> -->
-        
-        <h3>Edge Cases</h3>
-        <div class="alert warning">
-          <p><strong>Accessibility Considerations:</strong></p>
-          <ul>
-            <li>Always provide keyboard navigation support</li>
-            <li>Use <code>aria-current="page"</code> for current page indicators</li>
-            <li>Mobile menus should be fully operable via screen readers</li>
-          </ul>
+    grid-template-columns: minmax(300px, 1fr) 250px;
+    gap: 2rem;
+    }
+
+    main {
+    grid-column: 1;
+    }
+
+    aside {
+    grid-column: 2;
+    position: sticky;
+    top: 1rem;
+    align-self: start;
+    }</code></pre>
+            </div> -->
+            
+            <h3>Edge Cases</h3>
+            <div class="alert warning">
+            <p><strong>Common Mistakes:</strong></p>
+            <ul>
+                <li>Using for completely unrelated content (breaks semantic meaning)</li>
+                <li>Nesting multiple <code>&lt;aside&gt;</code> without proper headings</li>
+                <li>Overusing in mobile layouts where space is limited</li>
+            </ul>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
         </div>
+    </section>
 
-        <div class="alert">
-          <p><strong>Pro Tip:</strong> Don't wrap every link group in <code>&lt;nav&gt;</code>. Reserve it for <em>major</em> navigation blocks.</p>
-        </div>
+    <!-- Article Page for <nav> -->
+    <section class="article-page" id="article-nav">
+        <div class="container">
+        <article class="article-body">
+            <header class="article-header">
+            <h1>The &lt;nav&gt; Tag: Your Site's Roadmap</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-03">May 03, 2025</time></div>
+            </header>
 
-        <a href="#articles" class="cta-button">Back to Articles</a>
-      </article>
-    </div>
-  </section>
+            <p>Every great city thrives on clear street signs. Every great website relies on <code>&lt;nav&gt;</code> — the semantic cornerstone for its most essential links.</p> 
+            <p>In the boundless expanse of the internet, intuitive pathways are vital. The <code>&lt;nav&gt;</code> tag serves as a digital signpost, anchoring a website's navigation menus. Whether guiding shoppers through an e-commerce platform or providing a table of contents for a detailed article, <code>&lt;nav&gt;</code> delivers structure and focus.</p>
+            <p>More than a mere list of links, it boldly declares, “This is how to explore this site,” empowering human visitors and search engine crawlers alike with seamless navigation.</P>
 
-  <!-- Article Page for <figure> and <figcaption> -->
-  <section class="article-page" id="article-figure">
-    <div class="container">
-      <article class="article-body">
-        <header class="article-header">
-          <h1>The Dynamic Duo: &lt;figure&gt; & &lt;figcaption&gt;</h1>
-          <div class="article-meta">Published on <time datetime="2025-05-04">May 04, 2025</time></div>
-        </header>
+            <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <nav style="background: var(--light); padding: 1rem; margin: 1rem 0; border: 1px dashed var(--primary);">
+                <ul style="display: flex; gap: 1rem; list-style: none; padding: 0;">
+                <li><a href="#" style="text-decoration: none; color: var(--primary);">Home</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--primary);">Articles</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--primary);">About</a></li>
+                </ul>
+            </nav>
+            </div>
 
-        <p>Imagine wandering through a museum where paintings hang without labels—beautiful but bewildering. That's what images on the web are like without <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>: a semantic duo that anchors visuals to their meaning. 
-        <p>Every image, illustration, or media element carries a story. The <code>&lt;figure&gt;</code> tag serves as the frame, elegantly containing these visual treasures. Yet, it's the <code>&lt;figcaption&gt;</code>, nestled within, that breathes life into them with a descriptive caption. Picture a photo of The Grail Center in Akwa-Ibom, its caption unveiling its cultural significance or a code snippet paired with text clarifying its purpose.</p>
-        <p>Together, <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> weave context and clarity, making media richer, more accessible, and universally understood.</p>
+            <div class="benefits">
+            <h3>Why &lt;nav&gt; Matters:</h3>
+            <ul>
+                <li><strong>Keyboard Navigation:</strong> Users can jump to it with shortcuts</li>
+                <li><strong>SEO Significance:</strong> Search engines identify primary navigation</li>
+                <li><strong>Screen Reader Friendly:</strong> Announced as a navigation landmark</li>
+                <li><strong>Future-Proof:</strong> Prepares for emerging navigation patterns</li>
+            </ul>
+            </div>
 
-        <div class="live-example">
-          <div class="example-title">Live Example:</div>
-          <figure style="border: 1px dashed var(--primary); padding: 1rem; margin: 1rem 0;">
-            <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute Dogs" style="width: 100%; height: auto;">
-            <figcaption style="text-align: center; font-style: italic; margin-top: 0.5rem;">
-              Figure 1: Two Yellow Labrador Retriever Puppies
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="benefits">
-          <h3>Why This Pair Matters:</h3>
-          <ul>
-            <li><strong>Accessibility:</strong> Screen readers announce the caption with the image</li>
-            <li><strong>SEO Value:</strong> Search engines understand the image-content relationship</li>
-            <li><strong>Responsive Ready:</strong> Maintains connection even when layout changes</li>
-            <li><strong>Styling Control:</strong> Perfect for creating consistent media blocks</li>
-          </ul>
-        </div>
-
-        <h2>Beyond Just Images</h2>
-        <p>These tags work with various content types:</p>
-        
-        <div class="code-block">
-          <pre><code>&lt;!-- Code Snippet Example --&gt;
-&lt;figure&gt;
-  &lt;pre&gt;&lt;code&gt;function greet() { 
-  console.log("Hello World!"); 
-}&lt;/code&gt;&lt;/pre&gt;
-  &lt;figcaption&gt;Listing 1: Basic JavaScript function&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;!-- Video Example --&gt;
-&lt;figure&gt;
-  &lt;video controls src="tutorial.mp4"&gt;&lt;/video&gt;
-  &lt;figcaption&gt;Video 1: Semantic HTML tutorial&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;!-- Data Visualization --&gt;
-&lt;figure&gt;
-  &lt;svg&gt;&lt;!-- Chart markup --&gt;&lt;/svg&gt;
-  &lt;figcaption&gt;Chart 1: Monthly traffic growth&lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
-        </div>
-
-        <!-- <h2>Advanced Implementations</h2>
-        
-        <h3>Responsive Art Direction</h3>
-        <div class="code-block">
-          <pre><code>&lt;figure&gt;
-  &lt;picture&gt;
-    &lt;source media="(min-width: 1200px)" srcset="large.jpg"&gt;
-    &lt;source media="(min-width: 800px)" srcset="medium.jpg"&gt;
-    &lt;img src="small.jpg" alt="Responsive image example"&gt;
-  &lt;/picture&gt;
-  &lt;figcaption&gt;Example of responsive art direction&lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
-        </div> -->
-        
-        <h3>Edge Cases</h3>
-        <div class="alert warning">
-          <p><strong>When to Avoid:</strong></p>
-          <ul>
-            <li>For decorative images that don't need captions</li>
-            <li>When the image is purely for layout purposes</li>
-            <li>If the caption doesn't add meaningful context</li>
-          </ul>
-        </div>
-
-        <div class="alert">
-          <p><strong>Pro Tip:</strong> Always include <code>alt</code> text for images <em>and</em> meaningful captions - they serve different purposes!</p>
-        </div>
-
-        <a href="#articles" class="cta-button">Back to Articles</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- Article Page for <details> and <summary> -->
-  <section class="article-page" id="article-details">
-    <div class="container">
-      <article class="article-body">
-        <header class="article-header">
-          <h1>&lt;details&gt; & &lt;summary&gt;: Your Built - In Accordion</h1>
-          <div class="article-meta">Published on <time datetime="2025-05-05">May 05, 2025</time></div>
-        </header>
-
-        <p>Picture a treasure chest with a labeled latch, tempting you to lift it. The <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> tags bring that sense of discovery to the web - no JavaScript required!</p> 
-        <p>Webpages often conceal extra layers of knowledge, ready to be uncovered. The <code>&lt;details&gt;</code> tag serves as the chest, safeguarding these hidden insights. Its companion, <code>&lt;summary&gt;</code>, acts as the inviting latch, displaying a clickable heading that sparks curiosity.</p> 
-        <p>Imagine an FAQ where questions in <code>&lt;summary&gt;</code> unlock answers within <code>&lt;details&gt;</code> or technical specs revealed with a single click. Together, they create interactive, user-driven experiences with pure HTML finesse.</p>
-
-        <div class="live-example">
-          <div class="example-title">Live Example:</div>
-          <details style="border: 1px solid var(--primary); border-radius: 0.3rem; padding: 0.5rem; margin: 1rem 0;">
-  <summary style="font-weight: bold; cursor: pointer;">What is semantic HTML?</summary>
-  <p style="margin-top: 0.5rem;">Semantic HTML uses tags like <code>&lt;nav&gt;</code>, <code>&lt;figure&gt;</code>, and <code>&lt;details&gt;</code> to describe the meaning of content, improving accessibility and SEO.</p>
-</details>
-          
-          <details style="border: 1px solid var(--primary); border-radius: 0.3rem; padding: 0.5rem; margin: 1rem 0;">
-            <summary style="font-weight: bold; cursor: pointer;">Click to reveal secret HTML tip</summary>
-            <p style="margin-top: 0.5rem;">You can style the marker with <code>::marker</code> pseudo-element!</p>
-          </details>
-
-          <details style="border: 1px solid var(--primary); border-radius: 0.3rem; padding: 0.5rem; margin: 1rem 0;">
-  <summary style="font-weight: bold; cursor: pointer;">Why use &lt;details&gt; instead of JavaScript?</summary>
-  <p style="margin-top: 0.5rem;">The <code>&lt;details&gt;</code> tag provides native interactivity, reducing code complexity and ensuring compatibility with screen readers and low-bandwidth devices.</p>
-</details>
-        </div>
-
-        <div class="benefits">
-          <h3>Why This Combo Rocks:</h3>
-          <ul>
-            <li><strong>Zero JavaScript:</strong> Works even with JS disabled</li>
-            <li><strong>Progressive Disclosure:</strong> Perfect for FAQs and technical docs</li>
-            <li><strong>Built-In Accessibility:</strong> Keyboard operable by default</li>
-            <li><strong>Performance Friendly:</strong> No library overhead</li>
-          </ul>
-        </div>
-
-        <h2>Creative Implementations</h2>
-        <div class="code-block">
-          <pre><code>&lt;!-- FAQ Section --&gt;
-&lt;details&gt;
-  &lt;summary&gt;What is semantic HTML?&lt;/summary&gt;
-  &lt;p&gt;Semantic HTML means using elements that convey meaning...&lt;/p&gt;
-&lt;/details&gt;
-
-&lt;!-- Spoiler Protection --&gt;
-&lt;details&gt;
-  &lt;summary&gt;Spoiler: Who wins in Avengers?&lt;/summary&gt;
-  &lt;p&gt;Iron Man sacrifices himself...&lt;/p&gt;
-&lt;/details&gt;
-
-&lt;!-- Mobile-Friendly Menu --&gt;
-&lt;details&gt;
-  &lt;summary&gt;Menu&lt;/summary&gt;
-  &lt;nav&gt;
+            <h2>Best Practices</h2>
+            <div class="code-block">
+            <pre><code>&lt;!-- Main Navigation --&gt;
+    &lt;nav aria-label="Primary"&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/articles"&gt;Articles&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
-  &lt;/nav&gt;
-&lt;/details&gt;</code></pre>
-        </div>
+    &lt;/nav&gt;
 
-        <!-- <h2>Advanced Implementations</h2>
-        
-        <h3>Nested Accordion Pattern</h3>
-        <div class="code-block">
-          <pre><code>&lt;details&gt;
-  &lt;summary&gt;Main Category&lt;/summary&gt;
+    &lt;!-- Table of Contents --&gt;
+    &lt;nav aria-label="Table of Contents"&gt;
+    &lt;ol&gt;
+        &lt;li&gt;&lt;a href="#intro"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#chapter1"&gt;Chapter 1&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/nav&gt;</code></pre>
+            </div>
+
+            <!-- <h2>Advanced Implementations</h2>
+            
+            <h3>Mega Menu Pattern</h3>
+            <div class="code-block">
+            <pre><code>&lt;nav aria-label="Main"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+        &lt;a href="/products" aria-haspopup="true"&gt;Products&lt;/a&gt;
+        &lt;div class="mega-menu"&gt;
+            &lt;div class="mega-menu-column"&gt;
+            &lt;h3&gt;Category 1&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="/products/1"&gt;Product 1&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;style&gt;
+    .mega-menu {
+        display: none;
+        position: absolute;
+        /* Positioning styles */
+    }
+    
+    li:hover .mega-menu {
+        display: grid;
+    }
+    &lt;/style&gt;</code></pre>
+            </div> -->
+            
+            <h3>Edge Cases</h3>
+            <div class="alert warning">
+            <p><strong>Accessibility Considerations:</strong></p>
+            <ul>
+                <li>Always provide keyboard navigation support</li>
+                <li>Use <code>aria-current="page"</code> for current page indicators</li>
+                <li>Mobile menus should be fully operable via screen readers</li>
+            </ul>
+            </div>
+
+            <div class="alert">
+            <p><strong>Pro Tip:</strong> Don't wrap every link group in <code>&lt;nav&gt;</code>. Reserve it for <em>major</em> navigation blocks.</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
+        </div>
+    </section>
+
+    <!-- Article Page for <figure> and <figcaption> -->
+    <section class="article-page" id="article-figure">
+        <div class="container">
+        <article class="article-body">
+            <header class="article-header">
+            <h1>The Dynamic Duo: &lt;figure&gt; & &lt;figcaption&gt;</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-04">May 04, 2025</time></div>
+            </header>
+
+            <p>Imagine wandering through a museum where paintings hang without labels—beautiful but bewildering. That's what images on the web are like without <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>: a semantic duo that anchors visuals to their meaning. 
+            <p>Every image, illustration, or media element carries a story. The <code>&lt;figure&gt;</code> tag serves as the frame, elegantly containing these visual treasures. Yet, it's the <code>&lt;figcaption&gt;</code>, nestled within, that breathes life into them with a descriptive caption. Picture a photo of The Grail Center in Akwa-Ibom, its caption unveiling its cultural significance or a code snippet paired with text clarifying its purpose.</p>
+            <p>Together, <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> weave context and clarity, making media richer, more accessible, and universally understood.</p>
+
+            <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <figure style="border: 1px dashed var(--primary); padding: 1rem; margin: 1rem 0;">
+                <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cute Dogs" style="width: 100%; height: auto;">
+                <figcaption style="text-align: center; font-style: italic; margin-top: 0.5rem;">
+                Figure 1: Two Yellow Labrador Retriever Puppies
+                </figcaption>
+            </figure>
+            </div>
+
+            <div class="benefits">
+            <h3>Why This Pair Matters:</h3>
+            <ul>
+                <li><strong>Accessibility:</strong> Screen readers announce the caption with the image</li>
+                <li><strong>SEO Value:</strong> Search engines understand the image-content relationship</li>
+                <li><strong>Responsive Ready:</strong> Maintains connection even when layout changes</li>
+                <li><strong>Styling Control:</strong> Perfect for creating consistent media blocks</li>
+            </ul>
+            </div>
+
+            <h2>Beyond Just Images</h2>
+            <p>These tags work with various content types:</p>
+            
+            <div class="code-block">
+            <pre><code>&lt;!-- Code Snippet Example --&gt;
+    &lt;figure&gt;
+    &lt;pre&gt;&lt;code&gt;function greet() { 
+    console.log("Hello World!"); 
+    }&lt;/code&gt;&lt;/pre&gt;
+    &lt;figcaption&gt;Listing 1: Basic JavaScript function&lt;/figcaption&gt;
+    &lt;/figure&gt;
+
+    &lt;!-- Video Example --&gt;
+    &lt;figure&gt;
+    &lt;video controls src="tutorial.mp4"&gt;&lt;/video&gt;
+    &lt;figcaption&gt;Video 1: Semantic HTML tutorial&lt;/figcaption&gt;
+    &lt;/figure&gt;
+
+    &lt;!-- Data Visualization --&gt;
+    &lt;figure&gt;
+    &lt;svg&gt;&lt;!-- Chart markup --&gt;&lt;/svg&gt;
+    &lt;figcaption&gt;Chart 1: Monthly traffic growth&lt;/figcaption&gt;
+    &lt;/figure&gt;</code></pre>
+            </div>
+
+            <!-- <h2>Advanced Implementations</h2>
+            
+            <h3>Responsive Art Direction</h3>
+            <div class="code-block">
+            <pre><code>&lt;figure&gt;
+    &lt;picture&gt;
+        &lt;source media="(min-width: 1200px)" srcset="large.jpg"&gt;
+        &lt;source media="(min-width: 800px)" srcset="medium.jpg"&gt;
+        &lt;img src="small.jpg" alt="Responsive image example"&gt;
+    &lt;/picture&gt;
+    &lt;figcaption&gt;Example of responsive art direction&lt;/figcaption&gt;
+    &lt;/figure&gt;</code></pre>
+            </div> -->
+            
+            <h3>Edge Cases</h3>
+            <div class="alert warning">
+            <p><strong>When to Avoid:</strong></p>
+            <ul>
+                <li>For decorative images that don't need captions</li>
+                <li>When the image is purely for layout purposes</li>
+                <li>If the caption doesn't add meaningful context</li>
+            </ul>
+            </div>
+
+            <div class="alert">
+            <p><strong>Pro Tip:</strong> Always include <code>alt</code> text for images <em>and</em> meaningful captions - they serve different purposes!</p>
+            </div>
+
+            <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
+        </div>
+    </section>
+
+    <!-- Article Page for <details> and <summary> -->
+    <section class="article-page" id="article-details">
+      <div class="container">
+        <article class="article-body">
+          <header class="article-header">
+            <h1>&lt;details&gt; & &lt;summary&gt;: Your Built - In Accordion</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-05">May 05, 2025</time></div>
+          </header>
+
+          <p>Picture a treasure chest with a labeled latch, tempting you to lift it. The <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> tags bring that sense of discovery to the web - no JavaScript required!</p> 
+          <p>Webpages often conceal extra layers of knowledge, ready to be uncovered. The <code>&lt;details&gt;</code> tag serves as the chest, safeguarding these hidden insights. Its companion, <code>&lt;summary&gt;</code>, acts as the inviting latch, displaying a clickable heading that sparks curiosity.</p> 
+          <p>Imagine an FAQ where questions in <code>&lt;summary&gt;</code> unlock answers within <code>&lt;details&gt;</code> or technical specs revealed with a single click. Together, they create interactive, user-driven experiences with pure HTML finesse.</p>
+
+          <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <details style="border: 1px solid var(--primary); border-radius: 0.3rem; padding: 0.5rem; margin: 1rem 0;">
+    <summary style="font-weight: bold; cursor: pointer;">What is semantic HTML?</summary>
+    <p style="margin-top: 0.5rem;">Semantic HTML uses tags like <code>&lt;nav&gt;</code>, <code>&lt;figure&gt;</code>, and <code>&lt;details&gt;</code> to describe the meaning of content, improving accessibility and SEO.</p>
+  </details>
+            
+            <details style="border: 1px solid var(--primary); border-radius: 0.3rem; padding: 0.5rem; margin: 1rem 0;">
+              <summary style="font-weight: bold; cursor: pointer;">Click to reveal secret HTML tip</summary>
+              <p style="margin-top: 0.5rem;">You can style the marker with <code>::marker</code> pseudo-element!</p>
+            </details>
+
+            <details style="border: 1px solid var(--primary); border-radius: 0.3rem; padding: 0.5rem; margin: 1rem 0;">
+    <summary style="font-weight: bold; cursor: pointer;">Why use &lt;details&gt; instead of JavaScript?</summary>
+    <p style="margin-top: 0.5rem;">The <code>&lt;details&gt;</code> tag provides native interactivity, reducing code complexity and ensuring compatibility with screen readers and low-bandwidth devices.</p>
+  </details>
+          </div>
+
+          <div class="benefits">
+            <h3>Why This Combo Rocks:</h3>
+            <ul>
+              <li><strong>Zero JavaScript:</strong> Works even with JS disabled</li>
+              <li><strong>Progressive Disclosure:</strong> Perfect for FAQs and technical docs</li>
+              <li><strong>Built-In Accessibility:</strong> Keyboard operable by default</li>
+              <li><strong>Performance Friendly:</strong> No library overhead</li>
+            </ul>
+          </div>
+
+          <h2>Creative Implementations</h2>
+          <div class="code-block">
+            <pre><code>&lt;!-- FAQ Section --&gt;
   &lt;details&gt;
-    &lt;summary&gt;Subcategory 1&lt;/summary&gt;
-    &lt;p&gt;Content...&lt;/p&gt;
+    &lt;summary&gt;What is semantic HTML?&lt;/summary&gt;
+    &lt;p&gt;Semantic HTML means using elements that convey meaning...&lt;/p&gt;
   &lt;/details&gt;
+
+  &lt;!-- Spoiler Protection --&gt;
   &lt;details&gt;
-    &lt;summary&gt;Subcategory 2&lt;/summary&gt;
-    &lt;p&gt;Content...&lt;/p&gt;
+    &lt;summary&gt;Spoiler: Who wins in Avengers?&lt;/summary&gt;
+    &lt;p&gt;Iron Man sacrifices himself...&lt;/p&gt;
   &lt;/details&gt;
-&lt;/details&gt;</code></pre>
-        </div> -->
-        
-        <h3>Edge Cases</h3>
-        <div class="alert warning">
-          <p><strong>Browser Quirks:</strong></p>
-          <ul>
-            <li>Firefox shows animation by default (can be disabled with <code>transition: height 0s</code>)</li>
-            <li>IE11 requires polyfill for proper functionality</li>
-            <li>Some screen readers may announce state changes differently</li>
-          </ul>
-        </div>
 
-        <div class="alert">
-          <p><strong>Pro Tip:</strong> Use <code>details[open]</code> in CSS to style the open state differently!</p>
-        </div>
+  &lt;!-- Mobile-Friendly Menu --&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Menu&lt;/summary&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/details&gt;</code></pre>
+          </div>
 
-        <a href="#articles" class="cta-button">Back to Articles</a>
-      </article>
-    </div>
-  </section>
+          <!-- <h2>Advanced Implementations</h2>
+          
+          <h3>Nested Accordion Pattern</h3>
+          <div class="code-block">
+            <pre><code>&lt;details&gt;
+    &lt;summary&gt;Main Category&lt;/summary&gt;
+    &lt;details&gt;
+      &lt;summary&gt;Subcategory 1&lt;/summary&gt;
+      &lt;p&gt;Content...&lt;/p&gt;
+    &lt;/details&gt;
+    &lt;details&gt;
+      &lt;summary&gt;Subcategory 2&lt;/summary&gt;
+      &lt;p&gt;Content...&lt;/p&gt;
+    &lt;/details&gt;
+  &lt;/details&gt;</code></pre>
+          </div> -->
+          
+          <h3>Edge Cases</h3>
+          <div class="alert warning">
+            <p><strong>Browser Quirks:</strong></p>
+            <ul>
+              <li>Firefox shows animation by default (can be disabled with <code>transition: height 0s</code>)</li>
+              <li>IE11 requires polyfill for proper functionality</li>
+              <li>Some screen readers may announce state changes differently</li>
+            </ul>
+          </div>
 
-  <!-- Article Page for <mark> -->
-  <section class="article-page" id="article-mark">
-    <div class="container">
-      <article class="article-body">
-        <header class="article-header">
-          <h1>The &lt;mark&gt; Tag: Your Digital Highlighter</h1>
-          <div class="article-meta">Published on <time datetime="2025-05-06">May 06, 2025</time></div>
-        </header>
+          <div class="alert">
+            <p><strong>Pro Tip:</strong> Use <code>details[open]</code> in CSS to style the open state differently!</p>
+          </div>
 
-        <p>Picture studying a dense document, highlighter in hand, marking words that leap off the page. The <code>&lt;mark&gt;</code> tag brings that focus to the web, acting as a digital highlighter with semantic strength.</p>
-        <p>Applied to text, it visually emphasizes key phrases, but its true power lies in meaning: it signals relevance. Use it to spotlight search terms in results or critical points in a quote, anchoring their importance within context.</p>
-        <p>Like neon streaks in a textbook, <code>&lt;mark&gt;</code> makes the web's key moments unmissable, for both readers and search engines.</p>
+          <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
+      </div>
+    </section>
 
-        <div class="live-example">
-          <div class="example-title">Live Example:</div>
-          <p style="margin: 1rem 0;">
-            When searching for "semantic HTML", results should <mark style="background: var(--accent); color: white; padding: 0.1em 0.3em;">highlight</mark> relevant terms to show why they matched your query.
-          </p>
-        </div>
+    <!-- Article Page for <mark> -->
+    <section class="article-page" id="article-mark">
+      <div class="container">
+        <article class="article-body">
+          <header class="article-header">
+            <h1>The &lt;mark&gt; Tag: Your Digital Highlighter</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-06">May 06, 2025</time></div>
+          </header>
 
-        <div class="benefits">
-          <h3>Why &lt;mark&gt; Beats Generic Spans:</h3>
-          <ul>
-            <li><strong>Semantic Meaning:</strong> Indicates <em>relevance</em> in context</li>
-            <li><strong>Search-Friendly:</strong> Google may prioritize marked content</li>
-            <li><strong>Accessibility:</strong> Screen readers can announce highlights</li>
-            <li><strong>Styling Control:</strong> Easy to customize appearance</li>
-          </ul>
-        </div>
+          <p>Picture studying a dense document, highlighter in hand, marking words that leap off the page. The <code>&lt;mark&gt;</code> tag brings that focus to the web, acting as a digital highlighter with semantic strength.</p>
+          <p>Applied to text, it visually emphasizes key phrases, but its true power lies in meaning: it signals relevance. Use it to spotlight search terms in results or critical points in a quote, anchoring their importance within context.</p>
+          <p>Like neon streaks in a textbook, <code>&lt;mark&gt;</code> makes the web's key moments unmissable, for both readers and search engines.</p>
 
-        <h2>Practical Applications</h2>
-        <div class="code-block">
-          <pre><code>&lt;!-- Search Results --&gt;
-&lt;p&gt;Your search for "HTML" found:&lt;/p&gt;
-&lt;p&gt;Learn &lt;mark&gt;HTML&lt;/mark&gt; semantics in 30 days...&lt;/p&gt;
+          <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <p style="margin: 1rem 0;">
+              When searching for "semantic HTML", results should <mark style="background: var(--accent); color: white; padding: 0.1em 0.3em;">highlight</mark> relevant terms to show why they matched your query.
+            </p>
+          </div>
 
-&lt;!-- Tutorial Emphasis --&gt;
-&lt;p&gt;Remember: Always include &lt;mark&gt;alt text&lt;/mark&gt; for images.&lt;/p&gt;
+          <div class="benefits">
+            <h3>Why &lt;mark&gt; Beats Generic Spans:</h3>
+            <ul>
+              <li><strong>Semantic Meaning:</strong> Indicates <em>relevance</em> in context</li>
+              <li><strong>Search-Friendly:</strong> Google may prioritize marked content</li>
+              <li><strong>Accessibility:</strong> Screen readers can announce highlights</li>
+              <li><strong>Styling Control:</strong> Easy to customize appearance</li>
+            </ul>
+          </div>
 
-&lt;!-- User-Generated Highlights --&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;The &lt;mark&gt;article&lt;/mark&gt; element changed how we structure content.&lt;/p&gt;
-  &lt;footer&gt;- Student highlight&lt;/footer&gt;
-&lt;/blockquote&gt;</code></pre>
-        </div>
+          <h2>Practical Applications</h2>
+          <div class="code-block">
+            <pre><code>&lt;!-- Search Results --&gt;
+  &lt;p&gt;Your search for "HTML" found:&lt;/p&gt;
+  &lt;p&gt;Learn &lt;mark&gt;HTML&lt;/mark&gt; semantics in 30 days...&lt;/p&gt;
 
-        <!-- <h2>Advanced Implementations</h2>
-        
-        <h3>Search Highlight Animation</h3>
-        <div class="code-block">
-          <pre><code>mark {
-  background: linear-gradient(yellow, yellow);
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.5s ease;
-}
+  &lt;!-- Tutorial Emphasis --&gt;
+  &lt;p&gt;Remember: Always include &lt;mark&gt;alt text&lt;/mark&gt; for images.&lt;/p&gt;
 
-mark.animate {
-  background-size: 100% 100%;
-}</code></pre>
-        </div> -->
-        
-        <h3>Edge Cases</h3>
-        <div class="alert warning">
-          <p><strong>Semantic Misuse:</strong></p>
-          <ul>
-            <li>Don't use for styling only (use <code>&lt;span&gt;</code> with class)</li>
-            <li>Avoid marking large text blocks (breaks semantic meaning)</li>
-            <li>Not suitable for permanent highlights (use <code>&lt;strong&gt;</code> instead)</li>
-          </ul>
-        </div>
+  &lt;!-- User-Generated Highlights --&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;The &lt;mark&gt;article&lt;/mark&gt; element changed how we structure content.&lt;/p&gt;
+    &lt;footer&gt;- Student highlight&lt;/footer&gt;
+  &lt;/blockquote&gt;</code></pre>
+          </div>
 
-        <div class="alert">
-          <p><strong>Design Tip:</strong> Customize the highlight color with CSS while preserving semantics:</p>
-          <pre><code>mark {
-  background: linear-gradient(yellow, yellow);
-  padding: 0.1em;
-}</code></pre>
-        </div>
+          <!-- <h2>Advanced Implementations</h2>
+          
+          <h3>Search Highlight Animation</h3>
+          <div class="code-block">
+            <pre><code>mark {
+    background: linear-gradient(yellow, yellow);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease;
+  }
 
-        <a href="#articles" class="cta-button">Back to Articles</a>
-      </article>
-    </div>
-  </section>
+  mark.animate {
+    background-size: 100% 100%;
+  }</code></pre>
+          </div> -->
+          
+          <h3>Edge Cases</h3>
+          <div class="alert warning">
+            <p><strong>Semantic Misuse:</strong></p>
+            <ul>
+              <li>Don't use for styling only (use <code>&lt;span&gt;</code> with class)</li>
+              <li>Avoid marking large text blocks (breaks semantic meaning)</li>
+              <li>Not suitable for permanent highlights (use <code>&lt;strong&gt;</code> instead)</li>
+            </ul>
+          </div>
 
-  <!-- Article Page for <cite> -->
-  <section class="article-page" id="article-cite">
-    <div class="container">
-      <article class="article-body">
-        <header class="article-header">
-          <h1>The &lt;cite&gt; Tag: Giving Credit Where It's Due</h1>
-          <div class="article-meta">Published on <time datetime="2025-05-07">May 07, 2025</time></div>
-        </header>
+          <div class="alert">
+            <p><strong>Design Tip:</strong> Customize the highlight color with CSS while preserving semantics:</p>
+            <pre><code>mark {
+    background: linear-gradient(yellow, yellow);
+    padding: 0.1em;
+  }</code></pre>
+          </div>
 
-        <p>Imagine submitting a research paper without citations (that's academic disaster!).</p> 
-        <p>The web's equivalent is the <code>&lt;cite&gt;</code> tag, a semantic nod to crediting creative works. Every story or insight builds on others' contributions, and <code>&lt;cite&gt;</code> ensures they're acknowledged. It wraps the title of a work—be it a book, article, song, or film—giving context and attribution.</p>
-        <p>Often styled in italics by browsers, it signals provenance, like citing <cite>Things Fall Apart by Chinua Achebe</cite> in a literary essay or referencing a groundbreaking study. <code>&lt;cite&gt;</code> weaves a web of trust, grounding knowledge in its sources.</p>
+          <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
+      </div>
+    </section>
 
-        <div class="live-example">
-          <div class="example-title">Live Example:</div>
-          <blockquote style="border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0;">
-            <p>"Semantic HTML is the foundation of accessible web development."</p>
-            <footer>— <cite style="font-style: italic;">Web Content Accessibility Guidelines (WCAG)</cite></footer>
-          </blockquote>
-        </div>
+    <!-- Article Page for <cite> -->
+    <section class="article-page" id="article-cite">
+      <div class="container">
+        <article class="article-body">
+          <header class="article-header">
+            <h1>The &lt;cite&gt; Tag: Giving Credit Where It's Due</h1>
+            <div class="article-meta">Published on <time datetime="2025-05-07">May 07, 2025</time></div>
+          </header>
 
-        <div class="benefits">
-          <h3>Why &lt;cite&gt; Matters:</h3>
-          <ul>
-            <li><strong>Machine-Readable:</strong> Helps search engines understand references</li>
-            <li><strong>Academic Integrity:</strong> Proper source attribution</li>
-            <li><strong>Styling Hook:</strong> Italic by default but customizable</li>
-            <li><strong>Semantic Clarity:</strong> Distinguishes citations from regular text</li>
-          </ul>
-        </div>
+          <p>Imagine submitting a research paper without citations (that's academic disaster!).</p> 
+          <p>The web's equivalent is the <code>&lt;cite&gt;</code> tag, a semantic nod to crediting creative works. Every story or insight builds on others' contributions, and <code>&lt;cite&gt;</code> ensures they're acknowledged. It wraps the title of a work—be it a book, article, song, or film—giving context and attribution.</p>
+          <p>Often styled in italics by browsers, it signals provenance, like citing <cite>Things Fall Apart by Chinua Achebe</cite> in a literary essay or referencing a groundbreaking study. <code>&lt;cite&gt;</code> weaves a web of trust, grounding knowledge in its sources.</p>
 
-        <h2>Correct Usage</h2>
-        <div class="code-block">
-          <pre><code>&lt;!-- Creative Work Title --&gt;
-&lt;p&gt;My favorite book is &lt;cite&gt;Eloquent JavaScript&lt;/cite&gt;.&lt;/p&gt;
+          <div class="live-example">
+            <div class="example-title">Live Example:</div>
+            <blockquote style="border-left: 3px solid var(--primary); padding-left: 1rem; margin: 1rem 0;">
+              <p>"Semantic HTML is the foundation of accessible web development."</p>
+              <footer>— <cite style="font-style: italic;">Web Content Accessibility Guidelines (WCAG)</cite></footer>
+            </blockquote>
+          </div>
 
-&lt;!-- Quote Attribution --&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;"The web should be accessible to everyone."&lt;/p&gt;
-  &lt;footer&gt;— &lt;cite&gt;Tim Berners-Lee&lt;/cite&gt;&lt;/footer&gt;
-&lt;/blockquote&gt;
+          <div class="benefits">
+            <h3>Why &lt;cite&gt; Matters:</h3>
+            <ul>
+              <li><strong>Machine-Readable:</strong> Helps search engines understand references</li>
+              <li><strong>Academic Integrity:</strong> Proper source attribution</li>
+              <li><strong>Styling Hook:</strong> Italic by default but customizable</li>
+              <li><strong>Semantic Clarity:</strong> Distinguishes citations from regular text</li>
+            </ul>
+          </div>
 
-&lt;!-- Reference in Text --&gt;
-&lt;p&gt;As explained in &lt;cite&gt;HTML: The Living Standard&lt;/cite&gt;...&lt;/p&gt;</code></pre>
-        </div>
+          <h2>Correct Usage</h2>
+          <div class="code-block">
+            <pre><code>&lt;!-- Creative Work Title --&gt;
+  &lt;p&gt;My favorite book is &lt;cite&gt;Eloquent JavaScript&lt;/cite&gt;.&lt;/p&gt;
 
-        <!--<h2>Advanced Implementations</h2>
-        
-        <h3>Biblographic References with Microdata</h3>
-        <div class="code-block">
-          <pre><code>&lt;p&gt;
-  From the book &lt;cite itemprop="citation" itemscope itemtype="https://schema.org/Book"&gt;
-    &lt;span itemprop="name"&gt;HTML5: The Missing Manual&lt;/span&gt;
-    by &lt;span itemprop="author"&gt;Matthew MacDonald&lt;/span&gt;
-  &lt;/cite&gt;.
-&lt;/p&gt;</code></pre>
-        </div>-->
-        
-        <h3>Edge Cases</h3>
-        <div class="alert warning">
-          <p><strong>Common Confusions:</strong></p>
-          <ul>
-            <li>Not for personal names (use <code>&lt;span&gt;</code> or <code>&lt;address&gt;</code>)</li>
-            <li>Avoid using for publication dates (use <code>&lt;time&gt;</code>)</li>
-            <li>Don't nest other semantic elements inside <code>&lt;cite&gt;</code></li>
-          </ul>
-        </div>
+  &lt;!-- Quote Attribution --&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;"The web should be accessible to everyone."&lt;/p&gt;
+    &lt;footer&gt;— &lt;cite&gt;Tim Berners-Lee&lt;/cite&gt;&lt;/footer&gt;
+  &lt;/blockquote&gt;
 
-        <div class="alert">
-          <p><strong>Important:</strong> Use <code>&lt;cite&gt;</code> for the <em>title of the work</em>, not the author's name. For people, use <code>&lt;span&gt;</code> or semantic classes.</p>
-        </div>
+  &lt;!-- Reference in Text --&gt;
+  &lt;p&gt;As explained in &lt;cite&gt;HTML: The Living Standard&lt;/cite&gt;...&lt;/p&gt;</code></pre>
+          </div>
 
-        <a href="#articles" class="cta-button">Back to Articles</a>
-      </article>
-    </div>
-  </section>
+          <!--<h2>Advanced Implementations</h2>
+          
+          <h3>Biblographic References with Microdata</h3>
+          <div class="code-block">
+            <pre><code>&lt;p&gt;
+    From the book &lt;cite itemprop="citation" itemscope itemtype="https://schema.org/Book"&gt;
+      &lt;span itemprop="name"&gt;HTML5: The Missing Manual&lt;/span&gt;
+      by &lt;span itemprop="author"&gt;Matthew MacDonald&lt;/span&gt;
+    &lt;/cite&gt;.
+  &lt;/p&gt;</code></pre>
+          </div>-->
+          
+          <h3>Edge Cases</h3>
+          <div class="alert warning">
+            <p><strong>Common Confusions:</strong></p>
+            <ul>
+              <li>Not for personal names (use <code>&lt;span&gt;</code> or <code>&lt;address&gt;</code>)</li>
+              <li>Avoid using for publication dates (use <code>&lt;time&gt;</code>)</li>
+              <li>Don't nest other semantic elements inside <code>&lt;cite&gt;</code></li>
+            </ul>
+          </div>
 
-  <!-- Article Page for <abbr> -->
+          <div class="alert">
+            <p><strong>Important:</strong> Use <code>&lt;cite&gt;</code> for the <em>title of the work</em>, not the author's name. For people, use <code>&lt;span&gt;</code> or semantic classes.</p>
+          </div>
+
+          <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Article Page for <abbr> -->
     <section class="article-page" id="article-abbr">
         <div class="container">
           <article class="article-body">
@@ -1157,7 +1196,7 @@ launched the James Webb Space Telescope.
 &lt;/p&gt;</code></pre>
               </div>
 
-              <!-- <h2>Advanced Implementations</h2>
+              <h2>Advanced Implementations</h2>
               
               <h3>Styling Abbreviations</h3>
               <div class="code-block">
@@ -1173,7 +1212,7 @@ abbr:hover::after {
   color: var(--primary);
 }
 &lt;/style&gt;</code></pre>
-              </div> -->
+              </div>
               
               <h3>Edge Cases</h3>
               <div class="alert warning">
@@ -1189,13 +1228,13 @@ abbr:hover::after {
                   <p><strong>Pro Tip:</strong> For common abbreviations (like "HTML"), you might omit the <code>&lt;abbr&gt;</code> tag after the first occurrence on a page.</p>
               </div>
 
-              <a href="#articles" class="cta-button">Back to Articles</a>
+              <a href="index.html" class="cta-button">Back to Articles</a>
           </article>
 
-          <!-- <div class="up-next">
+          <div class="up-next">
             <h2 class="up-next-title">Up Next:</h2>
             <h3><a href="404.html"><code>&lt;address&gt;</code></a></h3>
-        </div> -->
+        </div>
       </div>
     </section>
       
@@ -1272,346 +1311,79 @@ Phone: &lt;span itemprop="telephone"&gt;(555) 123-4567&lt;/span&gt;
             <div class="alert">
               <p><strong>Pro Tip:</strong> Use the <code>&lt;address&gt;</code> tag in your footer for the website's contact information.</p>
             </div>
-
-            <a href="#articles" class="cta-button">Back to Articles</a>
+          
+            <a href="index.html" class="cta-button">Back to Articles</a>
         </article>
 
-        <!--<div class="up-next">
+        <!-- <div class="up-next">
           <h2 class="up-next-title">Up Next:</h2>
           <h3><a href="404.html"><code>&lt;data&gt;</code></a></h3>
-        </div>-->
+        </div> -->
       </div>
     </section>
 
-  <!-- Article Page for <data> -->
-  <!-- SATURDAY 10 MAY 25 -->
-  <section class="article-page" id="article-data">
-      <div class="container">
-          <article class="article-body">
-              <header class="article-header">
-                  <h1>The &lt;data&gt; Tag: Bridging Human and Machine Readable Data</h1>
-
-                  <div class="article-meta">Published on <time datetime="2025-05-10">May 10, 2025</time></div>
-              </header>
-
-              <p>In the bustling global digital marketplace, from e-commerce hubs in Shanghai to startups in São Paulo, the &lt;data&gt; tag serves as a Rosetta Stone, translating human-readable content into machine-readable values.</p>
-              <p>Often overlooked for generic &lt;span&gt; tags, &lt;data&gt; embeds product IDs or standardized prices like “Olive Oil (1L): $10” with a value of “SKU12345”, enabling seamless data processing.</p>
-              <p>This semantic bridge empowers platforms worldwide to compare products, enhancing accessibility and interconnectivity in the web's data-driven ecosystem.</p>
-
-              <div class="live-example">
-                  <div class="example-title">Live Example:</div>
-                  <ul>
-                      <li><data value="978-3-16-148410-0">The Great Novel</data></li>
-                      <li><data value="978-1-23-456789-0">Web Development Guide</data></li>
-                  </ul>
-
-                  
-              </div>
-
-              <div class="benefits">
-                  <h3>Why &lt;data&gt; Matters:</h3>
-                  <ul>
-                      <li><strong>Data Processing:</strong> Provides machine-readable values</li>
-                      <li><strong>Semantics:</strong> Clearly marks data values</li>
-                      <li><strong>Microdata:</strong> Works well with structured data</li>
-                      <li><strong>Future-Proof:</strong> Prepares content for data extraction</li>
-                  </ul>
-              </div>
-
-              <h2>Best Practices</h2>
-              <div class="code-block">
-                  <pre><code>&lt;ul&gt;
-&lt;li&gt;&lt;data value="42"&gt;Forty-two&lt;/data&gt;&lt;/li&gt;
-&lt;li&gt;&lt;data value="2023-05-17"&gt;Today&lt;/data&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Product ID: &lt;data value="PRD-12345"&gt;12345&lt;/data&gt;&lt;/p&gt;</code></pre>
-              </div>
-
-              <!-- <h2>Advanced Implementations</h2>
-              
-              <h3>Combining with JavaScript</h3>
-              <div class="code-block">
-                  <pre><code>&lt;ul id="products"&gt;
-&lt;li&gt;&lt;data value="100"&gt;$100&lt;/data&gt; Product A&lt;/li&gt;
-&lt;li&gt;&lt;data value="150"&gt;$150&lt;/data&gt; Product B&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script&gt;
-const items = document.querySelectorAll('#products data');
-let total = 0;
-
-items.forEach(item => {
-  total += Number(item.value);
-});
-
-console.log(`Total value: $${total}`);
-&lt;/script&gt;</code></pre>
-              </div> -->
-              
-              <h3>Edge Cases</h3>
-              <div class="alert warning">
-                  <p><strong>Important Notes:</strong></p>
-                  <ul>
-                      <li>Not to be confused with <code>&lt;time&gt;</code> for dates/times</li>
-                      <li>The value attribute must be present</li>
-                      <li>Use <code>&lt;meta&gt;</code> for data not visible to users</li>
-                  </ul>
-              </div>
-
-              <div class="alert">
-                  <p><strong>Pro Tip:</strong> Use <code>&lt;data&gt;</code> when you need to maintain both human-readable and machine-readable versions of the same information.</p>
-              </div>
-
-              <a href="#articles" class="cta-button">Back to Articles</a>
-          </article>
-
-          <!--<div class="up-next">
-            <h2 class="up-next-title">Up Next:</h2>
-            <h3><a href="404.html"><code>&lt;dfn&gt;</code></a></h3>
-          </div>-->
-      </div>
-  </section>
-
-  <!-- Article Page for <dfn> -->
-  <!-- SUNDAY 11 MAY 25 -->
-  <section class="article-page" id="article-dfn">
-      <div class="container">
-          <article class="article-body">
-              <header class="article-header">
-                  <h1>The &lt;dfn&gt; Tag: Defining Terms with Clarity</h1>
-                  <div class="article-meta">Published on <time datetime="2025-05-11">May 11, 2025</time></div>
-              </header>
-
-              <p>In the web's ever-growing lexicon, from AI jargon in Tokyo to fintech terms in London, clarity is paramount.</p>
-              <p>The &lt;dfn&gt; tag, a lighthouse of definition, illuminates the first use of terms like “Blockchain” or “Quantum Computing,” often paired with a title attribute explanation.</p> 
-              <p>Frequently overlooked for plain text, &lt;dfn&gt; ensures accessible, semantic clarity for global readers, anchoring understanding in technical content and inviting all to “define our terms together.”</p>
-
-              <div class="live-example">
-                  <div class="example-title">Live Example:</div>
-                  <p>
-                      A <dfn style="font-style: italic; font-weight: bold;">blog</dfn> is a discussion or informational website published on the web.
-                  </p>
-                  <p>The <dfn title="Decentralized digital ledger"><span style="font-style: italic; font-weight: bold">Blockchain</span></dfn> enables secure transactions.</p>
-              </div>
-
-              <div class="benefits">
-                  <h3>Why &lt;dfn&gt; Matters:</h3>
-                  <ul>
-                      <li><strong>Semantic Meaning:</strong> Clearly identifies definitions</li>
-                      <li><strong>Accessibility:</strong> Screen readers can identify definitions</li>
-                      <li><strong>Documentation:</strong> Perfect for technical writing</li>
-                      <li><strong>Styling:</strong> Typically renders with default italics</li>
-                  </ul>
-              </div>
-
-              <h2>Best Practices</h2>
-              <div class="code-block">
-                  <pre><code>&lt;p&gt;
-&lt;dfn&gt;HTML&lt;/dfn&gt;, HyperText Markup Language, 
-is the standard markup language for web pages.
-&lt;/p&gt;
-
-&lt;p&gt;
-The &lt;dfn id="css-def"&gt;CSS&lt;/dfn&gt; (Cascading Style Sheets) 
-describes how HTML elements are displayed.
-&lt;/p&gt;
-&lt;a href="#css-def"&gt;Learn more about CSS&lt;/a&gt;</code></pre>
-              </div>
-
-              <!-- <h2>Advanced Implementations</h2>
-              
-              <h3>Creating a Glossary</h3>
-              <div class="code-block">
-                  <pre><code>&lt;dl&gt;
-&lt;dt&gt;&lt;dfn id="ajax"&gt;AJAX&lt;/dfn&gt;&lt;/dt&gt;
-&lt;dd&gt;Asynchronous JavaScript and XML, a web development technique.&lt;/dd&gt;
-
-&lt;dt&gt;&lt;dfn id="api"&gt;API&lt;/dfn&gt;&lt;/dt&gt;
-&lt;dd&gt;Application Programming Interface, a software intermediary.&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;Learn more about &lt;a href="#api"&gt;APIs&lt;/a&gt; in our documentation.&lt;/p&gt;</code></pre>
-              </div> -->
-              
-              <h3>Edge Cases</h3>
-              <div class="alert warning">
-                  <p><strong>Usage Guidelines:</strong></p>
-                  <ul>
-                      <li>Only use for the defining instance of a term</li>
-                      <li>The term can be wrapped in <code>&lt;abbr&gt;</code> if it's an abbreviation</li>
-                      <li>Consider adding an id for linking to the definition</li>
-                  </ul>
-              </div>
-
-              <div class="alert">
-                  <p><strong>Pro Tip:</strong> Combine <code>&lt;dfn&gt;</code> with <code>&lt;abbr&gt;</code> when defining abbreviations for maximum clarity.</p>
-              </div>
-
-              <a href="#top" class="cta-button">Back to Top</a>
-          </article>
-
-          <!--<div class="up-next">
-            <h2 class="up-next-title">Up Next:</h2>
-            <h3><a href="404.html"><code>&lt;kbd&gt;</code></a></h3>
-          </div>-->
-      </div>
-  </section>
-
-  <!-- Article Page for <kbd> -->
-  <!-- MONDAY 12 MAY 25 -->
-  <section class="article-page" id="article-kbd">
-      <div class="container">
-          <article class="article-body">
-              <header class="article-header">
-                  <h1>The &lt;kbd&gt; Tag: Keyboard Input Made Visible</h1>
-                  <div class="article-meta">Published on <time datetime="2025-05-12">May 12, 2025</time></div>
-              </header>
-
-              <p>In the global landscape of technical tutorials and documentation, from Silicon Valley to Bangalore, guiding developers and designers through software navigation is essential.</p>
-              <p>The &lt;kbd&gt; tag, a beacon of keystroke clarity, visually anchors commands like &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt; for copying or &lt;kbd&gt;npm install&lt;/kbd&gt; for package setup, rendered in crisp monospace.</p>
-              <p>Often overlooked for plain text, &lt;kbd&gt; bridges instruction and execution, ensuring accessible, semantic cues for coders worldwide, enhancing tutorials with precision.</p>
-
-              <div class="live-example">
-                  <div class="example-title">Live Example:</div>
-                  <p>
-                      Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save your document.
-                  </p>
-                  <p>
-                      Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy selected items to clipboard.
-                  </p>
-              </div>
-
-              <div class="benefits">
-                  <h3>Why &lt;kbd&gt; Matters:</h3>
-                  <ul>
-                      <li><strong>Clarity:</strong> Clearly distinguishes keyboard commands</li>
-                      <li><strong>Consistency:</strong> Standard way to mark user input</li>
-                      <li><strong>Accessibility:</strong> Screen readers can identify keyboard input</li>
-                      <li><strong>Styling:</strong> Typically renders with monospace font</li>
-                  </ul>
-              </div>
-
-              <h2>Best Practices</h2>
-              <div class="code-block">
-                  <pre><code>&lt;p&gt;To copy text, press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;.&lt;/p&gt;
-
-&lt;p&gt;In Linux, you can force quit with &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;Esc&lt;/kbd&gt;.&lt;/p&gt;
-
-&lt;p&gt;Type &lt;kbd&gt;exit&lt;/kbd&gt; to close the terminal.&lt;/p&gt;</code></pre>
-              </div>
-
-              <!-- <h2>Advanced Implementations</h2>
-              
-              <h3>Styling Keyboard Keys</h3>
-              <div class="code-block">
-                  <pre><code>&lt;style&gt;
-kbd {
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-  display: inline-block;
-  font-family: monospace;
-  line-height: 1;
-  padding: 2px 4px;
-  white-space: nowrap;
-}
-
-kbd kbd {
-  padding: 0;
-  box-shadow: none;
-}
-&lt;/style&gt;
-
-&lt;p&gt;Press &lt;kbd&gt;&lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;F3&lt;/kbd&gt;&lt;/kbd&gt; for advanced search.&lt;/p&gt;</code></pre>
-              </div> -->
-              
-              <h3>Edge Cases</h3>
-              <div class="alert warning">
-                  <p><strong>Usage Guidelines:</strong></p>
-                  <ul>
-                      <li>Use for actual keyboard input, not conceptual input</li>
-                      <li>Can be nested for complex key combinations</li>
-                      <li>Not for arbitrary monospace text (use <code>&lt;code&gt;</code> instead)</li>
-                  </ul>
-              </div>
-
-              <div class="alert">
-                  <p><strong>Pro Tip:</strong> Combine <code>&lt;kbd&gt;</code> with <code>&lt;code&gt;</code> when showing commands that should be typed verbatim.</p>
-              </div>
-
-              <a href="#articles" class="cta-button">Back to Articles</a>
-          </article>
-
-          <!-- <div class="up-next">
-            <h2 class="up-next-title">Up Next:</h2>
-            <h3><a href="404.html"><code>&lt;meter&gt;</code></a></h3>
-          </div> -->
-      </div>
-  </section>
-
-  <!-- Article Page for <meter> -->
-    <section class="article-page" id="article-meter">
+    <!-- Article Page for <data> -->
+    <section class="article-page" id="article-data">
         <div class="container">
             <article class="article-body">
                 <header class="article-header">
-                    <h1>The &lt;meter&gt; Tag: Visualizing Scalar Measurements</h1>
-                    <div class="article-meta">Published on <time datetime="2025-05-13">May 13, 2025</time></div>
+                    <h1>The &lt;data&gt; Tag: Bridging Human and Machine Readable Data</h1>
+
+                    <div class="article-meta">Published on <time datetime="2025-05-10">May 10, 2025</time></div>
                 </header>
-  
-                <p>Words alone can struggle to capture a value's place within a range, whether it's your phone's battery life, WiFi signal strength across locations, or the progress of an online form. The &lt;meter&gt; tag emerges as a compelling visual narrator, leveraging attributes like value, min, max, and optionally low and high to deliver clarity.</p>
-                <p>For instance, a website might showcase a vibrant green &lt;meter&gt; bar steadily filling to reflect your data download's progress, syncing seamlessly with the process to provide an instant, intuitive understanding of the status.</p>
-  
+
+                <p>In the bustling global digital marketplace, from e-commerce hubs in Shanghai to startups in São Paulo, the &lt;data&gt; tag serves as a Rosetta Stone, translating human-readable content into machine-readable values.</p>
+                <p>Often overlooked for generic &lt;span&gt; tags, &lt;data&gt; embeds product IDs or standardized prices like “Olive Oil (1L): $10” with a value of “SKU12345”, enabling seamless data processing.</p>
+                <p>This semantic bridge empowers platforms worldwide to compare products, enhancing accessibility and interconnectivity in the web's data-driven ecosystem.</p>
+
                 <div class="live-example">
                     <div class="example-title">Live Example:</div>
-                    <div>
-                        Signal Strength: <meter value="65" min="0" max="100" style="width: 200px; height: 20px;">65%</meter> 65%
-                        <p></p>
-                        Signal Quality: <meter class="bad" value="35" min="0" max="100" style="width: 200px; height: 20px;">35%</meter> 35%
-                    </div>
-                </div>
-  
-                <div class="benefits">
-                    <h3>Why &lt;meter&gt; Matters:</h3>
                     <ul>
-                        <li><strong>Semantics:</strong> Clearly defines a measurement</li>
-                        <li><strong>Accessibility:</strong> Screen readers can interpret the value</li>
-                        <li><strong>Visualization:</strong> Browser provides native rendering</li>
-                        <li><strong>Flexibility:</strong> Works with different value ranges</li>
+                        <li><data value="978-3-16-148410-0">The Great Novel</data></li>
+                        <li><data value="978-1-23-456789-0">Web Development Guide</data></li>
+                    </ul>
+
+                    
+                </div>
+
+                <div class="benefits">
+                    <h3>Why &lt;data&gt; Matters:</h3>
+                    <ul>
+                        <li><strong>Data Processing:</strong> Provides machine-readable values</li>
+                        <li><strong>Semantics:</strong> Clearly marks data values</li>
+                        <li><strong>Microdata:</strong> Works well with structured data</li>
+                        <li><strong>Future-Proof:</strong> Prepares content for data extraction</li>
                     </ul>
                 </div>
-  
+
                 <h2>Best Practices</h2>
                 <div class="code-block">
-                    <pre><code>&lt;!-- Simple percentage --&gt;
-  &lt;meter value="0.75"&gt;75%&lt;/meter&gt;
-  
-  &lt;!-- With min/max --&gt;
-  &lt;meter value="8" min="0" max="10"&gt;8 out of 10&lt;/meter&gt;
-  
-  &lt;!-- With optimal range --&gt;
-  &lt;meter value="85" min="0" max="100" low="30" high="80" optimum="50"&gt;
-  Moderate
-  &lt;/meter&gt;</code></pre>
+                    <pre><code>&lt;ul&gt;
+  &lt;li&gt;&lt;data value="42"&gt;Forty-two&lt;/data&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;data value="2023-05-17"&gt;Today&lt;/data&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;Product ID: &lt;data value="PRD-12345"&gt;12345&lt;/data&gt;&lt;/p&gt;</code></pre>
                 </div>
-  
+
                 <!-- <h2>Advanced Implementations</h2>
                 
-                <h3>Dynamic Meter Updates</h3>
+                <h3>Combining with JavaScript</h3>
                 <div class="code-block">
-                    <pre><code>&lt;meter id="storage-meter" value="35" min="0" max="100"&gt;&lt;/meter&gt;
-  &lt;button onclick="increaseStorage()"&gt;Add 10GB&lt;/button&gt;
-  
+                    <pre><code>&lt;ul id="products"&gt;
+  &lt;li&gt;&lt;data value="100"&gt;$100&lt;/data&gt; Product A&lt;/li&gt;
+  &lt;li&gt;&lt;data value="150"&gt;$150&lt;/data&gt; Product B&lt;/li&gt;
+  &lt;/ul&gt;
+
   &lt;script&gt;
-  function increaseStorage() {
-    const meter = document.getElementById('storage-meter');
-    meter.value += 10;
-    
-    if (meter.value > 80) {
-      meter.high = meter.value - 5;
-    }
-  }
+  const items = document.querySelectorAll('#products data');
+  let total = 0;
+
+  items.forEach(item => {
+    total += Number(item.value);
+  });
+
+  console.log(`Total value: $${total}`);
   &lt;/script&gt;</code></pre>
                 </div> -->
                 
@@ -1619,24 +1391,289 @@ kbd kbd {
                 <div class="alert warning">
                     <p><strong>Important Notes:</strong></p>
                     <ul>
-                        <li>Not for progress bars (use <code>&lt;progress&gt;</code> instead)</li>
-                        <li>Should represent a scalar measurement, not an arbitrary value</li>
-                        <li>Always include fallback text between the tags</li>
+                        <li>Not to be confused with <code>&lt;time&gt;</code> for dates/times</li>
+                        <li>The value attribute must be present</li>
+                        <li>Use <code>&lt;meta&gt;</code> for data not visible to users</li>
                     </ul>
                 </div>
-  
+
                 <div class="alert">
-                    <p><strong>Pro Tip:</strong> Use the <code>low</code>, <code>high</code>, and <code>optimum</code> attributes to create visual indicators for your measurement ranges.</p>
+                    <p><strong>Pro Tip:</strong> Use <code>&lt;data&gt;</code> when you need to maintain both human-readable and machine-readable versions of the same information.</p>
                 </div>
-  
-                <a href="#articles" class="cta-button">Back to Articles</a>
+
+                <a href="index.html" class="cta-button">Back to Articles</a>
             </article>
 
             <!-- <div class="up-next">
-            <h2 class="up-next-title">Up Next:</h2>
-            <h3><a href="404.html"><code>&lt;output&gt;</code></a></h3>
-          </div> -->
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="404.html"><code>&lt;dfn&gt;</code></a></h3>
+            </div> -->
         </div>
+    </section>
+
+    <!-- Article Page for <dfn> -->
+    <section class="article-page" id="article-dfn">
+        <div class="container">
+            <article class="article-body">
+                <header class="article-header">
+                    <h1>The &lt;dfn&gt; Tag: Defining Terms with Clarity</h1>
+                    <div class="article-meta">Published on <time datetime="2025-05-11">May 11, 2025</time></div>
+                </header>
+
+                <p>In the web's ever-growing lexicon, from AI jargon in Tokyo to fintech terms in London, clarity is paramount.</p>
+                <p>The &lt;dfn&gt; tag, a lighthouse of definition, illuminates the first use of terms like “Blockchain” or “Quantum Computing,” often paired with a title attribute explanation.</p> 
+                <p>Frequently overlooked for plain text, &lt;dfn&gt; ensures accessible, semantic clarity for global readers, anchoring understanding in technical content and inviting all to “define our terms together.”</p>
+
+                <div class="live-example">
+                    <div class="example-title">Live Example:</div>
+                    <p>
+                        A <dfn style="font-style: italic; font-weight: bold;">blog</dfn> is a discussion or informational website published on the web.
+                    </p>
+                    <p>The <dfn title="Decentralized digital ledger"><span style="font-style: italic; font-weight: bold">Blockchain</span></dfn> enables secure transactions.</p>
+                </div>
+
+                <div class="benefits">
+                    <h3>Why &lt;dfn&gt; Matters:</h3>
+                    <ul>
+                        <li><strong>Semantic Meaning:</strong> Clearly identifies definitions</li>
+                        <li><strong>Accessibility:</strong> Screen readers can identify definitions</li>
+                        <li><strong>Documentation:</strong> Perfect for technical writing</li>
+                        <li><strong>Styling:</strong> Typically renders with default italics</li>
+                    </ul>
+                </div>
+
+                <h2>Best Practices</h2>
+                <div class="code-block">
+                    <pre><code>&lt;p&gt;
+  &lt;dfn&gt;HTML&lt;/dfn&gt;, HyperText Markup Language, 
+  is the standard markup language for web pages.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+  The &lt;dfn id="css-def"&gt;CSS&lt;/dfn&gt; (Cascading Style Sheets) 
+  describes how HTML elements are displayed.
+  &lt;/p&gt;
+  &lt;a href="#css-def"&gt;Learn more about CSS&lt;/a&gt;</code></pre>
+                </div>
+
+                <!-- <h2>Advanced Implementations</h2>
+                
+                <h3>Creating a Glossary</h3>
+                <div class="code-block">
+                    <pre><code>&lt;dl&gt;
+  &lt;dt&gt;&lt;dfn id="ajax"&gt;AJAX&lt;/dfn&gt;&lt;/dt&gt;
+  &lt;dd&gt;Asynchronous JavaScript and XML, a web development technique.&lt;/dd&gt;
+
+  &lt;dt&gt;&lt;dfn id="api"&gt;API&lt;/dfn&gt;&lt;/dt&gt;
+  &lt;dd&gt;Application Programming Interface, a software intermediary.&lt;/dd&gt;
+  &lt;/dl&gt;
+
+  &lt;p&gt;Learn more about &lt;a href="#api"&gt;APIs&lt;/a&gt; in our documentation.&lt;/p&gt;</code></pre>
+                </div> -->
+                
+                <h3>Edge Cases</h3>
+                <div class="alert warning">
+                    <p><strong>Usage Guidelines:</strong></p>
+                    <ul>
+                        <li>Only use for the defining instance of a term</li>
+                        <li>The term can be wrapped in <code>&lt;abbr&gt;</code> if it's an abbreviation</li>
+                        <li>Consider adding an id for linking to the definition</li>
+                    </ul>
+                </div>
+
+                <div class="alert">
+                    <p><strong>Pro Tip:</strong> Combine <code>&lt;dfn&gt;</code> with <code>&lt;abbr&gt;</code> when defining abbreviations for maximum clarity.</p>
+                </div>
+
+                <a href="index.html" class="cta-button">Back to Articles</a>
+            </article>
+
+            <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="404.html"><code>&lt;kbd&gt;</code></a></h3>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <kbd> -->
+    <section class="article-page" id="article-kbd">
+        <div class="container">
+            <article class="article-body">
+                <header class="article-header">
+                    <h1>The &lt;kbd&gt; Tag: Keyboard Input Made Visible</h1>
+                    <div class="article-meta">Published on <time datetime="2025-05-12">May 12, 2025</time></div>
+                </header>
+
+                <p>In the global landscape of technical tutorials and documentation, from Silicon Valley to Bangalore, guiding developers and designers through software navigation is essential.</p>
+                <p>The &lt;kbd&gt; tag, a beacon of keystroke clarity, visually anchors commands like &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt; for copying or &lt;kbd&gt;npm install&lt;/kbd&gt; for package setup, rendered in crisp monospace.</p>
+                <p>Often overlooked for plain text, &lt;kbd&gt; bridges instruction and execution, ensuring accessible, semantic cues for coders worldwide, enhancing tutorials with precision.</p>
+
+                <div class="live-example">
+                    <div class="example-title">Live Example:</div>
+                    <p>
+                        Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save your document.
+                    </p>
+                    <p>
+                        Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy selected items to clipboard.
+                    </p>
+                </div>
+
+                <div class="benefits">
+                    <h3>Why &lt;kbd&gt; Matters:</h3>
+                    <ul>
+                        <li><strong>Clarity:</strong> Clearly distinguishes keyboard commands</li>
+                        <li><strong>Consistency:</strong> Standard way to mark user input</li>
+                        <li><strong>Accessibility:</strong> Screen readers can identify keyboard input</li>
+                        <li><strong>Styling:</strong> Typically renders with monospace font</li>
+                    </ul>
+                </div>
+
+                <h2>Best Practices</h2>
+                <div class="code-block">
+                    <pre><code>&lt;p&gt;To copy text, press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;.&lt;/p&gt;
+
+  &lt;p&gt;In Linux, you can force quit with &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Alt&lt;/kbd&gt; + &lt;kbd&gt;Esc&lt;/kbd&gt;.&lt;/p&gt;
+
+  &lt;p&gt;Type &lt;kbd&gt;exit&lt;/kbd&gt; to close the terminal.&lt;/p&gt;</code></pre>
+                </div>
+
+                <!-- <h2>Advanced Implementations</h2>
+                
+                <h3>Styling Keyboard Keys</h3>
+                <div class="code-block">
+                    <pre><code>&lt;style&gt;
+  kbd {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    display: inline-block;
+    font-family: monospace;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+  }
+
+  kbd kbd {
+    padding: 0;
+    box-shadow: none;
+  }
+  &lt;/style&gt;
+
+  &lt;p&gt;Press &lt;kbd&gt;&lt;kbd&gt;Shift&lt;/kbd&gt; + &lt;kbd&gt;F3&lt;/kbd&gt;&lt;/kbd&gt; for advanced search.&lt;/p&gt;</code></pre>
+                </div> -->
+                
+                <h3>Edge Cases</h3>
+                <div class="alert warning">
+                    <p><strong>Usage Guidelines:</strong></p>
+                    <ul>
+                        <li>Use for actual keyboard input, not conceptual input</li>
+                        <li>Can be nested for complex key combinations</li>
+                        <li>Not for arbitrary monospace text (use <code>&lt;code&gt;</code> instead)</li>
+                    </ul>
+                </div>
+
+                <div class="alert">
+                    <p><strong>Pro Tip:</strong> Combine <code>&lt;kbd&gt;</code> with <code>&lt;code&gt;</code> when showing commands that should be typed verbatim.</p>
+                </div>
+
+                <a href="index.html" class="cta-button">Back to Articles</a>
+            </article>
+
+            <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="404.html"><code>&lt;meter&gt;</code></a></h3>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Article Page for <meter> -->
+    <section class="article-page" id="article-meter">
+          <div class="container">
+              <article class="article-body">
+                  <header class="article-header">
+                      <h1>The &lt;meter&gt; Tag: Visualizing Scalar Measurements</h1>
+                      <div class="article-meta">Published on <time datetime="2025-05-13">May 13, 2025</time></div>
+                  </header>
+    
+                  <!-- <p>The &lt;meter&gt; tag visually depicts a scalar value within a predefined range, such as disk usage, survey outcomes, or task completion.</p> -->
+                  <p>Words alone can struggle to capture a value's place within a range, whether it's your phone's battery life, WiFi signal strength across locations, or the progress of an online form. The &lt;meter&gt; tag emerges as a compelling visual narrator, leveraging attributes like value, min, max, and optionally low and high to deliver clarity.</p>
+                  <p>For instance, a website might showcase a vibrant green &lt;meter&gt; bar steadily filling to reflect your data download's progress, syncing seamlessly with the process to provide an instant, intuitive understanding of the status.</p>
+    
+                  <div class="live-example">
+                      <div class="example-title">Live Example:</div>
+                      <div>
+                          Signal Strength: <meter value="65" min="0" max="100" style="width: 200px; height: 20px;">65%</meter> 65%
+                          <p></p>
+                          Signal Quality: <meter class="bad" value="35" min="0" max="100" style="width: 200px; height: 20px;">35%</meter> 35%
+                      </div>
+                  </div>
+    
+                  <div class="benefits">
+                      <h3>Why &lt;meter&gt; Matters:</h3>
+                      <ul>
+                          <li><strong>Semantics:</strong> Clearly defines a measurement</li>
+                          <li><strong>Accessibility:</strong> Screen readers can interpret the value</li>
+                          <li><strong>Visualization:</strong> Browser provides native rendering</li>
+                          <li><strong>Flexibility:</strong> Works with different value ranges</li>
+                      </ul>
+                  </div>
+    
+                  <h2>Best Practices</h2>
+                  <div class="code-block">
+                      <pre><code>&lt;!-- Simple percentage --&gt;
+    &lt;meter value="0.75"&gt;75%&lt;/meter&gt;
+    
+    &lt;!-- With min/max --&gt;
+    &lt;meter value="8" min="0" max="10"&gt;8 out of 10&lt;/meter&gt;
+    
+    &lt;!-- With optimal range --&gt;
+    &lt;meter value="85" min="0" max="100" low="30" high="80" optimum="50"&gt;
+    Moderate
+    &lt;/meter&gt;</code></pre>
+                  </div>
+    
+                  <!-- <h2>Advanced Implementations</h2>
+                  
+                  <h3>Dynamic Meter Updates</h3>
+                  <div class="code-block">
+                      <pre><code>&lt;meter id="storage-meter" value="35" min="0" max="100"&gt;&lt;/meter&gt;
+    &lt;button onclick="increaseStorage()"&gt;Add 10GB&lt;/button&gt;
+    
+    &lt;script&gt;
+    function increaseStorage() {
+      const meter = document.getElementById('storage-meter');
+      meter.value += 10;
+      
+      if (meter.value > 80) {
+        meter.high = meter.value - 5;
+      }
+    }
+    &lt;/script&gt;</code></pre>
+                  </div> -->
+                  
+                  <h3>Edge Cases</h3>
+                  <div class="alert warning">
+                      <p><strong>Important Notes:</strong></p>
+                      <ul>
+                          <li>Not for progress bars (use <code>&lt;progress&gt;</code> instead)</li>
+                          <li>Should represent a scalar measurement, not an arbitrary value</li>
+                          <li>Always include fallback text between the tags</li>
+                      </ul>
+                  </div>
+    
+                  <div class="alert">
+                      <p><strong>Pro Tip:</strong> Use the <code>low</code>, <code>high</code>, and <code>optimum</code> attributes to create visual indicators for your measurement ranges.</p>
+                  </div>
+    
+                  <a href="index.html" class="cta-button">Back to Articles</a>
+              </article>
+
+              <!-- <div class="up-next">
+              <h2 class="up-next-title">Up Next:</h2>
+              <h3><a href="404.html"><code>&lt;output&gt;</code></a></h3>
+            </div> -->
+          </div>
     </section>
   
     <!-- Article Page for <output> -->
@@ -1726,12 +1763,12 @@ kbd kbd {
                     <p><strong>Pro Tip:</strong> Combine <code>&lt;output&gt;</code> with <code>&lt;label&gt;</code> for better accessibility when displaying results.</p>
                 </div>
   
-                <a href="#articles" class="cta-button">Back to Articles</a>
+                <a href="index.html" class="cta-button">Back to Articles</a>
             </article>
 
             <!-- <div class="up-next">
             <h2 class="up-next-title">Up Next:</h2>
-            <h3><a href="404.html">&lt;object&gt;</a></h3>
+            <h3><a href="404.html"><code>&lt;object&gt;</code></a></h3>
           </div> -->
         </div>
     </section>
@@ -1750,15 +1787,14 @@ kbd kbd {
           <p>Its ability to handle nested fallbacks makes it particularly valuable for creating accessible, future-proof content that works across different browsers and devices.</p>
           <p>Next time you need to embed content, try the &lt;object&gt; tag, you never know, it might just become your new favorite tool!</p>
 
-          <!--=====NOT NEEDED YET========= 
-          Imagine you’re building a website and want to showcase a video, a PDF, or even an interactive game. HTML offers two trusty tools for embedding such content: the <embed> tag and the <object> tag. While both can get the job done, they’re like two different superheroes in HTML’s toolbox, each with unique strengths. Let’s explore why <object> often steals the show for creating accessible, future-proof, and versatile web content!
+          <!-- Imagine you’re building a website and want to showcase a video, a PDF, or even an interactive game. HTML offers two trusty tools for embedding such content: the <embed> tag and the <object> tag. While both can get the job done, they’re like two different superheroes in HTML’s toolbox, each with unique strengths. Let’s explore why <object> often steals the show for creating accessible, future-proof, and versatile web content!
  -->
           <div class="live-example">
             <div class="example-title">Live Example</div>
               <div class="example-container" style="border: 1px dashed var(--primary); padding: 1rem;">
                 <object
                 type="video/mp4" 
-                data="/2.mp4" 
+                data="/assets/2.mp4" 
                 width="100%" 
                 height="500px">
                   <param name="autoplay" value="true">
@@ -1902,18 +1938,18 @@ kbd kbd {
             </ul>
           </div> -->
 
-          <a href="#articles" class="cta-button">Back to Articles</a>
+          <a href="index.html" class="cta-button">Back to Articles</a>
         </article>
 
         <!-- <div class="up-next">
             <h2 class="up-next-title">Up Next:</h2>
-            <h3><a href="404.html"><code>&lt;iframe&gt;</code></a></h3>
+            <h3><a href="#article-iframe"><code>&lt;iframe&gt;</code></a></h3>
           </div> -->
         </div>
-      </section>
+    </section>
 
-      <!-- Article Page for <iframe> -->
-      <section class="article-page" id="article-iframe">
+    <!-- Article Page for <iframe> -->
+    <section class="article-page" id="article-iframe">
         <div class="container">
           <article class="article-body">
             <header class="article-header">
@@ -1968,7 +2004,7 @@ kbd kbd {
       &lt;/iframe&gt;</code></pre>
             </div>
 
-            <div class="attribute-table">
+            <!-- <div class="attribute-table">
               <table>
                 <thead>
                   <tr>
@@ -1995,24 +2031,24 @@ kbd kbd {
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </div> -->
 
             <div class="alert warning">
               <p><strong>Security Note:</strong> Always use &lt;sandbox&gt; attribute when embedding untrusted content and consider CSP frame-ancestors for protection against clickjacking.</p>
             </div>
 
-            <a href="#articles" class="cta-button">Back to Articles</a>
+            <a href="index.html" class="cta-button">Back to Articles</a>
           </article>
 
           <!-- <div class="up-next">
               <h2 class="up-next-title">Up Next:</h2>
-              <h3><a href=404.html>&lt;picture&gt;</a></h3>
+              <h3><a href="#article-picture">&lt;picture&gt;</a></h3>
           </div> -->
         </div>
-      </section>
+    </section>
 
-      <!-- Article Page for <picture> -->
-      <section class="article-page" id="article-picture">
+    <!-- Article Page for <picture> -->
+    <section class="article-page" id="article-picture">
         <div class="container">
           <article class="article-body">
             <header class="article-header">
@@ -2067,18 +2103,18 @@ kbd kbd {
               <p><strong>Pro Tip:</strong> Combine with &lt;img loading="lazy"&gt; for optimal performance.</p>
             </div>
 
-            <a href="#articles" class="cta-button">Back to Articles</a>
+            <a href="index.html" class="cta-button">Back to Articles</a>
           </article>
 
-          <div class="up-next">
+          <!-- <div class="up-next">
               <h2 class="up-next-title">Up Next:</h2>
-              <h3><a href=404.html>&lt;progress&gt;</a></h3>
-          </div>
+              <h3><a href="#article-progress"><code>&lt;progress&gt;</code></a></h3>
+          </div> -->
         </div>
-      </section>
+    </section>
 
-      <!-- Article Page for <progress> -->
-      <!-- <section class="article-page" id="article-progress">
+    <!-- Article Page for <progress> -->
+    <section class="article-page" id="article-progress">
         <div class="container">
           <article class="article-body">
             <header class="article-header">
@@ -2133,64 +2169,67 @@ kbd kbd {
               <p><strong>Note:</strong> For file uploads, you'll still need JavaScript to update the value dynamically.</p>
             </div>
 
-            <a href="#articles" class="cta-button">Back to Articles</a>
+            <a href="index.html" class="cta-button">Back to Articles</a>
           </article>
 
           <div class="up-next">
               <h2 class="up-next-title">Up Next:</h2>
-              <h3><a href="#article-q">&lt;q&gt;</a></h3>
+              <h3><a href="404.html">&lt;q&gt;</a></h3>
           </div>
         </div>
-      </section> -->
- 
+    </section>
+
+
   <!-- Contact Page -->
-  <section class="article-page" id="contact">
-    <div class="container">
-      <article class="article-body">
-        <header class="article-header">
-          <h1>Contact Us</h1>
-          <div class="article-meta">Have questions or suggestions? Get in touch!</div>
-        </header>
+    <section class="article-page" id="contact">
+        <div class="container">
+        <article class="article-body">
+            <header class="article-header">
+            <h1>Contact Us</h1>
+            <div class="article-meta">Have questions or suggestions? Get in touch!</div>
+            </header>
 
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" aria-label="contact-form">
-          <input type="hidden" name="access_key" value="49fbe388-ecf6-4f51-9506-527174a0725b">
-          
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-        <a href="#articles" class="cta-button">Back to Articles</a>
-      </article>
-    
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" aria-label="contact-form">
+            <input type="hidden" name="access_key" value="49fbe388-ecf6-4f51-9506-527174a0725b">
+            
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+            </form>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#articles">Articles</a>
-        <a href="404.html">Contact</a>
-        <!--<a href="#">Privacy Policy</a>-->
-      </div>
-      <p class="copyright">&copy; 2025 30 Underrated HTML Elements Explained | Semantic Web Blog. All rights reserved.</p>
-    </div>
-  </footer>
+            <a href="index.html" class="cta-button">Back to Articles</a>
+        </article>
+        </div>
+    </section>
 
-  <!-- Back to Top Button -->
-  <button class="back-to-top" aria-label="Back to top">↑</button>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html">Article</a>
+            <a href="#contact">Contact</a>
+            <!--<a href="#">Privacy Policy</a>-->
+        </div>
+        <p class="copyright">&copy; 2025 30 Underrated HTML Elements Explained | Semantic Web Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
 
   <!-- JavaScript -->
   <script src="style.js"></script>
