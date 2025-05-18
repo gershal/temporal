@@ -134,25 +134,6 @@ backToTopButton.addEventListener('click', () => {
   });
 });
 
-/* // Landing Page
-document.addEventListener('DOMContentLoaded', function() {
-  const landingPage = document.getElementById('landingPage');
-  const ctaButton = document.getElementById('ctaButton');
-  const mainContent = document.getElementById('mainContent');
-
-  // Show main content when CTA is clicked
-  ctaButton.addEventListener('click', function() {
-    landingPage.classList.add('hidden');
-    mainContent.classList.add('visible');
-                
-    // Enable scrolling on the main content
-    document.body.style.overflow = 'auto';
-  });
-
-    // Initially hide main content and disable scrolling
-    document.body.style.overflow = 'hidden';
-  }); */
-
 document.addEventListener('DOMContentLoaded', function() {
   const landingPage = document.getElementById('landingPage');
   const ctaButton = document.getElementById('ctaButton');
