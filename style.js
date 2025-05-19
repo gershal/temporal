@@ -156,3 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.style.height = 'auto';
     });
 });
+
+// Dynamic Copyright Year
+document.getElementById("copyright-year").textContent = new Date().getFullYear();
