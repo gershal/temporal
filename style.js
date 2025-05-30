@@ -207,94 +207,95 @@ function throttle(func, limit) {
     };
 }
 
-// Optional: Confetti effect with better performance
+// Confetti effect
+document.addEventListener('DOMContentLoaded', function() {
+    initConfetti();
+});
+
 function initConfetti() {
     const confettiBtn = document.getElementById('confetti-btn');
-    if (!confettiBtn) return;
+    if (!confettiBtn) {
+        console.warn('Confetti button not found');
+        return;
+    }
 
-    confettiBtn.addEventListener('click', (e) => {
-        // Get button position to center the confetti
-        const btnRect = confettiBtn.getBoundingClientRect();
-        const centerX = btnRect.left + btnRect.width / 2;
-        const centerY = btnRect.top + btnRect.height / 2;
+    confettiBtn.addEventListener('click', function(e) {
+        // Get viewport dimensions
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
         
-        createConfettiBurst(centerX, centerY);
+        // Create confetti container
+        const container = document.createElement('div');
+        container.style.position = 'fixed';
+        container.style.top = '0';
+        container.style.left = '0';
+        container.style.width = '100%';
+        container.style.height = '100%';
+        container.style.pointerEvents = 'none';
+        container.style.zIndex = '9999';
+        container.style.overflow = 'hidden';
+        document.body.appendChild(container);
+
+        // Confetti colors
+        const colors = [
+            '#4361ee', // Primary color
+            '#f72585', // Secondary color
+            '#4cc9f0', // Light blue
+            '#7209b7', // Purple
+            '#3a0ca3'  // Dark blue
+        ];
+
+        // Create 100 pieces of confetti
+        for (let i = 0; i < 100; i++) {
+            setTimeout(() => {
+                createConfettiPiece(container, colors, viewportWidth, viewportHeight);
+            }, i * 20);
+        }
+
+        // Remove container after animation completes
+        setTimeout(() => {
+            container.remove();
+        }, 3000);
     });
 }
 
-function createConfettiBurst(centerX, centerY) {
-    const colors = [
-        '#4361ee', // Your primary color
-        '#f72585', // Your secondary color
-        '#4cc9f0', // A light blue
-        '#7209b7', // A purple
-        '#3a0ca3'  // A dark blue
-    ];
-    
-    const container = document.createElement('div');
-    container.style.position = 'fixed';
-    container.style.top = '0';
-    container.style.left = '0';
-    container.style.width = '100%';
-    container.style.height = '100%';
-    container.style.pointerEvents = 'none';
-    container.style.zIndex = '9999';
-    container.style.overflow = 'hidden';
-    document.body.appendChild(container);
-
-    const particleCount = 100;
-    const angleIncrement = (Math.PI * 2) / particleCount;
-    
-    for (let i = 0; i < particleCount; i++) {
-        createConfettiParticle(container, colors, centerX, centerY, angleIncrement * i);
-    }
-
-    setTimeout(() => {
-        container.remove();
-    }, 3000);
-}
-
-function createConfettiParticle(container, colors, centerX, centerY, angle) {
-    const size = Math.random() * 10 + 5;
+function createConfettiPiece(container, colors, viewportWidth, viewportHeight) {
+    const size = Math.random() * 10 + 5; // Random size between 5-15px
     const particle = document.createElement('div');
     
+    // Set initial styles
     particle.style.position = 'absolute';
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
     particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    particle.style.borderRadius = '50%';
-    particle.style.left = `${centerX}px`;
-    particle.style.top = `${centerY}px`;
+    particle.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+    particle.style.left = `${Math.random() * viewportWidth}px`;
+    particle.style.top = '-10px';
     particle.style.transformOrigin = 'center center';
-    
-    // Random shape (50% chance to be square)
-    if (Math.random() > 0.5) {
-        particle.style.borderRadius = '0';
-    }
     
     container.appendChild(particle);
 
-    // Calculate movement with some randomness
-    const velocity = 2 + Math.random() * 3;
-    const distance = 50 + Math.random() * 100;
+    // Animation properties
+    const animationDuration = 2000 + Math.random() * 1000;
+    const endX = (Math.random() - 0.5) * viewportWidth;
+    const endY = viewportHeight + 10;
     const rotation = Math.random() * 360;
-    
-    const xMovement = Math.cos(angle) * distance;
-    const yMovement = Math.sin(angle) * distance;
-    
+
+    // Create animation
     const animation = particle.animate([
         { 
-            transform: `translate(0, 0) rotate(0deg)`,
+            transform: 'translate(0, 0) rotate(0deg)',
             opacity: 1 
         },
         { 
-            transform: `translate(${xMovement}px, ${yMovement}px) rotate(${rotation}deg)`,
+            transform: `translate(${endX}px, ${endY}px) rotate(${rotation}deg)`,
             opacity: 0 
         }
     ], {
-        duration: 1000 + Math.random() * 1000,
+        duration: animationDuration,
         easing: 'cubic-bezier(0.1, 0.8, 0.2, 1)'
     });
 
+    // Clean up after animation
     animation.onfinish = () => particle.remove();
 }
