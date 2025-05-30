@@ -948,3 +948,46 @@ summary {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
+
+/* Add to your existing CSS */
+.thank-you-message {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.thank-you-message h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.thank-you-message p {
+  margin-bottom: 1.5rem;
+}
+
+/* Dark mode compatibility */
+body.dark-mode .thank-you-message {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .thank-you-message a {
+  color: var(--secondary);
+}
+
+#confetti-btn {
+  margin-top: 1.5rem;
+  background: var(--primary);
+  color: var(--light);
+}
+
+body.dark-mode #confetti-btn {
+  background: var(--secondary);
+}
+
+#confetti-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
