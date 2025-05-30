@@ -1,192 +1,300 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Enhanced Dark Mode Toggle
+    // Initialize all components
+    initDarkMode();
+    initScroller();
+    initNavigation();
+    initBackToTop();
+    initLandingPage();
+    initDynamicYear();
+});
+
+// Dark Mode Toggle - Improved with better state management
+function initDarkMode() {
     const darkModeToggle = document.createElement('button');
+    darkModeToggle.id = 'darkModeToggle';
     darkModeToggle.innerHTML = '🌙 Dark Mode';
-    darkModeToggle.style.position = 'fixed';
-    darkModeToggle.style.top = '10px';
-    darkModeToggle.style.right = '10px';
-    darkModeToggle.style.padding = '8px 13px';
-    darkModeToggle.style.background = 'var(--primary)';
-    darkModeToggle.style.color = 'white';
-    darkModeToggle.style.border = 'none';
-    darkModeToggle.style.borderRadius = '4px';
-    darkModeToggle.style.cursor = 'pointer';
-    darkModeToggle.style.zIndex = '1000';
+    darkModeToggle.className = 'dark-mode-toggle';
     
+    // Apply styles via CSS class instead of inline styles
     document.body.appendChild(darkModeToggle);
     
-    // Check for saved preference
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        document.body.classList.add('dark-mode');
-        darkModeToggle.innerHTML = '☀️ Light Mode';
+    // Check for saved preference or system preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedMode = localStorage.getItem('darkMode');
+    
+    if (savedMode === 'enabled' || (!savedMode && prefersDark)) {
+        enableDarkMode(darkModeToggle);
     }
 
-    darkModeToggle.addEventListener('click', function() {
+    darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         
         if (document.body.classList.contains('dark-mode')) {
-            darkModeToggle.innerHTML = '☀️ Light Mode';
-            localStorage.setItem('darkMode', 'enabled');
+            enableDarkMode(darkModeToggle);
         } else {
-            darkModeToggle.innerHTML = '🌙 Dark Mode';
-            localStorage.setItem('darkMode', 'disabled');
+            disableDarkMode(darkModeToggle);
         }
     });
-
-    // [Keep your existing form handling code]
-});
-
-
-// Scroller Effect for Previous Articles
-const scrollers = document.querySelectorAll(".scroller");
-
-if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
 }
 
-function addAnimation() {
+function enableDarkMode(toggle) {
+    toggle.innerHTML = '☀️ Light Mode';
+    localStorage.setItem('darkMode', 'enabled');
+    document.body.classList.add('dark-mode');
+}
+
+function disableDarkMode(toggle) {
+    toggle.innerHTML = '🌙 Dark Mode';
+    localStorage.setItem('darkMode', 'disabled');
+    document.body.classList.remove('dark-mode');
+}
+
+// Scroller Effect - Optimized with IntersectionObserver
+function initScroller() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const scrollers = document.querySelectorAll(".scroller:not([data-animated])");
+    
     scrollers.forEach(scroller => {
-        scroller.setAttribute('data-animated', true);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateScroller(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-        const scrollerInner = scroller.querySelector(".scroller__inner");
-        const scrollerContent = Array.from(scrollerInner.children);
-        /*IF ===scrollerInner.children=== IS USED, IT WILL LEAD TO AN HTML COLLECTION WHEN CONSOLE LOGGED. MEANING IF THE LIST IS MODIFIED, IT WILL RESULT TO AN ENDLESS LOOP (REPETITION) SO INCLUDE ===Array.from()===*/
+        observer.observe(scroller);
+    });
+}
 
-        scrollerContent.forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
+function animateScroller(scroller) {
+    scroller.setAttribute('data-animated', 'true');
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    if (!scrollerInner) return;
+
+    const scrollerContent = Array.from(scrollerInner.children);
+    const fragment = document.createDocumentFragment();
+    
+    scrollerContent.forEach(item => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", "true");
+        fragment.appendChild(duplicatedItem);
+    });
+
+    scrollerInner.appendChild(fragment);
+}
+
+// Navigation - Improved with event delegation
+function initNavigation() {
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        
+        if (href?.startsWith('#article-')) {
+            e.preventDefault();
+            showArticle(href);
+        } else if (href === '#contact') {
+            e.preventDefault();
+            showArticle('#contact');
+        } else if (href === '#articles') {
+            e.preventDefault();
+            showMainArticles();
+        }
+    });
+}
+
+function showArticle(articleId) {
+    // Hide all article pages
+    document.querySelectorAll('.article-page').forEach(page => {
+        page.style.display = 'none';
+    });
+
+    // Hide main article section
+    const mainArticle = document.querySelector('#article');
+    if (mainArticle) mainArticle.style.display = 'none';
+
+    // Show target article
+    const target = document.querySelector(articleId);
+    if (target) {
+        target.style.display = 'block';
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+function showMainArticles() {
+    document.querySelectorAll('.article-page').forEach(page => {
+        page.style.display = 'none';
+    });
+
+    const mainArticle = document.querySelector('#article');
+    if (mainArticle) {
+        mainArticle.style.display = 'block';
+        mainArticle.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+// Back to Top - Optimized with throttling
+function initBackToTop() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    if (!backToTopButton) return;
+
+    const handleScroll = throttle(() => {
+        backToTopButton.classList.toggle('visible', window.scrollY > 300);
+    }, 100);
+
+    window.addEventListener('scroll', handleScroll);
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 }
 
-// Navigation
-function showArticle(articleId) {
-  // Hide all article pages and the main article section
-  document.querySelectorAll('.article-page').forEach(page => {
-    page.style.display = 'none';
-  });
+// Landing Page - Improved with better transitions
+function initLandingPage() {
+    const landingPage = document.getElementById('landingPage');
+    const ctaButton = document.getElementById('ctaButton');
+    const mainContent = document.getElementById('mainContent');
+    if (!landingPage || !ctaButton || !mainContent) return;
 
-  const mainArticle = document.querySelector('#article');
-  if (mainArticle) {
-    mainArticle.style.display = 'none'; // hide the main article list
-  }
+    document.body.classList.add('landing-active');
+    mainContent.style.display = 'none';
 
-  // Show the requested article or contact page
-  const target = document.querySelector(articleId);
-  if (target) {
-    target.style.display = 'block';
-    target.scrollIntoView({ behavior: 'smooth' });
-  }
+    ctaButton.addEventListener('click', () => {
+        landingPage.style.opacity = '0';
+        landingPage.style.pointerEvents = 'none';
+        
+        setTimeout(() => {
+            landingPage.style.display = 'none';
+            mainContent.style.display = 'block';
+            document.body.classList.remove('landing-active');
+        }, 300); // Match this with your CSS transition duration
+    });
 }
 
-// Set up article navigation
-document.querySelectorAll('a[href^="#article-"]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    showArticle(link.getAttribute('href'));
-  });
-});
-
-// Contact page navigation
-document.querySelectorAll('a[href="#contact"]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    showArticle('#contact');
-  });
-});
-
-// Back to article list
-document.querySelectorAll('a[href="#articles"]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    // Hide all article pages (including contact)
-    document.querySelectorAll('.article-page').forEach(page => {
-      page.style.display = 'none';
-    });
-
-    // Show the main article section again
-    const mainArticle = document.querySelector('#article');
-    if (mainArticle) {
-      mainArticle.style.display = 'block';
-      mainArticle.scrollIntoView({ behavior: 'smooth' });
+// Dynamic Year - Simple utility
+function initDynamicYear() {
+    const yearElement = document.getElementById('copyright-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
-  });
-});
+}
 
+// Utility function for throttling
+function throttle(func, limit) {
+    let lastFunc;
+    let lastRan;
+    return function() {
+        const context = this;
+        const args = arguments;
+        if (!lastRan) {
+            func.apply(context, args);
+            lastRan = Date.now();
+        } else {
+            clearTimeout(lastFunc);
+            lastFunc = setTimeout(function() {
+                if ((Date.now() - lastRan) >= limit) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                }
+            }, limit - (Date.now() - lastRan));
+        }
+    };
+}
 
-// Back to top button
-const backToTopButton = document.querySelector('.back-to-top');
+// Optional: Confetti effect with better performance
+function initConfetti() {
+    const confettiBtn = document.getElementById('confetti-btn');
+    if (!confettiBtn) return;
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopButton.classList.add('visible');
-  } else {
-    backToTopButton.classList.remove('visible');
-  }
-});
-
-backToTopButton.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  const landingPage = document.getElementById('landingPage');
-  const ctaButton = document.getElementById('ctaButton');
-  const mainContent = document.getElementById('mainContent');
-  const darkModeToggle = document.getElementById('darkModeToggle');
-
-  // Add landing-active class to body initially
-  document.body.classList.add('landing-active');
-
-  // Show main content when CTA is clicked
-  ctaButton.addEventListener('click', function() {
-    landingPage.classList.add('hidden');
-    mainContent.classList.add('visible');
-
-    // Remove landing-active class to restore scrolling
-    document.body.classList.remove('landing-active');
-
-    // Reset body positioning
-    document.body.style.position = 'static';
-    document.body.style.height = 'auto';
+    confettiBtn.addEventListener('click', (e) => {
+        // Get button position to center the confetti
+        const btnRect = confettiBtn.getBoundingClientRect();
+        const centerX = btnRect.left + btnRect.width / 2;
+        const centerY = btnRect.top + btnRect.height / 2;
+        
+        createConfettiBurst(centerX, centerY);
     });
-});
+}
 
-// Dynamic Copyright Year
-document.getElementById("copyright-year").textContent = new Date().getFullYear();
-
-// Confetti effect - add before </body>
-document.getElementById('confetti-btn')?.addEventListener('click', () => {
-  // Simple confetti using your site's color scheme
-  const confetti = document.createElement('div');
-  confetti.style.position = 'fixed';
-  confetti.style.width = '10px';
-  confetti.style.height = '10px';
-  confetti.style.backgroundColor = var(--secondary);
-  confetti.style.borderRadius = '50%';
-  confetti.style.zIndex = '9999';
-  confetti.style.pointerEvents = 'none';
-  
-  for (let i = 0; i < 100; i++) {
-    const clone = confetti.cloneNode();
-    clone.style.left = `${Math.random() * 100}vw`;
-    clone.style.top = '-10px';
-    clone.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    document.body.appendChild(clone);
+function createConfettiBurst(centerX, centerY) {
+    const colors = [
+        '#4361ee', // Your primary color
+        '#f72585', // Your secondary color
+        '#4cc9f0', // A light blue
+        '#7209b7', // A purple
+        '#3a0ca3'  // A dark blue
+    ];
     
-    const animation = clone.animate([
-      { top: '-10px', opacity: 1 },
-      { top: `${Math.random() * 100 + 50}vh`, opacity: 0 }
+    const container = document.createElement('div');
+    container.style.position = 'fixed';
+    container.style.top = '0';
+    container.style.left = '0';
+    container.style.width = '100%';
+    container.style.height = '100%';
+    container.style.pointerEvents = 'none';
+    container.style.zIndex = '9999';
+    container.style.overflow = 'hidden';
+    document.body.appendChild(container);
+
+    const particleCount = 100;
+    const angleIncrement = (Math.PI * 2) / particleCount;
+    
+    for (let i = 0; i < particleCount; i++) {
+        createConfettiParticle(container, colors, centerX, centerY, angleIncrement * i);
+    }
+
+    setTimeout(() => {
+        container.remove();
+    }, 3000);
+}
+
+function createConfettiParticle(container, colors, centerX, centerY, angle) {
+    const size = Math.random() * 10 + 5;
+    const particle = document.createElement('div');
+    
+    particle.style.position = 'absolute';
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    particle.style.borderRadius = '50%';
+    particle.style.left = `${centerX}px`;
+    particle.style.top = `${centerY}px`;
+    particle.style.transformOrigin = 'center center';
+    
+    // Random shape (50% chance to be square)
+    if (Math.random() > 0.5) {
+        particle.style.borderRadius = '0';
+    }
+    
+    container.appendChild(particle);
+
+    // Calculate movement with some randomness
+    const velocity = 2 + Math.random() * 3;
+    const distance = 50 + Math.random() * 100;
+    const rotation = Math.random() * 360;
+    
+    const xMovement = Math.cos(angle) * distance;
+    const yMovement = Math.sin(angle) * distance;
+    
+    const animation = particle.animate([
+        { 
+            transform: `translate(0, 0) rotate(0deg)`,
+            opacity: 1 
+        },
+        { 
+            transform: `translate(${xMovement}px, ${yMovement}px) rotate(${rotation}deg)`,
+            opacity: 0 
+        }
     ], {
-      duration: 2000 + Math.random() * 3000,
-      easing: 'cubic-bezier(0.1,0.8,0.3,1)'
+        duration: 1000 + Math.random() * 1000,
+        easing: 'cubic-bezier(0.1, 0.8, 0.2, 1)'
     });
-    
-    animation.onfinish = () => clone.remove();
-  }
-});
+
+    animation.onfinish = () => particle.remove();
+}
