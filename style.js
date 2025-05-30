@@ -159,3 +159,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Dynamic Copyright Year
 document.getElementById("copyright-year").textContent = new Date().getFullYear();
+
+// Confetti effect - add before </body>
+document.getElementById('confetti-btn')?.addEventListener('click', () => {
+  // Simple confetti using your site's color scheme
+  const confetti = document.createElement('div');
+  confetti.style.position = 'fixed';
+  confetti.style.width = '10px';
+  confetti.style.height = '10px';
+  confetti.style.backgroundColor = var(--secondary);
+  confetti.style.borderRadius = '50%';
+  confetti.style.zIndex = '9999';
+  confetti.style.pointerEvents = 'none';
+  
+  for (let i = 0; i < 100; i++) {
+    const clone = confetti.cloneNode();
+    clone.style.left = `${Math.random() * 100}vw`;
+    clone.style.top = '-10px';
+    clone.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    document.body.appendChild(clone);
+    
+    const animation = clone.animate([
+      { top: '-10px', opacity: 1 },
+      { top: `${Math.random() * 100 + 50}vh`, opacity: 0 }
+    ], {
+      duration: 2000 + Math.random() * 3000,
+      easing: 'cubic-bezier(0.1,0.8,0.3,1)'
+    });
+    
+    animation.onfinish = () => clone.remove();
+  }
+});
