@@ -132,7 +132,7 @@ function showMainArticles() {
 
     const mainArticle = document.querySelector('#article');
     if (mainArticle) {
-        mainArticle.style.display = 'block';
+        mainArticle.style.display = 'flex';
         mainArticle.scrollIntoView({ behavior: 'smooth' });
     }
 }
